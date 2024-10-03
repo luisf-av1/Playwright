@@ -3,7 +3,6 @@ import { test, expect } from '@playwright/test';
 test.describe.parallel("TS | Example", async () => {
 
     test.beforeEach(async ({page}, testInfo)=>{
-        console.log(`\n${testInfo.title} starting...`)
         await page.goto("");
     });
 
