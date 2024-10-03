@@ -11,8 +11,10 @@ test("First PW Test", async({page})=>{
 });
 
 test("Simple click test", async ({page})=>{
-    await page.goto("https://the-internet.herokuapp.com/");
-    await page.locator('text=Add/Remove Elements').click(); //select element by text
-    await page.locator('text=Add Element').click();
+    await page.goto("https://the-internet.herokuapp.com/"); //Go to page
 
+    const locatot = page.locator('text=Add Element') //select element by text
+    await locatot.click(); //click element
+
+    await page.click('text=Add/Remove Elements'); //click element alternative option
 });
