@@ -13,6 +13,10 @@ class MyReporter implements Reporter {
 - Number tests cases to run: ${suite.allTests().length}`;
   }
 
+  onTestBegin(test: TestCase, result: TestResult) {
+    console.log(` ▶️ Starting test ${test.title}`);
+  }
+  
   onTestEnd(test: TestCase, result: TestResult) {
     switch (result.status) {
       case "failed":
