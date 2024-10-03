@@ -2,6 +2,31 @@ const {test, spect, expect } = require('@playwright/test');
 
 test("First PW Test", async({page})=>{
     await page.goto("https://playwright.dev");
+});
+
+test.fail("Fail PW Test", async({page})=>{
+    await page.goto("https://playwright.dev");
+});
+
+test.fixme("Fix me PW Test", async({page})=>{
+    await page.goto("https://playwright.dev");
+});
+
+test.slow("Slow PW Test", async({page})=>{
+    await page.goto("https://playwright.dev");
+});
+
+test.skip("Skip PW Test", async({page})=>{
+    await page.goto("https://playwright.dev");
+});
+
+test("Conditional skip PW Test", async({page, browserName})=>{
+    test.skip(browserName == "firefox", "working in firefox fix")
+    await page.goto("https://playwright.dev");
+});
+
+test("Locator example", async({page})=>{
+    await page.goto("https://playwright.dev");
 
     //asertion
     const title = page.locator('.navbar__inner .navbar__title');
