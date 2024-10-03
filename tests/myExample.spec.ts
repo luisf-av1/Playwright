@@ -35,10 +35,11 @@ test("Locator example", async({page})=>{
     // await page.pause();
 });
 
-test.only("Simple click test", async ({page}, testInfo)=>{
+test("Simple click test", async ({page}, testInfo)=>{
     await page.goto("https://the-internet.herokuapp.com/"); //Go to page
 
     const locator =  page.locator('text=Add/Remove Elements') //select element by text
+    await locator.screenshot({path: `screenshots/${testInfo.title.replace(" ", "_")}_locator.png`})
     await locator.click(); //click element
 
     await page.screenshot({ path: `screenshots/${testInfo.title.replace(" ", "_")}.png`})
