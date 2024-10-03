@@ -1,4 +1,4 @@
-const {test, spect, expect } = require('@playwright/test');
+const {test, expect } = require('@playwright/test');
 
 test("First PW Test", async({page})=>{
     await page.goto("https://playwright.dev");
@@ -21,7 +21,7 @@ test.skip("Skip PW Test", async({page})=>{
 });
 
 test("Conditional skip PW Test", async({page, browserName})=>{
-    test.skip(browserName == "firefox", "working in firefox fix")
+    test.skip(browserName == "firefox", "working in firefox")
     await page.goto("https://playwright.dev");
 });
 

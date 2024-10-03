@@ -1,4 +1,4 @@
-const {test, spect, expect } = require('@playwright/test');
+import { test, expect } from '@playwright/test';
 
 // npx playwright test tests/tagExample.spec.ts --grep @smoke 
 // npx playwright test tests/tagExample.spec.ts --grep @regression  || npx playwright test tests/tagExample.spec.ts --grep-invert @smoke 
