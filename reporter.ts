@@ -29,7 +29,7 @@ class MyReporter implements Reporter {
         this.skipped++;
         break;
       case "passed":
-        console.log(`✅ Test ${test.title} ${result.status}`);
+        console.log(`✅ Test ${test.title}: ${result.status}`);
         this.passed++;
         break;
     }
