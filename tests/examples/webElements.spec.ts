@@ -41,7 +41,7 @@ test.describe('TS | Web Elements', async () => {
         await download.saveAs('resource/downloads/' + download.suggestedFilename());
     })
 
-    test.only("TC | File upload", async ({page})=>{
+    test("TC | File upload", async ({page})=>{
         await page.goto("https://the-internet.herokuapp.com/upload");
 
         // Start waiting for file chooser before clicking. Note no await.
@@ -54,6 +54,14 @@ test.describe('TS | Web Elements', async () => {
 
         await expect(page.locator("h3")).toHaveText("File Uploaded!");
 
+        await page.pause();
+    })
+
+    test.only("TC | Hover element", async ({page})=>{
+        await page.goto("https://the-internet.herokuapp.com/hovers");
+
+        await page.hover('[alt="User Avatar"]');
+        await expect(page.locator('text=name: user1')).toBeVisible();
         await page.pause();
     })
 });
