@@ -24,7 +24,7 @@ export default defineConfig({
   /* Reporter to use. See https://playwright.dev/docs/test-reporters */
   reporter: [
     ['./reporter.ts'],
-    ['html'],
+     // ["list", { printSteps: true }],
     ["junit", { outputFile: "playwright-report/pw/results-junit.xml", open: "never" }],
     ["html", { outputFolder: "playwright-report/pw/html/", open: "never" }],
   ],
@@ -63,10 +63,10 @@ export default defineConfig({
     //   name: 'Mobile Chrome',
     //   use: { ...devices['Pixel 5'] },
     // },
-    // {
-    //   name: 'Mobile Safari',
-    //   use: { ...devices['iPhone 12'] },
-    // },
+    {
+      name: 'Mobile Safari',
+      use: { ...devices['iPhone 12'] },
+    },
 
     /* Test against branded browsers. */
     // {

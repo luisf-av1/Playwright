@@ -2,6 +2,8 @@ const {test, expect } = require('@playwright/test');
 
 const baseUrl = " https://demoqa.com/text-box";
 
+test.use({viewport: {width:1280, height: 720}}); //Local config example
+
 test.beforeEach(async({page})=>{
     await page.goto(baseUrl);
 })
