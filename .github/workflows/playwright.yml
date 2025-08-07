@@ -13,13 +13,12 @@ permissions:
   id-token: write
 
 jobs:
-  test:
-    timeout-minutes: 15
+  test-execution:
     runs-on: ubuntu-latest
-    outputs:
-      run_id: ${{ steps.set_run_id.outputs.run_id }}
     steps:
-      - uses: actions/checkout@v4
+      # Downloads the repo into the runner.
+      - name: ⬇️ Checkout code
+        uses: actions/checkout@v3
 
       - uses: actions/setup-node@v4
         with:
@@ -35,6 +34,9 @@ jobs:
         id: set_run_id
         run: echo "run_id=$(date +'%Y%m%d%H%M%S')" >> "$GITHUB_OUTPUT"
 
+      - name: 📂 Prepare folders to store newman report
+        run: mkdir -p playwright-report
+        
       - name: Run Playwright tests
         id: run_tests
         run: |
@@ -49,55 +51,66 @@ jobs:
           name: test-report
           path: playwright-report/
 
-  generate-report:
-    needs: test
-    if: always()
-    runs-on: ubuntu-latest
-    steps:
-      - name: Checkout main branch
+      - name: ➡️ Checkout gh-pages branch
         uses: actions/checkout@v4
-
-      - name: Download test report artifact
-        uses: actions/download-artifact@v4
         with:
-          name: test-report
-          path: playwright-report/
+          ref: gh-pages
+          path: gh-pages
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-
-      - name: Install dependencies
-        run: npm ci
-
-      - name: Generate historical summary JSON
+      - name: 📚 Get previous reports from gh-pages branch
         run: |
-          mkdir -p pages/data/history
-          node .github/scripts/aggregate-report.js ${{ needs.test.outputs.run_id }}
+          rm -rf playwright-report
+          mkdir -p playwright-report
+          rsync -av --ignore-existing gh-pages/ reports/ # Copies only new reports from "gh-pages/" to "reports/"
 
-      - name: Commit test summary JSON
+      - name: 🗄 Create folder for current report
         run: |
-          git config user.name "github-actions"
-          git config user.email "github-actions@users.noreply.github.com"
-          git add pages/data/history/
-          git commit -m "Add test run summary: ${{ needs.test.outputs.run_id }}" || echo "No changes to commit"
-          git push
+          export TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+          cp -R newman/ "reports/$TIMESTAMP" # Copy files of new report ( saved in "newman/") into new folder to store report ("reports/$TIMESTAMP")
+          echo "Report generated in: reports/$TIMESTAMP"
 
-  deploy-pages:
-    needs: generate-report
-    if: always()
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
+      - name: 📝 Generate reports hub page (index.html)
+      # Create page to list all the generated reports
+        run: |
+          cat << 'EOF' > reports/index.html
+          <!DOCTYPE html>
+          <html lang="es">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Newman Reports</title>
+            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+            <style>
+              body { margin: 20px; }
+              h1 { margin-bottom: 20px; }
+              ul { list-style-type: none; padding: 0; }
+              li { margin-bottom: 10px; }
+              a { text-decoration: none; color: #0d6efd; }
+              a:hover { text-decoration: underline; }
+            </style>
+          </head>
+          <body>
+            <div class="container">
+              <h1 class="display-4">Newman Reports</h1>
+              <ul>
+          EOF
+            for dir in reports/*/ ; do
+              [ -d "$dir" ] || continue
+              dirname=$(basename "$dir")
+              if [ "$dirname" != "index.html" ]; then
+                echo "<li><a href=\"${dirname}/report.html\">${dirname}</a></li>" >> reports/index.html # List links to generate reports in reports hub (index.html)
+              fi
+            done
+          cat << 'EOF' >> reports/index.html
+              </ul>
+            </div>
+          </body>
+          </html>
+          EOF
 
-      - name: Setup Pages
-        uses: actions/configure-pages@v4
-
-      - name: Upload GitHub Pages artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: 🌐 Publish reports in GitHub Pages
+        uses: peaceiris/actions-gh-pages@v3
         with:
-          path: ./pages
-
-      - name: Deploy to GitHub Pages
-        uses: actions/deploy-pages@v4
+          github_token: ${{ secrets.GH_PAT }}
+          publish_dir: ./reports
+          enable_jekyll: false
