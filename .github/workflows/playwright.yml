@@ -57,12 +57,17 @@ jobs:
             git checkout --orphan gh-pages
             git reset --hard
           fi
-
+      
       - name: 📚 Get previous reports from gh-pages branch
         run: |
-          rm -rf playwright-report
-          mkdir -p playwright-report
-          rsync -av --ignore-existing gh-pages/ playwright-report/ # Copies only new reports from "gh-pages/" to "reports/"
+          if git ls-remote --exit-code origin gh-pages; then
+            git fetch origin gh-pages
+            git checkout gh-pages
+            rsync -a --ignore-missing-args ./ ./playwright-report || true
+            git checkout -
+          else
+            echo "No gh-pages branch found. Skipping report retrieval."
+          fi
 
       - name: 🗄 Create folder for current report
         run: |
