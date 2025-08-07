@@ -3,9 +3,11 @@ name: Playwright Tests
 on:
   workflow_dispatch:
   push:
-    branches: [ main, master ]
+    branches: [ "main" ]
   pull_request:
-    branches: [ main, master ]
+    branches: [ "main" ]
+  schedule:
+  - cron: "0 9 * * 1-5"
 
 permissions:
   contents: write
@@ -18,34 +20,29 @@ jobs:
     steps:
       # Downloads the repo into the runner.
       - name: ⬇️ Checkout code
-        uses: actions/checkout@v3
+        uses: actions/checkout@v4
 
-      - uses: actions/setup-node@v4
+      - name: ⚙️ Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: lts/*
+          node-version: '16'
 
-      - name: Install dependencies
+      - name: 📦 Install dependencies
         run: npm ci
 
-      - name: Install Playwright Browsers
+      - name: 📦 Install Playwright Browsers
         run: npx playwright install --with-deps
-
-      - name: Save Run ID
-        id: set_run_id
-        run: echo "run_id=$(date +'%Y%m%d%H%M%S')" >> "$GITHUB_OUTPUT"
 
       - name: 📂 Prepare folders to store newman report
         run: mkdir -p playwright-report
         
-      - name: Run Playwright tests
-        id: run_tests
+      - name: ▶️ Run Playwright tests
         run: |
           mkdir -p playwright-report
           npx playwright test --reporter=json --output=playwright-report
-          echo "exit_code=$?" >> "$GITHUB_OUTPUT"
         continue-on-error: true
 
-      - name: Upload test report as artifact
+      - name: 📊 Upload test report as artifact
         uses: actions/upload-artifact@v4
         with:
           name: test-report
@@ -61,24 +58,24 @@ jobs:
         run: |
           rm -rf playwright-report
           mkdir -p playwright-report
-          rsync -av --ignore-existing gh-pages/ reports/ # Copies only new reports from "gh-pages/" to "reports/"
+          rsync -av --ignore-existing gh-pages/ playwright-report/ # Copies only new reports from "gh-pages/" to "reports/"
 
       - name: 🗄 Create folder for current report
         run: |
           export TIMESTAMP=$(date +%Y%m%d-%H%M%S)
-          cp -R newman/ "reports/$TIMESTAMP" # Copy files of new report ( saved in "newman/") into new folder to store report ("reports/$TIMESTAMP")
-          echo "Report generated in: reports/$TIMESTAMP"
+          cp -R playwright-report/ "reports/$TIMESTAMP" # Copy files of new report ( saved in "newman/") into new folder to store report ("reports/$TIMESTAMP")
+          echo "Report generated in: playwright-report/$TIMESTAMP"
 
       - name: 📝 Generate reports hub page (index.html)
       # Create page to list all the generated reports
         run: |
-          cat << 'EOF' > reports/index.html
+          cat << 'EOF' > playwright-report/index.html
           <!DOCTYPE html>
           <html lang="es">
           <head>
             <meta charset="UTF-8">
             <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Newman Reports</title>
+            <title>Test Reports</title>
             <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
             <style>
               body { margin: 20px; }
@@ -91,17 +88,17 @@ jobs:
           </head>
           <body>
             <div class="container">
-              <h1 class="display-4">Newman Reports</h1>
+              <h1 class="display-4">Test Reports</h1>
               <ul>
           EOF
-            for dir in reports/*/ ; do
+            for dir in playwright-report/*/ ; do
               [ -d "$dir" ] || continue
               dirname=$(basename "$dir")
               if [ "$dirname" != "index.html" ]; then
-                echo "<li><a href=\"${dirname}/report.html\">${dirname}</a></li>" >> reports/index.html # List links to generate reports in reports hub (index.html)
+                echo "<li><a href=\"${dirname}/report.html\">${dirname}</a></li>" >> playwright-report/index.html # List links to generate reports in reports hub (index.html)
               fi
             done
-          cat << 'EOF' >> reports/index.html
+          cat << 'EOF' >> pages/index.html
               </ul>
             </div>
           </body>
@@ -112,5 +109,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./reports
+          publish_dir: ./playwright-report
           enable_jekyll: false
