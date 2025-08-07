@@ -50,38 +50,40 @@ jobs:
           playwright-report/
           playwright-report/report.json
 
-
   generate-report:
     needs: test
-    if: always()  # Run even if tests failed
+    if: always()
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v4
-    - uses: actions/download-artifact@v4
-      with:
-        name: test-report
-
-    - name: Set up Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: lts/*
-
-    - name: Install dependencies
-      run: npm install fs-extra
-
-    - name: Generate historical entry
-      run: |
-        mkdir -p pages/data/history
-        node .github/scripts/aggregate-report.js "${{ needs.test.outputs.run_id }}"
-
-    - name: Commit historical JSON data
-      run: |
-        git config user.name "github-actions"
-        git config user.email "github-actions@github.com"
-        git pull
-        git add pages/data/history/
-        git commit -m "Add test results for run ${{ needs.test.outputs.run_id }}" || echo "No changes to commit"
-        git push
+      - name: Checkout code
+        uses: actions/checkout@v4
+  
+      - name: Download test report
+        uses: actions/download-artifact@v4
+        with:
+          name: test-report
+          path: playwright-report
+  
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+  
+      - name: Install dependencies
+        run: npm ci
+  
+      - name: Generate historical entry
+        run: |
+          mkdir -p pages/data/history
+          node .github/scripts/aggregate-report.js ${{ needs.test.outputs.run_id }}
+  
+      - name: Commit historical JSON data
+        run: |
+          git config user.name "github-actions"
+          git config user.email "github-actions@users.noreply.github.com"
+          git add pages/data/history/
+          git commit -m "Add test run summary: ${{ needs.test.outputs.run_id }}" || echo "No changes to commit"
+          git push
 
   deploy-pages:
     needs: generate-report
