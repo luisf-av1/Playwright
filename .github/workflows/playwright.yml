@@ -34,7 +34,7 @@ jobs:
     - name: Run Playwright tests
       id: run_tests
       run: |
-        npx playwright test --reporter=json,json-summary
+        npx playwright test --reporter=json --output=playwright-report
         echo "exit_code=$?" >> "$GITHUB_OUTPUT"
       continue-on-error: true
 
@@ -48,9 +48,8 @@ jobs:
         name: test-report
         path: |
           playwright-report/
-          test-results/
-          test-results.json
-          test-results-summary.json
+          playwright-report/report.json
+
 
   generate-report:
     needs: test
