@@ -39,14 +39,14 @@ jobs:
       - name: ▶️ Run Playwright tests
         run: |
           mkdir -p playwright-report
-          npx playwright test --reporter=json --output=playwright-report
+          npx playwright test
         continue-on-error: true
 
       - name: 📊 Upload test report as artifact
         uses: actions/upload-artifact@v4
         with:
           name: test-report
-          path: playwright-report/
+          path: playwright-report/pw/html/
 
       - name: ➡️ Checkout gh-pages branch
         uses: actions/checkout@v4
