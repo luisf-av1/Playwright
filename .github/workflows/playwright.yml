@@ -72,7 +72,7 @@ jobs:
       - name: 🗄 Create folder for current report
         run: |
           export TIMESTAMP=$(date +%Y%m%d-%H%M%S)
-          cp -R playwright-report/ "reports/$TIMESTAMP" # Copy files of new report ( saved in "newman/") into new folder to store report ("reports/$TIMESTAMP")
+          cp -R playwright-report/ "playwright-report/$TIMESTAMP" # Copy files of new report ( saved in "newman/") into new folder to store report ("reports/$TIMESTAMP")
           echo "Report generated in: playwright-report/$TIMESTAMP"
 
       - name: 📝 Generate reports hub page (index.html)
