@@ -33,7 +33,7 @@ jobs:
       - name: 📦 Install Playwright Browsers
         run: npx playwright install --with-deps
 
-      - name: 📂 Prepare folders to store newman report
+      - name: 📂 Prepare folders
         run: mkdir -p playwright-report
         
       - name: ▶️ Run Playwright tests
@@ -48,32 +48,23 @@ jobs:
           name: test-report
           path: playwright-report/
 
-      - name: ➡️ Checkout gh-pages branch (create if missing)
-        run: |
-          git fetch origin
-          if git show-ref --verify --quiet refs/heads/gh-pages; then
-            git checkout gh-pages
-          else
-            git checkout --orphan gh-pages
-            git reset --hard
-          fi
+      - name: ➡️ Checkout gh-pages branch
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
+
       
-      - name: 📚 Get previous reports from gh-pages branch
+      - name: 📚 Get previous reports (if any)
         run: |
-          if git ls-remote --exit-code origin gh-pages; then
-            git fetch origin gh-pages
-            git checkout gh-pages
-            rsync -a --ignore-missing-args ./ ./playwright-report || true
-            git checkout -
-          else
-            echo "No gh-pages branch found. Skipping report retrieval."
-          fi
+          mkdir -p gh-pages/reports
+          echo "Old reports copied."
 
       - name: 🗄 Create folder for current report
         run: |
-          export TIMESTAMP=$(date +%Y%m%d-%H%M%S)
-          mkdir -p "reports/$TIMESTAMP"
-          cp -R playwright-report/ "reports/$TIMESTAMP" # Copy files of new report
+          TIMESTAMP=$(date +%Y%m%d-%H%M%S)
+          mkdir -p gh-pages/reports/$TIMESTAMP
+          cp -R playwright-report/* gh-pages/reports/$TIMESTAMP
           echo "Report generated in: report/$TIMESTAMP"
 
       - name: 📝 Generate reports hub page (index.html)
@@ -97,20 +88,14 @@ jobs:
             </style>
           </head>
           <body>
-            <div class="container">
-              <h1 class="display-4">Test Reports</h1>
-              <ul>
+            <h1>Test Reports</h1>
+            <ul>
           EOF
-            for dir in playwright-report/*/ ; do
-              [ -d "$dir" ] || continue
-              dirname=$(basename "$dir")
-              if [ "$dirname" != "index.html" ]; then
-                echo "<li><a href=\"${dirname}/report.html\">${dirname}</a></li>" >> playwright-report/index.html # List links to generate reports in reports hub (index.html)
-              fi
-            done
-          cat << 'EOF' >> pages/index.html
-              </ul>
-            </div>
+          for dir in $(ls gh-pages/reports); do
+            echo "<li><a href=\"reports/$dir/index.html\">$dir</a></li>" >> gh-pages/index.html
+          done
+          cat << 'EOF' >> gh-pages/index.html
+            </ul>
           </body>
           </html>
           EOF
@@ -119,5 +104,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./playwright-report
-          enable_jekyll: false
+          publish_dir: gh-pages
