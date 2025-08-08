@@ -72,7 +72,7 @@ jobs:
       - name: 🗄 Create folder for current report
         run: |
           export TIMESTAMP=$(date +%Y%m%d-%H%M%S)
-          mkdir -p "report/$TIMESTAMP"
+          mkdir -p "reports/$TIMESTAMP"
           cp -R playwright-report/ "reports/$TIMESTAMP" # Copy files of new report
           echo "Report generated in: report/$TIMESTAMP"
 
