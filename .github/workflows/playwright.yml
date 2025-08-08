@@ -70,7 +70,7 @@ jobs:
       - name: 📝 Generate reports hub page (index.html)
       # Create page to list all the generated reports
         run: |
-          cat << 'EOF' > playwright-report/index.html
+          cat << 'EOF' > gh-pages/index.html
           <!DOCTYPE html>
           <html lang="es">
           <head>
