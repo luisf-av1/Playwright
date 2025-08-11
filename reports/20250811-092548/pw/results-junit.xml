@@ -1,0 +1,292 @@
+<testsuites id="" name="" tests="48" failures="2" skipped="4" errors="0" time="31.006268">
+<testsuite name="Dashboard/example.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="chromium" tests="2" failures="0" skipped="0" time="1.307" errors="0">
+<testcase name="has title" classname="Dashboard/example.spec.ts" time="0.559">
+</testcase>
+<testcase name="get started link" classname="Dashboard/example.spec.ts" time="0.748">
+</testcase>
+</testsuite>
+<testsuite name="Dashboard/tagExample.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="chromium" tests="5" failures="0" skipped="0" time="2" errors="0">
+<testcase name="PW Test 1 @smoke" classname="Dashboard/tagExample.spec.ts" time="0.397">
+</testcase>
+<testcase name="PW Test 2 @regression" classname="Dashboard/tagExample.spec.ts" time="0.385">
+</testcase>
+<testcase name="PW Test 3 @smoke" classname="Dashboard/tagExample.spec.ts" time="0.407">
+</testcase>
+<testcase name="PW Test 4 @regression" classname="Dashboard/tagExample.spec.ts" time="0.403">
+</testcase>
+<testcase name="PW Test 5 @smoke" classname="Dashboard/tagExample.spec.ts" time="0.408">
+</testcase>
+</testsuite>
+<testsuite name="LogIn/hooksParallelExample.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="chromium" tests="3" failures="0" skipped="0" time="1.172" errors="0">
+<testcase name="TS | Example › TC1" classname="LogIn/hooksParallelExample.spec.ts" time="0.424">
+</testcase>
+<testcase name="TS | Example › TC2" classname="LogIn/hooksParallelExample.spec.ts" time="0.39">
+</testcase>
+<testcase name="TS | Example › TC3" classname="LogIn/hooksParallelExample.spec.ts" time="0.358">
+</testcase>
+</testsuite>
+<testsuite name="settings/hooksSerialExample.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="chromium" tests="3" failures="0" skipped="0" time="1.141" errors="0">
+<testcase name="TS | Serial Example › TC1" classname="settings/hooksSerialExample.spec.ts" time="0.393">
+<system-out>
+<![CDATA[
+TC1 starting...
+Test finished.
+]]>
+</system-out>
+</testcase>
+<testcase name="TS | Serial Example › TC2" classname="settings/hooksSerialExample.spec.ts" time="0.396">
+<system-out>
+<![CDATA[
+TC2 starting...
+Test finished.
+]]>
+</system-out>
+</testcase>
+<testcase name="TS | Serial Example › TC3" classname="settings/hooksSerialExample.spec.ts" time="0.352">
+<system-out>
+<![CDATA[
+TC3 starting...
+Test finished.
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="settings/testSuiteExample.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="chromium" tests="4" failures="0" skipped="0" time="1.101" errors="0">
+<testcase name="TS | Example › PW Test 1" classname="settings/testSuiteExample.spec.ts" time="0.269">
+</testcase>
+<testcase name="TS | Example › PW Test 2" classname="settings/testSuiteExample.spec.ts" time="0.276">
+</testcase>
+<testcase name="TS | Example › PW Test 3" classname="settings/testSuiteExample.spec.ts" time="0.279">
+</testcase>
+<testcase name="TS | Example › PW Test 4" classname="settings/testSuiteExample.spec.ts" time="0.277">
+</testcase>
+</testsuite>
+<testsuite name="Usage/myExample.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="chromium" tests="7" failures="1" skipped="2" time="2.249" errors="0">
+<testcase name="First PW Test" classname="Usage/myExample.spec.ts" time="0.416">
+<properties>
+<property name="slow" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="Fail PW Test" classname="Usage/myExample.spec.ts" time="0.383">
+<properties>
+<property name="slow" value="">
+</property>
+<property name="fail" value="">
+</property>
+</properties>
+<failure message="myExample.spec.ts:7:6 Fail PW Test" type="FAILURE">
+<![CDATA[  [chromium] › Usage/myExample.spec.ts:7:6 › Fail PW Test ──────────────────────────────────────────
+
+    Expected to fail, but passed.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/Usage-myExample-Fail-PW-Test-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/Usage-myExample-Fail-PW-Test-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/Usage-myExample-Fail-PW-Test-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../../test-results/Usage-myExample-Fail-PW-Test-chromium/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Fix me PW Test" classname="Usage/myExample.spec.ts" time="0">
+<properties>
+<property name="slow" value="async ({
+  page
+}) =&gt; {
+  await page.goto(&quot;https://playwright.dev&quot;);
+}">
+</property>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Skip PW Test" classname="Usage/myExample.spec.ts" time="0">
+<properties>
+<property name="slow" value="async ({
+  page
+}) =&gt; {
+  await page.goto(&quot;https://playwright.dev&quot;);
+}">
+</property>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Conditional skip PW Test" classname="Usage/myExample.spec.ts" time="0.446">
+<properties>
+<property name="slow" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="Locator example" classname="Usage/myExample.spec.ts" time="0.419">
+<properties>
+<property name="slow" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="Simple click test" classname="Usage/myExample.spec.ts" time="0.585">
+<properties>
+<property name="slow" value="">
+</property>
+</properties>
+</testcase>
+</testsuite>
+<testsuite name="Dashboard/example.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="Mobile Safari" tests="2" failures="0" skipped="0" time="4.267" errors="0">
+<testcase name="has title" classname="Dashboard/example.spec.ts" time="3.229">
+</testcase>
+<testcase name="get started link" classname="Dashboard/example.spec.ts" time="1.038">
+</testcase>
+</testsuite>
+<testsuite name="Dashboard/tagExample.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="Mobile Safari" tests="5" failures="0" skipped="0" time="3.536" errors="0">
+<testcase name="PW Test 1 @smoke" classname="Dashboard/tagExample.spec.ts" time="0.757">
+</testcase>
+<testcase name="PW Test 2 @regression" classname="Dashboard/tagExample.spec.ts" time="0.654">
+</testcase>
+<testcase name="PW Test 3 @smoke" classname="Dashboard/tagExample.spec.ts" time="0.754">
+</testcase>
+<testcase name="PW Test 4 @regression" classname="Dashboard/tagExample.spec.ts" time="0.658">
+</testcase>
+<testcase name="PW Test 5 @smoke" classname="Dashboard/tagExample.spec.ts" time="0.713">
+</testcase>
+</testsuite>
+<testsuite name="LogIn/hooksParallelExample.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="Mobile Safari" tests="3" failures="0" skipped="0" time="2.431" errors="0">
+<testcase name="TS | Example › TC1" classname="LogIn/hooksParallelExample.spec.ts" time="0.815">
+</testcase>
+<testcase name="TS | Example › TC2" classname="LogIn/hooksParallelExample.spec.ts" time="0.86">
+</testcase>
+<testcase name="TS | Example › TC3" classname="LogIn/hooksParallelExample.spec.ts" time="0.756">
+</testcase>
+</testsuite>
+<testsuite name="settings/hooksSerialExample.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="Mobile Safari" tests="3" failures="0" skipped="0" time="2.412" errors="0">
+<testcase name="TS | Serial Example › TC1" classname="settings/hooksSerialExample.spec.ts" time="0.842">
+<system-out>
+<![CDATA[
+TC1 starting...
+Test finished.
+]]>
+</system-out>
+</testcase>
+<testcase name="TS | Serial Example › TC2" classname="settings/hooksSerialExample.spec.ts" time="0.782">
+<system-out>
+<![CDATA[
+TC2 starting...
+Test finished.
+]]>
+</system-out>
+</testcase>
+<testcase name="TS | Serial Example › TC3" classname="settings/hooksSerialExample.spec.ts" time="0.788">
+<system-out>
+<![CDATA[
+TC3 starting...
+Test finished.
+]]>
+</system-out>
+</testcase>
+</testsuite>
+<testsuite name="settings/testSuiteExample.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="Mobile Safari" tests="4" failures="0" skipped="0" time="2.505" errors="0">
+<testcase name="TS | Example › PW Test 1" classname="settings/testSuiteExample.spec.ts" time="0.603">
+</testcase>
+<testcase name="TS | Example › PW Test 2" classname="settings/testSuiteExample.spec.ts" time="0.681">
+</testcase>
+<testcase name="TS | Example › PW Test 3" classname="settings/testSuiteExample.spec.ts" time="0.588">
+</testcase>
+<testcase name="TS | Example › PW Test 4" classname="settings/testSuiteExample.spec.ts" time="0.633">
+</testcase>
+</testsuite>
+<testsuite name="Usage/myExample.spec.ts" timestamp="2025-08-11T09:25:16.274Z" hostname="Mobile Safari" tests="7" failures="1" skipped="2" time="4.059" errors="0">
+<testcase name="First PW Test" classname="Usage/myExample.spec.ts" time="0.728">
+<properties>
+<property name="slow" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="Fail PW Test" classname="Usage/myExample.spec.ts" time="0.743">
+<properties>
+<property name="slow" value="">
+</property>
+<property name="fail" value="">
+</property>
+</properties>
+<failure message="myExample.spec.ts:7:6 Fail PW Test" type="FAILURE">
+<![CDATA[  [Mobile Safari] › Usage/myExample.spec.ts:7:6 › Fail PW Test ─────────────────────────────────────
+
+    Expected to fail, but passed.
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    test-results/Usage-myExample-Fail-PW-Test-Mobile-Safari/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    test-results/Usage-myExample-Fail-PW-Test-Mobile-Safari/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../../test-results/Usage-myExample-Fail-PW-Test-Mobile-Safari/test-failed-1.png]]
+
+[[ATTACHMENT|../../test-results/Usage-myExample-Fail-PW-Test-Mobile-Safari/video.webm]]
+]]>
+</system-out>
+</testcase>
+<testcase name="Fix me PW Test" classname="Usage/myExample.spec.ts" time="0">
+<properties>
+<property name="slow" value="async ({
+  page
+}) =&gt; {
+  await page.goto(&quot;https://playwright.dev&quot;);
+}">
+</property>
+<property name="fixme" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Skip PW Test" classname="Usage/myExample.spec.ts" time="0">
+<properties>
+<property name="slow" value="async ({
+  page
+}) =&gt; {
+  await page.goto(&quot;https://playwright.dev&quot;);
+}">
+</property>
+<property name="skip" value="">
+</property>
+</properties>
+<skipped>
+</skipped>
+</testcase>
+<testcase name="Conditional skip PW Test" classname="Usage/myExample.spec.ts" time="0.743">
+<properties>
+<property name="slow" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="Locator example" classname="Usage/myExample.spec.ts" time="0.759">
+<properties>
+<property name="slow" value="">
+</property>
+</properties>
+</testcase>
+<testcase name="Simple click test" classname="Usage/myExample.spec.ts" time="1.086">
+<properties>
+<property name="slow" value="">
+</property>
+</properties>
+</testcase>
+</testsuite>
+</testsuites>
