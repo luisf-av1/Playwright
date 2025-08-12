@@ -1,0 +1,1732 @@
+{
+  "config": {
+    "configFile": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\playwright.config.ts",
+    "rootDir": "C:/Users/larroyave/Documents/pw/StudioQ/tests",
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 4
+    },
+    "preserveOutput": "always",
+    "reporter": [
+      [
+        "html",
+        {
+          "open": "never"
+        }
+      ],
+      [
+        "list",
+        null
+      ],
+      [
+        "dot",
+        null
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "quiet": false,
+    "projects": [
+      {
+        "outputDir": "C:/Users/larroyave/Documents/pw/StudioQ/test-results",
+        "repeatEach": 1,
+        "retries": 1,
+        "metadata": {
+          "actualWorkers": 4
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "C:/Users/larroyave/Documents/pw/StudioQ/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "shard": null,
+    "updateSnapshots": "missing",
+    "updateSourceMethod": "patch",
+    "version": "1.53.0",
+    "workers": 4,
+    "webServer": null
+  },
+  "suites": [
+    {
+      "title": "e2e\\ai-market-place\\main.spec.ts",
+      "file": "e2e/ai-market-place/main.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "AI Marketplace",
+          "file": "e2e/ai-market-place/main.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display search and filter controls",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 29622,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:42:34.782Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-market-place-main-A-7bb2c--search-and-filter-controls-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "98ac23d108d515bddc0d-10ef36e463f641777533",
+              "file": "e2e/ai-market-place/main.spec.ts",
+              "line": 10,
+              "column": 7
+            },
+            {
+              "title": "should list automations with headings and install counts",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15143,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:43:06.263Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-market-place-main-A-08e7f-headings-and-install-counts-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "98ac23d108d515bddc0d-269729db2e56b2f93272",
+              "file": "e2e/ai-market-place/main.spec.ts",
+              "line": 18,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e\\ai-playground\\main.spec.ts",
+      "file": "e2e/ai-playground/main.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "AI Playground",
+          "file": "e2e/ai-playground/main.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display AI Playground main tabs",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 30041,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:42:34.647Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-playground-main-AI--9194d-lay-AI-Playground-main-tabs-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1056d2d49a444e1955b9-e46fea625eaba933fb4a",
+              "file": "e2e/ai-playground/main.spec.ts",
+              "line": 13,
+              "column": 7
+            },
+            {
+              "title": "should show Voice Call Simulator form in AI Voice tab",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 14590,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:43:06.653Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-playground-main-AI--2607c-ulator-form-in-AI-Voice-tab-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "1056d2d49a444e1955b9-66cd9f7a6de4b15b2e77",
+              "file": "e2e/ai-playground/main.spec.ts",
+              "line": 22,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e\\ai-solutions-architect\\main.spec.ts",
+      "file": "e2e/ai-solutions-architect/main.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "AI Solutions Architect",
+          "file": "e2e/ai-solutions-architect/main.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display main steps",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 29991,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:42:34.698Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-solutions-architect-2da35-t-should-display-main-steps-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "60d66ef21f3b27d700cb-1903b5db749c288d613b",
+              "file": "e2e/ai-solutions-architect/main.spec.ts",
+              "line": 11,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e\\ai-workflow\\filters\\automation_name.spec.ts",
+      "file": "e2e/ai-workflow/filters/automation_name.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC | Verify filter by a single category",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 42330,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:42:34.788Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-au-f4682-filter-by-a-single-category-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4ef6a97a44ef21baf83a-d4104c58a351c6c07d8c",
+          "file": "e2e/ai-workflow/filters/automation_name.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "TC | Verify filter by All Categories",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 23916,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:22.839Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-au-b94d7-fy-filter-by-All-Categories-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "4ef6a97a44ef21baf83a-f649b30121740ef294fd",
+          "file": "e2e/ai-workflow/filters/automation_name.spec.ts",
+          "line": 25,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "e2e\\ai-workflow\\filters\\clear-filters.spec.ts",
+      "file": "e2e/ai-workflow/filters/clear-filters.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "AI Workflow: Clear filters removes all applied filters",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": -1,
+                  "parallelIndex": -1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:06.651Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "e8ed587d5a46cb5c0017-7cefa895c1282fcecca9",
+          "file": "e2e/ai-workflow/filters/clear-filters.spec.ts",
+          "line": 13,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "e2e\\ai-workflow\\filters\\date.spec.ts",
+      "file": "e2e/ai-workflow/filters/date.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC | Verify filter by valid date range",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 16444,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:06.742Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-da-2c8aa--filter-by-valid-date-range-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "60b0c73d796c3d702344-05c33f203593dcb235af",
+          "file": "e2e/ai-workflow/filters/date.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "TC | Verify filter by predefined date option",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:32.619Z",
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-da-88d02-r-by-predefined-date-option-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "60b0c73d796c3d702344-a9aba3b8d58e2dbf7498",
+          "file": "e2e/ai-workflow/filters/date.spec.ts",
+          "line": 16,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "e2e\\ai-workflow\\filters\\status-filter.spec.ts",
+      "file": "e2e/ai-workflow/filters/status-filter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC | Verify filter by \"Select All\" statuses",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "passed",
+                  "duration": 25811,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:22.168Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-st-963d8-lter-by-Select-All-statuses-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "ec27a24489a14bb8d7f5-440151015035902856c8",
+          "file": "e2e/ai-workflow/filters/status-filter.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "TC | Verify filter by a single random status",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 1,
+                  "parallelIndex": 1,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:49.645Z",
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-st-f8d9f-r-by-a-single-random-status-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "ec27a24489a14bb8d7f5-fc626713b0ac525066af",
+          "file": "e2e/ai-workflow/filters/status-filter.spec.ts",
+          "line": 38,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "e2e\\ai-workflow\\filters\\type-filter.spec.ts",
+      "file": "e2e/ai-workflow/filters/type-filter.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC | Verify filter by \"Select All\" types",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 25155,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:22.499Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-ty-df7b8--filter-by-Select-All-types-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6e3c6b3fe04202d78a5a-66211eaf418686a4f12a",
+          "file": "e2e/ai-workflow/filters/type-filter.spec.ts",
+          "line": 5,
+          "column": 5
+        },
+        {
+          "title": "TC | Verify filter by a single random type",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 19359,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:49.270Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-ty-44582-ter-by-a-single-random-type-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "6e3c6b3fe04202d78a5a-7a21c236c8a6d1d74525",
+          "file": "e2e/ai-workflow/filters/type-filter.spec.ts",
+          "line": 40,
+          "column": 5
+        },
+        {
+          "title": "TC | Verify filter by n random types",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "failed",
+                  "duration": 19624,
+                  "error": {
+                    "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"Web\"\u001b[39m\nReceived array: \u001b[31m[\"Email\", \"Workflow\", \"Website\", \"Document\"]\u001b[39m",
+                    "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"Web\"\u001b[39m\nReceived array: \u001b[31m[\"Email\", \"Workflow\", \"Website\", \"Document\"]\u001b[39m\n    at C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\ai-workflow\\filters\\type-filter.spec.ts:89:30",
+                    "location": {
+                      "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\ai-workflow\\filters\\type-filter.spec.ts",
+                      "column": 30,
+                      "line": 89
+                    },
+                    "snippet": "\u001b[0m \u001b[90m 87 |\u001b[39m     \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m count\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 88 |\u001b[39m       \u001b[36mconst\u001b[39m cellText \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m statusCells\u001b[33m.\u001b[39mnth(i)\u001b[33m.\u001b[39mtextContent())\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mtrim()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 89 |\u001b[39m       expect(selectedLabels)\u001b[33m.\u001b[39mtoContain(cellText)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 90 |\u001b[39m     }\n \u001b[90m 91 |\u001b[39m   }\n \u001b[90m 92 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m"
+                  },
+                  "errors": [
+                    {
+                      "location": {
+                        "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\ai-workflow\\filters\\type-filter.spec.ts",
+                        "column": 30,
+                        "line": 89
+                      },
+                      "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoContain\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // indexOf\u001b[22m\n\nExpected value: \u001b[32m\"Web\"\u001b[39m\nReceived array: \u001b[31m[\"Email\", \"Workflow\", \"Website\", \"Document\"]\u001b[39m\n\n\u001b[0m \u001b[90m 87 |\u001b[39m     \u001b[36mfor\u001b[39m (\u001b[36mlet\u001b[39m i \u001b[33m=\u001b[39m \u001b[35m0\u001b[39m\u001b[33m;\u001b[39m i \u001b[33m<\u001b[39m count\u001b[33m;\u001b[39m i\u001b[33m++\u001b[39m) {\n \u001b[90m 88 |\u001b[39m       \u001b[36mconst\u001b[39m cellText \u001b[33m=\u001b[39m (\u001b[36mawait\u001b[39m statusCells\u001b[33m.\u001b[39mnth(i)\u001b[33m.\u001b[39mtextContent())\u001b[33m?\u001b[39m\u001b[33m.\u001b[39mtrim()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 89 |\u001b[39m       expect(selectedLabels)\u001b[33m.\u001b[39mtoContain(cellText)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                              \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 90 |\u001b[39m     }\n \u001b[90m 91 |\u001b[39m   }\n \u001b[90m 92 |\u001b[39m })\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\ai-workflow\\filters\\type-filter.spec.ts:89:30\u001b[22m"
+                    }
+                  ],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:44:16.262Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "error-context",
+                      "contentType": "text/markdown",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-ty-558c1-fy-filter-by-n-random-types-chromium\\error-context.md"
+                    },
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-ty-558c1-fy-filter-by-n-random-types-chromium\\trace.zip"
+                    }
+                  ],
+                  "errorLocation": {
+                    "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\ai-workflow\\filters\\type-filter.spec.ts",
+                    "column": 30,
+                    "line": 89
+                  }
+                },
+                {
+                  "workerIndex": 6,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 24153,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 1,
+                  "startTime": "2025-08-12T15:44:57.337Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-ai-workflow-filters-ty-558c1-fy-filter-by-n-random-types-chromium-retry1\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "flaky"
+            }
+          ],
+          "id": "6e3c6b3fe04202d78a5a-c852c13bd800ccab9963",
+          "file": "e2e/ai-workflow/filters/type-filter.spec.ts",
+          "line": 67,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "e2e\\dashboard\\dashboard.spec.ts",
+      "file": "e2e/dashboard/dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC | Dashboard sections",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [
+                {
+                  "type": "skip"
+                }
+              ],
+              "expectedStatus": "skipped",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "skipped",
+                  "duration": 0,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:33.587Z",
+                  "annotations": [
+                    {
+                      "type": "skip"
+                    }
+                  ],
+                  "attachments": []
+                }
+              ],
+              "status": "skipped"
+            }
+          ],
+          "id": "100b0891d08a31cb23fb-0f99d59ed0b89dcf3955",
+          "file": "e2e/dashboard/dashboard.spec.ts",
+          "line": 5,
+          "column": 6
+        },
+        {
+          "title": "TC | View workflow details",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 2,
+                  "parallelIndex": 2,
+                  "status": "passed",
+                  "duration": 13352,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:33.588Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-dashboard-dashboard-TC-View-workflow-details-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "100b0891d08a31cb23fb-a934aadf77bfeb0c3ac5",
+          "file": "e2e/dashboard/dashboard.spec.ts",
+          "line": 52,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "e2e\\help-and-support\\main.spec.ts",
+      "file": "e2e/help-and-support/main.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Help & Support",
+          "file": "e2e/help-and-support/main.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display help search and FAQ",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 18603,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:43:48.184Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-help-and-support-main--9c575-display-help-search-and-FAQ-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "975a62c04d77109ea08c-89b12432f667f979dafd",
+              "file": "e2e/help-and-support/main.spec.ts",
+              "line": 13,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e\\login\\login.spec.ts",
+      "file": "e2e/login/login.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TC | Login with valid credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 17259,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:43:48.416Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-login-login-TC-Login-with-valid-credentials-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b962a6768020bcc3854-b19b8625189453e6f56f",
+          "file": "e2e/login/login.spec.ts",
+          "line": 4,
+          "column": 5
+        },
+        {
+          "title": "TC | Login with invalid credentials",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 8467,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:44:06.726Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-login-login-TC-Login-with-invalid-credentials-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b962a6768020bcc3854-c1f323c491aeed33619d",
+          "file": "e2e/login/login.spec.ts",
+          "line": 10,
+          "column": 5
+        },
+        {
+          "title": "TC | Login with invalid email format",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 9278,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:44:15.959Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-login-login-TC-Login-with-invalid-email-format-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b962a6768020bcc3854-fae59e4acf4a0eceac93",
+          "file": "e2e/login/login.spec.ts",
+          "line": 22,
+          "column": 5
+        },
+        {
+          "title": "TC | Logout - after login",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "chromium",
+              "projectName": "chromium",
+              "results": [
+                {
+                  "workerIndex": 3,
+                  "parallelIndex": 3,
+                  "status": "passed",
+                  "duration": 10611,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2025-08-12T15:44:27.243Z",
+                  "annotations": [],
+                  "attachments": [
+                    {
+                      "name": "trace",
+                      "contentType": "application/zip",
+                      "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-login-login-TC-Logout---after-login-chromium\\trace.zip"
+                    }
+                  ]
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1b962a6768020bcc3854-7b9251a51769bdc0ef10",
+          "file": "e2e/login/login.spec.ts",
+          "line": 39,
+          "column": 5
+        }
+      ]
+    },
+    {
+      "title": "e2e\\profile\\main.spec.ts",
+      "file": "e2e/profile/main.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Profile",
+          "file": "e2e/profile/main.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display user profile information",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 17071,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:43:49.705Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-profile-main-Profile-s-61697-ay-user-profile-information-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "cc53e9d6ea4faf6ceb48-94b90cbf36f0e034cde5",
+              "file": "e2e/profile/main.spec.ts",
+              "line": 11,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e\\project-control\\main.spec.ts",
+      "file": "e2e/project-control/main.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Project Control Section",
+          "file": "e2e/project-control/main.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display Project Control heading and tabs",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 19413,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'Project Control', level: 1 })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Project Control', level: 1 })\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'Project Control', level: 1 })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Project Control', level: 1 })\u001b[22m\n\n    at C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts:13:84",
+                        "location": {
+                          "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts",
+                          "column": 84,
+                          "line": 13
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m   test(\u001b[32m'should display Project Control heading and tabs'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Project Control'\u001b[39m\u001b[33m,\u001b[39m level\u001b[33m:\u001b[39m \u001b[35m1\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'tab'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Projects'\u001b[39m\u001b[33m,\u001b[39m selected\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'tab'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Summary by Project'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'tab'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Summary by User'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts",
+                            "column": 84,
+                            "line": 13
+                          },
+                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('heading', { name: 'Project Control', level: 1 })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('heading', { name: 'Project Control', level: 1 })\u001b[22m\n\n\n\u001b[0m \u001b[90m 11 |\u001b[39m\n \u001b[90m 12 |\u001b[39m   test(\u001b[32m'should display Project Control heading and tabs'\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 13 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Project Control'\u001b[39m\u001b[33m,\u001b[39m level\u001b[33m:\u001b[39m \u001b[35m1\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                                                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 14 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'tab'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Projects'\u001b[39m\u001b[33m,\u001b[39m selected\u001b[33m:\u001b[39m \u001b[36mtrue\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 15 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'tab'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Summary by Project'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'tab'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Summary by User'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts:13:84\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:44:07.607Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-project-control-main-P-e0104-ct-Control-heading-and-tabs-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-project-control-main-P-e0104-ct-Control-heading-and-tabs-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts",
+                        "column": 84,
+                        "line": 13
+                      }
+                    },
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "passed",
+                      "duration": 16899,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-08-12T15:44:39.767Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-project-control-main-P-e0104-ct-Control-heading-and-tabs-chromium-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "9dc628364ac735444c39-0097375fe47c8def35be",
+              "file": "e2e/project-control/main.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "should display week summary and time entries table",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 5,
+                      "parallelIndex": 1,
+                      "status": "failed",
+                      "duration": 20750,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('cell', { name: 'Mon 4' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('cell', { name: 'Mon 4' })\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('cell', { name: 'Mon 4' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('cell', { name: 'Mon 4' })\u001b[22m\n\n    at C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts:26:61",
+                        "location": {
+                          "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts",
+                          "column": 61,
+                          "line": 26
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'table'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Projects'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Mon 4'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Tue 5'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Wed 6'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Thu 7'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts",
+                            "column": 61,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('cell', { name: 'Mon 4' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('cell', { name: 'Mon 4' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'table'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Projects'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Mon 4'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Tue 5'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Wed 6'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Thu 7'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts:26:61\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:44:58.091Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-project-control-main-P-a374b-mary-and-time-entries-table-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-project-control-main-P-a374b-mary-and-time-entries-table-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts",
+                        "column": 61,
+                        "line": 26
+                      }
+                    },
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 13175,
+                      "error": {
+                        "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('cell', { name: 'Mon 4' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('cell', { name: 'Mon 4' })\u001b[22m\n",
+                        "stack": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('cell', { name: 'Mon 4' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('cell', { name: 'Mon 4' })\u001b[22m\n\n    at C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts:26:61",
+                        "location": {
+                          "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts",
+                          "column": 61,
+                          "line": 26
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'table'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Projects'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Mon 4'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Tue 5'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Wed 6'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Thu 7'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts",
+                            "column": 61,
+                            "line": 26
+                          },
+                          "message": "Error: \u001b[31mTimed out 5000ms waiting for \u001b[39m\u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m()\u001b[22m\n\nLocator: getByRole('cell', { name: 'Mon 4' })\nExpected: visible\nReceived: <element(s) not found>\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" with timeout 5000ms\u001b[22m\n\u001b[2m  - waiting for getByRole('cell', { name: 'Mon 4' })\u001b[22m\n\n\n\u001b[0m \u001b[90m 24 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'table'\u001b[39m))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 25 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Projects'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 26 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Mon 4'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                             \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 27 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Tue 5'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 28 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Wed 6'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m 29 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'cell'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Thu 7'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts:26:61\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-08-12T15:45:20.716Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-project-control-main-P-a374b-mary-and-time-entries-table-chromium-retry1\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-project-control-main-P-a374b-mary-and-time-entries-table-chromium-retry1\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\project-control\\main.spec.ts",
+                        "column": 61,
+                        "line": 26
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "9dc628364ac735444c39-3c594b7f59a39494e6ef",
+              "file": "e2e/project-control/main.spec.ts",
+              "line": 19,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e\\settings\\main.spec.ts",
+      "file": "e2e/settings/main.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Settings",
+          "file": "e2e/settings/main.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display settings navigation and notification options",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 2,
+                      "status": "failed",
+                      "duration": 8042,
+                      "error": {
+                        "message": "Error: locator.click: Error: strict mode violation: getByRole('link', { name: 'Settings' }) resolved to 2 elements:\n    1) <a class=\"w-full\" href=\"/settings\">…</a> aka getByRole('navigation').getByRole('link', { name: 'Settings' })\n    2) <a class=\"w-full\" href=\"/settings\">…</a> aka getByRole('link', { name: 'Settings' }).nth(1)\n\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Settings' })\u001b[22m\n",
+                        "stack": "Error: locator.click: Error: strict mode violation: getByRole('link', { name: 'Settings' }) resolved to 2 elements:\n    1) <a class=\"w-full\" href=\"/settings\">…</a> aka getByRole('navigation').getByRole('link', { name: 'Settings' })\n    2) <a class=\"w-full\" href=\"/settings\">…</a> aka getByRole('link', { name: 'Settings' }).nth(1)\n\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Settings' })\u001b[22m\n\n    at C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\settings\\main.spec.ts:7:56",
+                        "location": {
+                          "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\settings\\main.spec.ts",
+                          "column": 56,
+                          "line": 7
+                        },
+                        "snippet": "\u001b[0m \u001b[90m  5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m  6 |\u001b[39m     \u001b[36mawait\u001b[39m login(page\u001b[33m,\u001b[39m validEmail\u001b[33m,\u001b[39m validPassword)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Settings'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Settings'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\settings\\main.spec.ts",
+                            "column": 56,
+                            "line": 7
+                          },
+                          "message": "Error: locator.click: Error: strict mode violation: getByRole('link', { name: 'Settings' }) resolved to 2 elements:\n    1) <a class=\"w-full\" href=\"/settings\">…</a> aka getByRole('navigation').getByRole('link', { name: 'Settings' })\n    2) <a class=\"w-full\" href=\"/settings\">…</a> aka getByRole('link', { name: 'Settings' }).nth(1)\n\nCall log:\n\u001b[2m  - waiting for getByRole('link', { name: 'Settings' })\u001b[22m\n\n\n\u001b[0m \u001b[90m  5 |\u001b[39m   test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n \u001b[90m  6 |\u001b[39m     \u001b[36mawait\u001b[39m login(page\u001b[33m,\u001b[39m validEmail\u001b[33m,\u001b[39m validPassword)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m  7 |\u001b[39m     \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'link'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Settings'\u001b[39m })\u001b[33m.\u001b[39mclick()\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                                                        \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m  8 |\u001b[39m     \u001b[36mawait\u001b[39m expect(page\u001b[33m.\u001b[39mgetByRole(\u001b[32m'heading'\u001b[39m\u001b[33m,\u001b[39m { name\u001b[33m:\u001b[39m \u001b[32m'Settings'\u001b[39m }))\u001b[33m.\u001b[39mtoBeVisible()\u001b[33m;\u001b[39m\n \u001b[90m  9 |\u001b[39m   })\u001b[33m;\u001b[39m\n \u001b[90m 10 |\u001b[39m\u001b[0m\n\u001b[2m    at C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\settings\\main.spec.ts:7:56\u001b[22m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:44:07.747Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-settings-main-Settings-43185-on-and-notification-options-chromium\\error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-settings-main-Settings-43185-on-and-notification-options-chromium\\trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\tests\\e2e\\settings\\main.spec.ts",
+                        "column": 56,
+                        "line": 7
+                      }
+                    },
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 11047,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2025-08-12T15:44:27.344Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-settings-main-Settings-43185-on-and-notification-options-chromium-retry1\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "flaky"
+                }
+              ],
+              "id": "c637eb8ef4b800de8a71-23060fa3e8676200bcd2",
+              "file": "e2e/settings/main.spec.ts",
+              "line": 11,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e\\time-tracking\\main.spec.ts",
+      "file": "e2e/time-tracking/main.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Time Tracking Section",
+          "file": "e2e/time-tracking/main.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should display Time tracker heading and tabs",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 17317,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:44:39.318Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-time-tracking-main-Tim-c900d-me-tracker-heading-and-tabs-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d73e2e5f32dd70e45435-4ccc55c0ca4bc9161b10",
+              "file": "e2e/time-tracking/main.spec.ts",
+              "line": 17,
+              "column": 7
+            },
+            {
+              "title": "should display filter options and metrics",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 20653,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:44:57.565Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-time-tracking-main-Tim-d341c--filter-options-and-metrics-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d73e2e5f32dd70e45435-6c56c6c22eaa1ac15601",
+              "file": "e2e/time-tracking/main.spec.ts",
+              "line": 23,
+              "column": 7
+            },
+            {
+              "title": "should display productivity table",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 3,
+                      "status": "passed",
+                      "duration": 9955,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:45:19.479Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-time-tracking-main-Tim-1837e--display-productivity-table-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "d73e2e5f32dd70e45435-5bada0bbedcba8453741",
+              "file": "e2e/time-tracking/main.spec.ts",
+              "line": 35,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "e2e\\usage\\main.spec.ts",
+      "file": "e2e/usage/main.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Usage Analytics",
+          "file": "e2e/usage/main.spec.ts",
+          "line": 7,
+          "column": 6,
+          "specs": [
+            {
+              "title": "should show usage tabs and analytics",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 2,
+                      "status": "passed",
+                      "duration": 15438,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T15:44:40.036Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "C:\\Users\\larroyave\\Documents\\pw\\StudioQ\\test-results\\e2e-usage-main-Usage-Analy-55a81-ow-usage-tabs-and-analytics-chromium\\trace.zip"
+                        }
+                      ]
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0f29942effeec655f505-094b1855df5eb07c52da",
+              "file": "e2e/usage/main.spec.ts",
+              "line": 14,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2025-08-12T15:42:31.350Z",
+    "duration": 183747.798,
+    "expected": 22,
+    "skipped": 4,
+    "unexpected": 1,
+    "flaky": 3
+  }
+}
