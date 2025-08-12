@@ -3,7 +3,7 @@ import { test, expect } from '@playwright/test';
 // npx playwright test tests/tagExample.spec.ts --grep @smoke 
 // npx playwright test tests/tagExample.spec.ts --grep @regression  || npx playwright test tests/tagExample.spec.ts --grep-invert @smoke 
 
-test.describe('TS | Dashboard', () => {
+test.describe('TS | Recent Data', () => {
 
     test("PW Test 1 @smoke", async({page})=>{
         await page.goto("https://playwright.dev");

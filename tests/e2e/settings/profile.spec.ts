@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe.serial("TS | Serial Example", async () => {
+test.describe.serial("TS | Profile", async () => {
 
     test.beforeEach(async ({page}, testInfo)=>{
         console.log(`\n${testInfo.title} starting...`)

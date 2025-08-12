@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe.parallel("TS | Example", async () => {
+test.describe.parallel("TS | SignIn", async () => {
 
     test.beforeEach(async ({page}, testInfo)=>{
         await page.goto("");

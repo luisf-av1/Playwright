@@ -1,6 +1,6 @@
 import { test, expect } from '@playwright/test';
 
-test.describe("TS | Example", async () => {
+test.describe("TS | Notifications", async () => {
 
     test("PW Test 1", async ({ page }) => {
         await page.goto("");
