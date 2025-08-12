@@ -14,7 +14,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
 
-      - name: ⬇️ Checkout code
+      - name: ⬇️ Checkout source code
         uses: actions/checkout@v4
 
       - name: ⚙️ Set up Node.js
@@ -27,29 +27,48 @@ jobs:
 
       - name: 📦 Install Playwright Browsers
         run: npx playwright install --with-deps
-        
+
       - name: 🧪 Run Playwright tests
         run: npx playwright test
         continue-on-error: true
 
-      - name: 📂 Prepare dashboard data folders
-        run: mkdir -p dashboard/data/history
+      # --- Preserve history from gh-pages branch ---
+      - name: 📂 Checkout gh-pages branch to preserve history
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
 
-      - name: 📄 Copy latest JSON report
+      - name: 📂 Copy old history into dashboard
         run: |
+          mkdir -p dashboard/data/history
+          if [ -f gh-pages/data/history.json ]; then
+            cp gh-pages/data/history.json dashboard/data/history.json
+          fi
+          if [ -d gh-pages/data/history ]; then
+            cp gh-pages/data/history/*.json dashboard/data/history/ || true
+          fi
+
+      # --- Save latest report ---
+      - name: 💾 Save latest JSON report
+        run: |
+          mkdir -p dashboard/data/history
           cp playwright-report/test-results.json dashboard/data/test-results.json
           ts=$(date -u +"%Y-%m-%dT%H-%M-%S")
           cp playwright-report/test-results.json dashboard/data/history/${ts}.json
 
-      - name: 🕒 Update history.json
-        run: node scripts/update-history.js dashboard/data/test-results.json dashboard/data/history.json
+      # --- Update history.json summary ---
+      - name: 🛠 Update history summary
+        run: |
+          node scripts/update-history.js dashboard/data/test-results.json dashboard/data/history.json
 
-      - name: 📊 Upload test report as artifact
+      - name: 📊 Upload raw test report as artifact
         uses: actions/upload-artifact@v4
         with:
           name: test-report
           path: playwright-report/
 
+      # --- Deploy to GitHub Pages ---
       - name: 🌐 Deploy dashboard to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
