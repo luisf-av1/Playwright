@@ -86,15 +86,15 @@
   },
   "suites": [
     {
-      "title": "e2e/Dashboard/example.spec.ts",
-      "file": "e2e/Dashboard/example.spec.ts",
+      "title": "e2e/dashboard/insights.spec.ts",
+      "file": "e2e/dashboard/insights.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
           "title": "TS | Insights",
-          "file": "e2e/Dashboard/example.spec.ts",
+          "file": "e2e/dashboard/insights.spec.ts",
           "line": 3,
           "column": 6,
           "specs": [
@@ -113,20 +113,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 611,
+                      "duration": 558,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:30.100Z",
+                      "startTime": "2025-08-12T20:38:47.441Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "2b8d188b8fef07957b47-4c394f6ebbbd76397095",
-              "file": "e2e/Dashboard/example.spec.ts",
+              "id": "6962b941958be13f5d4d-860e863631f16a967221",
+              "file": "e2e/dashboard/insights.spec.ts",
               "line": 5,
               "column": 9
             },
@@ -145,20 +145,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 795,
+                      "duration": 753,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:30.851Z",
+                      "startTime": "2025-08-12T20:38:48.092Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "2b8d188b8fef07957b47-ce7f35aedd946667c264",
-              "file": "e2e/Dashboard/example.spec.ts",
+              "id": "6962b941958be13f5d4d-1a5c1457dfb8e93c26a9",
+              "file": "e2e/dashboard/insights.spec.ts",
               "line": 12,
               "column": 9
             },
@@ -175,22 +175,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 2602,
+                      "duration": 1342,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:41.597Z",
+                      "startTime": "2025-08-12T20:38:53.522Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "2b8d188b8fef07957b47-7c641f8e0eb6ca0c6513",
-              "file": "e2e/Dashboard/example.spec.ts",
+              "id": "6962b941958be13f5d4d-be8a4114b81fa5c43364",
+              "file": "e2e/dashboard/insights.spec.ts",
               "line": 5,
               "column": 9
             },
@@ -207,22 +207,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 1022,
+                      "duration": 995,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:44.880Z",
+                      "startTime": "2025-08-12T20:38:55.514Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "2b8d188b8fef07957b47-43120c44905ef4fa1c94",
-              "file": "e2e/Dashboard/example.spec.ts",
+              "id": "6962b941958be13f5d4d-d2711f87a998d31a0f14",
+              "file": "e2e/dashboard/insights.spec.ts",
               "line": 12,
               "column": 9
             }
@@ -231,15 +231,15 @@
       ]
     },
     {
-      "title": "e2e/Dashboard/tagExample.spec.ts",
-      "file": "e2e/Dashboard/tagExample.spec.ts",
+      "title": "e2e/dashboard/recent_data.spec.ts",
+      "file": "e2e/dashboard/recent_data.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "TS | Dashboard",
-          "file": "e2e/Dashboard/tagExample.spec.ts",
+          "title": "TS | Recent Data",
+          "file": "e2e/dashboard/recent_data.spec.ts",
           "line": 6,
           "column": 6,
           "specs": [
@@ -260,20 +260,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 398,
+                      "duration": 393,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:31.654Z",
+                      "startTime": "2025-08-12T20:38:48.855Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "e8e2887e388e90e84672-13a69c90b6527cd92e21",
-              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "id": "8bb3dbcfefd710cbf953-b7f92cf7c4ea8ab7430e",
+              "file": "e2e/dashboard/recent_data.spec.ts",
               "line": 8,
               "column": 9
             },
@@ -294,20 +294,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 382,
+                      "duration": 396,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:32.059Z",
+                      "startTime": "2025-08-12T20:38:49.253Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "e8e2887e388e90e84672-8f9086bfbe42bdf70517",
-              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "id": "8bb3dbcfefd710cbf953-7d2881f36c3b887f1619",
+              "file": "e2e/dashboard/recent_data.spec.ts",
               "line": 12,
               "column": 9
             },
@@ -328,20 +328,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 388,
+                      "duration": 377,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:32.446Z",
+                      "startTime": "2025-08-12T20:38:49.655Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "e8e2887e388e90e84672-17c26fc95a1aa533047b",
-              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "id": "8bb3dbcfefd710cbf953-1848c06ba649d6985a7e",
+              "file": "e2e/dashboard/recent_data.spec.ts",
               "line": 16,
               "column": 9
             },
@@ -362,20 +362,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 394,
+                      "duration": 381,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:32.839Z",
+                      "startTime": "2025-08-12T20:38:50.036Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "e8e2887e388e90e84672-459a5672829bd0970fd5",
-              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "id": "8bb3dbcfefd710cbf953-92393a54fa99646cb28c",
+              "file": "e2e/dashboard/recent_data.spec.ts",
               "line": 20,
               "column": 9
             },
@@ -396,20 +396,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 390,
+                      "duration": 376,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:33.237Z",
+                      "startTime": "2025-08-12T20:38:50.422Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "e8e2887e388e90e84672-14f67849bc5361445514",
-              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "id": "8bb3dbcfefd710cbf953-0052c0069a5a821af6cc",
+              "file": "e2e/dashboard/recent_data.spec.ts",
               "line": 24,
               "column": 9
             },
@@ -428,22 +428,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 596,
+                      "duration": 640,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:45.912Z",
+                      "startTime": "2025-08-12T20:38:56.519Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "e8e2887e388e90e84672-807283665c9a946c3056",
-              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "id": "8bb3dbcfefd710cbf953-58ea48f51f820ee211ee",
+              "file": "e2e/dashboard/recent_data.spec.ts",
               "line": 8,
               "column": 9
             },
@@ -462,22 +462,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 594,
+                      "duration": 703,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:46.513Z",
+                      "startTime": "2025-08-12T20:38:57.165Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "e8e2887e388e90e84672-e76fa50479f9d4cbc1fa",
-              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "id": "8bb3dbcfefd710cbf953-1967ae9ab1c6c3f6d008",
+              "file": "e2e/dashboard/recent_data.spec.ts",
               "line": 12,
               "column": 9
             },
@@ -496,22 +496,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 700,
+                      "duration": 581,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:47.113Z",
+                      "startTime": "2025-08-12T20:38:57.874Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "e8e2887e388e90e84672-3ac9f2f82d7fec54a253",
-              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "id": "8bb3dbcfefd710cbf953-bc087890e633d53b9cdc",
+              "file": "e2e/dashboard/recent_data.spec.ts",
               "line": 16,
               "column": 9
             },
@@ -530,22 +530,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 668,
+                      "duration": 615,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:47.818Z",
+                      "startTime": "2025-08-12T20:38:58.460Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "e8e2887e388e90e84672-fbd2030f238e170cdcdd",
-              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "id": "8bb3dbcfefd710cbf953-e5395c4d042e765ce84b",
+              "file": "e2e/dashboard/recent_data.spec.ts",
               "line": 20,
               "column": 9
             },
@@ -564,22 +564,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 666,
+                      "duration": 599,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:48.491Z",
+                      "startTime": "2025-08-12T20:38:59.080Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "e8e2887e388e90e84672-1b93ac8bd306833b66d4",
-              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "id": "8bb3dbcfefd710cbf953-b09b80ef898ee4b3215e",
+              "file": "e2e/dashboard/recent_data.spec.ts",
               "line": 24,
               "column": 9
             }
@@ -588,475 +588,15 @@
       ]
     },
     {
-      "title": "e2e/LogIn/hooksParallelExample.spec.ts",
-      "file": "e2e/LogIn/hooksParallelExample.spec.ts",
+      "title": "e2e/settings/notifications.spec.ts",
+      "file": "e2e/settings/notifications.spec.ts",
       "column": 0,
       "line": 0,
       "specs": [],
       "suites": [
         {
-          "title": "TS | Example",
-          "file": "e2e/LogIn/hooksParallelExample.spec.ts",
-          "line": 3,
-          "column": 15,
-          "specs": [
-            {
-              "title": "TC1",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 406,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:33.634Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0cac1030c668a28f95fb-4fea45279562b5411933",
-              "file": "e2e/LogIn/hooksParallelExample.spec.ts",
-              "line": 9,
-              "column": 9
-            },
-            {
-              "title": "TC2",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 391,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:34.045Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0cac1030c668a28f95fb-ae3ecf5b01b064d4833d",
-              "file": "e2e/LogIn/hooksParallelExample.spec.ts",
-              "line": 14,
-              "column": 9
-            },
-            {
-              "title": "TC3",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 363,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:34.442Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0cac1030c668a28f95fb-8ec562da917986ac077b",
-              "file": "e2e/LogIn/hooksParallelExample.spec.ts",
-              "line": 19,
-              "column": 9
-            },
-            {
-              "title": "TC1",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Safari",
-                  "projectName": "Mobile Safari",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 809,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:49.163Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0cac1030c668a28f95fb-4f49bb582fc0471e24dc",
-              "file": "e2e/LogIn/hooksParallelExample.spec.ts",
-              "line": 9,
-              "column": 9
-            },
-            {
-              "title": "TC2",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Safari",
-                  "projectName": "Mobile Safari",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 825,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:49.979Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0cac1030c668a28f95fb-5d9974741b6ef7e2c13c",
-              "file": "e2e/LogIn/hooksParallelExample.spec.ts",
-              "line": 14,
-              "column": 9
-            },
-            {
-              "title": "TC3",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Safari",
-                  "projectName": "Mobile Safari",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 732,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:50.810Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "0cac1030c668a28f95fb-de2fccc66c10fbba7ea9",
-              "file": "e2e/LogIn/hooksParallelExample.spec.ts",
-              "line": 19,
-              "column": 9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "e2e/settings/hooksSerialExample.spec.ts",
-      "file": "e2e/settings/hooksSerialExample.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "TS | Serial Example",
-          "file": "e2e/settings/hooksSerialExample.spec.ts",
-          "line": 3,
-          "column": 15,
-          "specs": [
-            {
-              "title": "TC1",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 395,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "\nTC1 starting...\n"
-                        },
-                        {
-                          "text": "Test finished.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:34.811Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "1545b858ccd42f5bbb19-1d168cba15ed87676cdc",
-              "file": "e2e/settings/hooksSerialExample.spec.ts",
-              "line": 14,
-              "column": 9
-            },
-            {
-              "title": "TC2",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 376,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "\nTC2 starting...\n"
-                        },
-                        {
-                          "text": "Test finished.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:35.211Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "1545b858ccd42f5bbb19-3b724feae751d00b25c0",
-              "file": "e2e/settings/hooksSerialExample.spec.ts",
-              "line": 19,
-              "column": 9
-            },
-            {
-              "title": "TC3",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "chromium",
-                  "projectName": "chromium",
-                  "results": [
-                    {
-                      "workerIndex": 0,
-                      "status": "passed",
-                      "duration": 362,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "\nTC3 starting...\n"
-                        },
-                        {
-                          "text": "Test finished.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:35.592Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "1545b858ccd42f5bbb19-cb562af7d228bdfdd43b",
-              "file": "e2e/settings/hooksSerialExample.spec.ts",
-              "line": 24,
-              "column": 9
-            },
-            {
-              "title": "TC1",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Safari",
-                  "projectName": "Mobile Safari",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 812,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "\nTC1 starting...\n"
-                        },
-                        {
-                          "text": "Test finished.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:51.550Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "1545b858ccd42f5bbb19-77abcfd1f1960b02b63b",
-              "file": "e2e/settings/hooksSerialExample.spec.ts",
-              "line": 14,
-              "column": 9
-            },
-            {
-              "title": "TC2",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Safari",
-                  "projectName": "Mobile Safari",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 787,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "\nTC2 starting...\n"
-                        },
-                        {
-                          "text": "Test finished.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:52.367Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "1545b858ccd42f5bbb19-0d56d92feed9df999e12",
-              "file": "e2e/settings/hooksSerialExample.spec.ts",
-              "line": 19,
-              "column": 9
-            },
-            {
-              "title": "TC3",
-              "ok": true,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Safari",
-                  "projectName": "Mobile Safari",
-                  "results": [
-                    {
-                      "workerIndex": 3,
-                      "status": "passed",
-                      "duration": 695,
-                      "errors": [],
-                      "stdout": [
-                        {
-                          "text": "\nTC3 starting...\n"
-                        },
-                        {
-                          "text": "Test finished.\n"
-                        }
-                      ],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2025-08-12T20:15:53.159Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "1545b858ccd42f5bbb19-9e46298b25b9cea0ec8a",
-              "file": "e2e/settings/hooksSerialExample.spec.ts",
-              "line": 24,
-              "column": 9
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "title": "e2e/settings/testSuiteExample.spec.ts",
-      "file": "e2e/settings/testSuiteExample.spec.ts",
-      "column": 0,
-      "line": 0,
-      "specs": [],
-      "suites": [
-        {
-          "title": "TS | Example",
-          "file": "e2e/settings/testSuiteExample.spec.ts",
+          "title": "TS | Notifications",
+          "file": "e2e/settings/notifications.spec.ts",
           "line": 3,
           "column": 6,
           "specs": [
@@ -1075,20 +615,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 282,
+                      "duration": 279,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:35.959Z",
+                      "startTime": "2025-08-12T20:38:50.804Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "8c278c3c8b4e6d6ee467-ac3beb369cb94c999622",
-              "file": "e2e/settings/testSuiteExample.spec.ts",
+              "id": "f08996c82dfe12fe76d6-1f4a02f73b1bceb67002",
+              "file": "e2e/settings/notifications.spec.ts",
               "line": 5,
               "column": 9
             },
@@ -1107,20 +647,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 281,
+                      "duration": 279,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:36.245Z",
+                      "startTime": "2025-08-12T20:38:51.088Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "8c278c3c8b4e6d6ee467-8932f889884e09464fdb",
-              "file": "e2e/settings/testSuiteExample.spec.ts",
+              "id": "f08996c82dfe12fe76d6-437d70c2b5da636f00c6",
+              "file": "e2e/settings/notifications.spec.ts",
               "line": 9,
               "column": 9
             },
@@ -1139,20 +679,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 278,
+                      "duration": 279,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:36.530Z",
+                      "startTime": "2025-08-12T20:38:51.371Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "8c278c3c8b4e6d6ee467-b9f1d5c221cfa9c8dfb7",
-              "file": "e2e/settings/testSuiteExample.spec.ts",
+              "id": "f08996c82dfe12fe76d6-9711ba6228c2db4d31d7",
+              "file": "e2e/settings/notifications.spec.ts",
               "line": 13,
               "column": 9
             },
@@ -1171,20 +711,20 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 284,
+                      "duration": 277,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:36.811Z",
+                      "startTime": "2025-08-12T20:38:51.655Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "8c278c3c8b4e6d6ee467-4b080d053166673969ea",
-              "file": "e2e/settings/testSuiteExample.spec.ts",
+              "id": "f08996c82dfe12fe76d6-f6176cb59f4ca7aea3a1",
+              "file": "e2e/settings/notifications.spec.ts",
               "line": 17,
               "column": 9
             },
@@ -1201,22 +741,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 613,
+                      "duration": 732,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:53.863Z",
+                      "startTime": "2025-08-12T20:38:59.687Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "8c278c3c8b4e6d6ee467-deb23aa37e149231ef75",
-              "file": "e2e/settings/testSuiteExample.spec.ts",
+              "id": "f08996c82dfe12fe76d6-bb968a3002435af963db",
+              "file": "e2e/settings/notifications.spec.ts",
               "line": 5,
               "column": 9
             },
@@ -1233,22 +773,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 667,
+                      "duration": 597,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:54.481Z",
+                      "startTime": "2025-08-12T20:39:00.424Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "8c278c3c8b4e6d6ee467-cf06b42ecf682d92bd74",
-              "file": "e2e/settings/testSuiteExample.spec.ts",
+              "id": "f08996c82dfe12fe76d6-82930bf0046e759f443a",
+              "file": "e2e/settings/notifications.spec.ts",
               "line": 9,
               "column": 9
             },
@@ -1265,22 +805,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 585,
+                      "duration": 657,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:55.153Z",
+                      "startTime": "2025-08-12T20:39:01.026Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "8c278c3c8b4e6d6ee467-e3d4a17da04d952dec47",
-              "file": "e2e/settings/testSuiteExample.spec.ts",
+              "id": "f08996c82dfe12fe76d6-844d42812689566c5a0f",
+              "file": "e2e/settings/notifications.spec.ts",
               "line": 13,
               "column": 9
             },
@@ -1297,22 +837,22 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 3,
+                      "workerIndex": 1,
                       "status": "passed",
-                      "duration": 599,
+                      "duration": 547,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T20:15:55.743Z",
+                      "startTime": "2025-08-12T20:39:01.688Z",
                       "attachments": []
                     }
                   ],
                   "status": "expected"
                 }
               ],
-              "id": "8c278c3c8b4e6d6ee467-89b809c7488f02880cf6",
-              "file": "e2e/settings/testSuiteExample.spec.ts",
+              "id": "f08996c82dfe12fe76d6-58b615d4c66727d46b85",
+              "file": "e2e/settings/notifications.spec.ts",
               "line": 17,
               "column": 9
             }
@@ -1321,619 +861,264 @@
       ]
     },
     {
-      "title": "e2e/Usage/myExample.spec.ts",
-      "file": "e2e/Usage/myExample.spec.ts",
+      "title": "e2e/settings/profile.spec.ts",
+      "file": "e2e/settings/profile.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "First PW Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "slow"
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 391,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:37.101Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-f6e69845426172009db6",
-          "file": "e2e/Usage/myExample.spec.ts",
+          "title": "TS | Profile",
+          "file": "e2e/settings/profile.spec.ts",
           "line": 3,
-          "column": 1
-        },
-        {
-          "title": "Fail PW Test",
-          "ok": false,
-          "tags": [],
-          "tests": [
+          "column": 15,
+          "specs": [
             {
-              "timeout": 90000,
-              "annotations": [
+              "title": "TC1",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "type": "slow"
-                },
-                {
-                  "type": "fail"
-                }
-              ],
-              "expectedStatus": "failed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 413,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:37.496Z",
-                  "attachments": [
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-Usage-myExample-Fail-PW-Test-chromium/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-Usage-myExample-Fail-PW-Test-chromium/video.webm"
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 392,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\nTC1 starting...\n"
+                        },
+                        {
+                          "text": "Test finished.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T20:38:51.938Z",
+                      "attachments": []
                     }
-                  ]
-                },
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6b88d00c63841bd7ee72-e66d60ddae7ee10ea089",
+              "file": "e2e/settings/profile.spec.ts",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "TC2",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 1,
-                  "status": "passed",
-                  "duration": 593,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-08-12T20:15:38.379Z",
-                  "attachments": [
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-Usage-myExample-Fail-PW-Test-chromium-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-Usage-myExample-Fail-PW-Test-chromium-retry1/video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-Usage-myExample-Fail-PW-Test-chromium-retry1/trace.zip"
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 360,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\nTC2 starting...\n"
+                        },
+                        {
+                          "text": "Test finished.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T20:38:52.334Z",
+                      "attachments": []
                     }
-                  ]
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-255fdd2a748b85c1402a",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 7,
-          "column": 6
-        },
-        {
-          "title": "Fix me PW Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "6b88d00c63841bd7ee72-ab1f59a35a78916513bf",
+              "file": "e2e/settings/profile.spec.ts",
+              "line": 19,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [
+              "title": "TC3",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "type": "slow"
-                },
-                {
-                  "type": "fixme"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:39.172Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-158a82466823c1d47e84",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 11,
-          "column": 6
-        },
-        {
-          "title": "Skip PW Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [
-                {
-                  "type": "slow"
-                },
-                {
-                  "type": "skip"
-                }
-              ],
-              "expectedStatus": "skipped",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:39.172Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-76546c3dc44768f9baf6",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 19,
-          "column": 6
-        },
-        {
-          "title": "Conditional skip PW Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "slow"
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 432,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:39.595Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-91479f9144c12e929efa",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 23,
-          "column": 1
-        },
-        {
-          "title": "Locator example",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "slow"
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 413,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:40.118Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-db6402b30f3fd667c86c",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 28,
-          "column": 1
-        },
-        {
-          "title": "Simple click test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "slow"
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 2,
-                  "status": "passed",
-                  "duration": 610,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:40.537Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-0f0aa2123ade5dd607cb",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 38,
-          "column": 1
-        },
-        {
-          "title": "First PW Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "slow"
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 726,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:56.348Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-41e3a12965b6f205810c",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 3,
-          "column": 1
-        },
-        {
-          "title": "Fail PW Test",
-          "ok": false,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "slow"
-                },
-                {
-                  "type": "fail"
-                }
-              ],
-              "expectedStatus": "failed",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
-                {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 647,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:57.078Z",
-                  "attachments": [
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-Usage-myExample-Fail-PW-Test-Mobile-Safari/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-Usage-myExample-Fail-PW-Test-Mobile-Safari/video.webm"
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 380,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\nTC3 starting...\n"
+                        },
+                        {
+                          "text": "Test finished.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T20:38:52.699Z",
+                      "attachments": []
                     }
-                  ]
-                },
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6b88d00c63841bd7ee72-2e7a672ccbdd443a298b",
+              "file": "e2e/settings/profile.spec.ts",
+              "line": 24,
+              "column": 9
+            },
+            {
+              "title": "TC1",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "workerIndex": 4,
-                  "status": "passed",
-                  "duration": 1088,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 1,
-                  "startTime": "2025-08-12T20:15:58.202Z",
-                  "attachments": [
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
                     {
-                      "name": "screenshot",
-                      "contentType": "image/png",
-                      "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-Usage-myExample-Fail-PW-Test-Mobile-Safari-retry1/test-failed-1.png"
-                    },
-                    {
-                      "name": "video",
-                      "contentType": "video/webm",
-                      "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-Usage-myExample-Fail-PW-Test-Mobile-Safari-retry1/video.webm"
-                    },
-                    {
-                      "name": "trace",
-                      "contentType": "application/zip",
-                      "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-Usage-myExample-Fail-PW-Test-Mobile-Safari-retry1/trace.zip"
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 824,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\nTC1 starting...\n"
+                        },
+                        {
+                          "text": "Test finished.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T20:39:02.241Z",
+                      "attachments": []
                     }
-                  ]
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "unexpected"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-4736860751f33575d341",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 7,
-          "column": 6
-        },
-        {
-          "title": "Fix me PW Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "6b88d00c63841bd7ee72-3bfa494b8cb1e04aeb7e",
+              "file": "e2e/settings/profile.spec.ts",
+              "line": 14,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [
+              "title": "TC2",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "type": "slow"
-                },
-                {
-                  "type": "fixme"
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 792,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\nTC2 starting...\n"
+                        },
+                        {
+                          "text": "Test finished.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T20:39:03.070Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "expectedStatus": "skipped",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:59.494Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-8f4b4443fc5c20250b6e",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 11,
-          "column": 6
-        },
-        {
-          "title": "Skip PW Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
+              "id": "6b88d00c63841bd7ee72-ff8744b0e7f8837adaa5",
+              "file": "e2e/settings/profile.spec.ts",
+              "line": 19,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [
+              "title": "TC3",
+              "ok": true,
+              "tags": [],
+              "tests": [
                 {
-                  "type": "slow"
-                },
-                {
-                  "type": "skip"
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "status": "passed",
+                      "duration": 807,
+                      "errors": [],
+                      "stdout": [
+                        {
+                          "text": "\nTC3 starting...\n"
+                        },
+                        {
+                          "text": "Test finished.\n"
+                        }
+                      ],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T20:39:03.867Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "expectedStatus": "skipped",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
-                {
-                  "workerIndex": -1,
-                  "status": "skipped",
-                  "duration": 0,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:59.494Z",
-                  "attachments": []
-                }
-              ],
-              "status": "skipped"
+              "id": "6b88d00c63841bd7ee72-15091783266bc3ab0f6b",
+              "file": "e2e/settings/profile.spec.ts",
+              "line": 24,
+              "column": 9
             }
-          ],
-          "id": "7daf4016353b973bc1fd-df9182e85ba9fe1bc7fc",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 19,
-          "column": 6
-        },
-        {
-          "title": "Conditional skip PW Test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "slow"
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 653,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:15:59.913Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-a9eb957f1d2d86fc6c6e",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 23,
-          "column": 1
-        },
-        {
-          "title": "Locator example",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "slow"
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 797,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:16:00.657Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-e4c83c98f0f84e7bab2b",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 28,
-          "column": 1
-        },
-        {
-          "title": "Simple click test",
-          "ok": true,
-          "tags": [],
-          "tests": [
-            {
-              "timeout": 90000,
-              "annotations": [
-                {
-                  "type": "slow"
-                }
-              ],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
-                {
-                  "workerIndex": 5,
-                  "status": "passed",
-                  "duration": 1021,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T20:16:01.459Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "7daf4016353b973bc1fd-b3e34a32be6d52d1237e",
-          "file": "e2e/Usage/myExample.spec.ts",
-          "line": 38,
-          "column": 1
+          ]
         }
       ]
     }
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-12T20:15:29.585Z",
-    "duration": 32949.988,
-    "expected": 42,
-    "skipped": 4,
-    "unexpected": 2,
+    "startTime": "2025-08-12T20:38:46.962Z",
+    "duration": 17800.659,
+    "expected": 28,
+    "skipped": 0,
+    "unexpected": 0,
     "flaky": 0
   }
 }
