@@ -28,7 +28,7 @@
     </div>
     <div class="bg-white shadow rounded-lg p-4 text-center">
       <p class="text-gray-500">Last Execution Date</p>
-      <p id="duration" class="text-2xl font-bold">0s</p>
+      <p id="date" class="text-2xl font-bold">0s</p>
     </div>
     <div class="bg-white shadow rounded-lg p-4 text-center">
       <p class="text-gray-500">Last Execution Duration</p>
@@ -88,6 +88,7 @@ async function loadReport() {
   document.getElementById("failedCount").innerText = failed;
   document.getElementById("passRate").innerText = ((passed / totalTests) * 100).toFixed(1) + "%";
   document.getElementById("duration").innerText = (data.stats.duration / 1000).toFixed(1) + "s";
+  document.getElementById("date").innerText = (data.stats.startTime);
 
   // Chart
   const chartOptions = {
@@ -117,4 +118,5 @@ loadReport();
 </script>
 </body>
 </html>
+
 
