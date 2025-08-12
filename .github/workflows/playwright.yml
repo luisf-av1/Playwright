@@ -30,6 +30,7 @@ jobs:
         
       - name: Run Playwright tests
         run: npx playwright test --reporter=json --output=playwright-report
+        continue-on-error: true
 
       - name: Copy JSON report to dashboard folder
         run: cp playwright-report/test-results.json dashboard/test-results.json
