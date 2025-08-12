@@ -28,15 +28,17 @@ jobs:
       - name: 📦 Install Playwright Browsers
         run: npx playwright install --with-deps
         
-      - name: ▶️ Run Playwright tests
-        run: npx playwright test 
-        continue-on-error: true
+      - name: Run Playwright tests
+        run: npx playwright test --reporter=json --output=playwright-report
+
+      - name: Copy JSON report to dashboard folder
+        run: cp playwright-report/test-results.json dashboard/test-results.json
 
       - name: 📊 Upload test report as artifact
         uses: actions/upload-artifact@v4
         with:
           name: test-report
-          path: pw-reports/
+          path: playwright-report/
 
       - name: 🌐 Deploy dashboard to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
