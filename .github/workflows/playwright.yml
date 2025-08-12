@@ -1,107 +1,49 @@
-name: Playwright Tests
+name: Tests Dashboard
 
 on:
   workflow_dispatch:
   push:
-    branches: [ "main" ]
+    branches: [ "staging" ]
   pull_request:
     branches: [ "main" ]
   schedule:
   - cron: "0 9 * * 1-5"
 
-permissions:
-  contents: write
-  pages: write
-  id-token: write
-
 jobs:
   test-execution:
     runs-on: ubuntu-latest
     steps:
-      # Downloads the repo into the runner.
-      - name: ⬇️ Checkout code
+      
+      - name: ⬇️ Checkout code # Downloads the repo into the runner.
         uses: actions/checkout@v4
 
       - name: ⚙️ Set up Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: '16'
+          node-version: 20
 
       - name: 📦 Install dependencies
         run: npm ci
 
       - name: 📦 Install Playwright Browsers
         run: npx playwright install --with-deps
-
-      - name: 📂 Prepare folders
-        run: mkdir -p playwright-report
         
       - name: ▶️ Run Playwright tests
-        run: |
-          mkdir -p playwright-report
-          npx playwright test
+        run: npx playwright test --reporter=json --output=playwright-report
         continue-on-error: true
+
+      - name: 📂 Copy JSON report to dashboard folder
+        run: mkdir -p playwright-report
 
       - name: 📊 Upload test report as artifact
         uses: actions/upload-artifact@v4
         with:
           name: test-report
-          path: playwright-report/pw/html/
+          path: pw-reports/
 
-      - name: ➡️ Checkout gh-pages branch
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages
-
-      
-      - name: 📚 Get previous reports (if any)
-        run: |
-          mkdir -p gh-pages/reports
-          echo "Old reports copied."
-
-      - name: 🗄 Create folder for current report
-        run: |
-          TIMESTAMP=$(date +%Y%m%d-%H%M%S)
-          mkdir -p gh-pages/reports/$TIMESTAMP
-          cp -R playwright-report/* gh-pages/reports/$TIMESTAMP
-          echo "Report generated in: report/$TIMESTAMP"
-
-      - name: 📝 Generate reports hub page (index.html)
-      # Create page to list all the generated reports
-        run: |
-          cat << 'EOF' > gh-pages/index.html
-          <!DOCTYPE html>
-          <html lang="es">
-          <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Test Reports</title>
-            <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-            <style>
-              body { margin: 20px; }
-              h1 { margin-bottom: 20px; }
-              ul { list-style-type: none; padding: 0; }
-              li { margin-bottom: 10px; }
-              a { text-decoration: none; color: #0d6efd; }
-              a:hover { text-decoration: underline; }
-            </style>
-          </head>
-          <body>
-            <h1>Test Reports</h1>
-            <ul>
-          EOF
-          for dir in $(ls gh-pages/reports); do
-            echo "<li><a href=\"reports/$dir/index.html\">$dir</a></li>" >> gh-pages/index.html
-          done
-          cat << 'EOF' >> gh-pages/index.html
-            </ul>
-          </body>
-          </html>
-          EOF
-
-      - name: 🌐 Publish reports in GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+      - name: 🌐 Deploy dashboard to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAT }}
-          publish_dir: gh-pages
+          publish_dir: ./dashboard
+          publish_branch: gh-pages
