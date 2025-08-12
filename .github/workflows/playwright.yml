@@ -32,63 +32,18 @@ jobs:
         run: npx playwright test
         continue-on-error: true
 
-      # -------------------------
-      # Get old history.json from gh-pages
-      # -------------------------
-      - name: Checkout gh-pages branch
-        uses: actions/checkout@v4
+      - name: Copy JSON report to dashboard folder
+        run: cp playwright-report/test-results.json dashboard/test-results.json
+
+      - name: 📊 Upload test report as artifact
+        uses: actions/upload-artifact@v4
         with:
-          ref: gh-pages
-          path: gh-pages
+          name: test-report
+          path: playwright-report/
 
-      - name: Copy old history.json if exists
-        run: |
-          mkdir -p dashboard
-          if [ -f gh-pages/history.json ]; then
-            cp gh-pages/history.json dashboard/history.json
-          else
-            echo "[]" > dashboard/history.json
-          fi
-
-      # -------------------------
-      # Update history.json with latest run
-      # -------------------------
-      - name: Update history.json
-        run: node dashboard/update-history.js
-
-      # -------------------------
-      # Prepare dashboard files
-      # -------------------------
-      - name: Copy dashboard files
-        run: |
-          mkdir -p public
-          cp dashboard/history.json public/
-          cp playwright-report/test-results.json public/
-          cp dashboard/index.html public/
-
-
-
-      # -------------------------
-      # Deploy to GitHub Pages
-      # -------------------------
-      - name: Deploy to GitHub Pages
+      - name: 🌐 Deploy dashboard to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./public
-
-     # - name: Copy JSON report to dashboard folder
-     #  run: cp playwright-report/test-results.json dashboard/test-results.json
-
-      #- name: 📊 Upload test report as artifact
-      #  uses: actions/upload-artifact@v4
-      #  with:
-      #    name: test-report
-      #   path: playwright-report/
-
-      #- name: 🌐 Deploy dashboard to GitHub Pages
-      #  uses: peaceiris/actions-gh-pages@v4
-      #  with:
-      #    github_token: ${{ secrets.GH_PAT }}
-      #    publish_dir: ./dashboard
-      #    publish_branch: gh-pages
+          publish_dir: ./dashboard
+          publish_branch: gh-pages

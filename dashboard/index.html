@@ -108,8 +108,7 @@ async function loadReport(){
 
   function processSpecs(specs, parentFile){
     specs.forEach(spec => {
-      let filePath = (spec.file || parentFile || '').replace(/\\/g,'/');
-      filePath = filePath.split('/')[1]; 
+      const filePath = (spec.file || parentFile || '').replace(/\\/g,'/');
       const parts = filePath.split('/').filter(Boolean);
       // find e2e folder index (robust if path includes other prefixes)
       const e2i = parts.indexOf('e2e');
