@@ -54,7 +54,7 @@ jobs:
       # Update history.json with latest run
       # -------------------------
       - name: Update history.json
-        run: node scripts/update-history.js
+        run: node dashboard/update-history.js
 
       # -------------------------
       # Prepare dashboard files
