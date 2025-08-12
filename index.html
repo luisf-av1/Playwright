@@ -66,7 +66,7 @@ async function loadReport() {
 
   // Process sections & features
   data.suites.forEach(sectionSuite => {
-    const sectionName = sectionSuite.title.split("\\").pop().replace(/-/g, ' ').replace(/\.spec\.ts$/, '').replace(/\b\w/g, c => c.toUpperCase());
+    const sectionName = sectionSuite.title.split("/").pop().replace(/-/g, ' ').replace(/\.spec\.ts$/, '').replace(/\b\w/g, c => c.toUpperCase());
     let secPassed = 0, secFailed = 0;
 
     sectionSuite.suites?.forEach(featureSuite => {
@@ -143,3 +143,4 @@ loadReport();
 </script>
 </body>
 </html>
+
