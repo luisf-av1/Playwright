@@ -2,18 +2,18 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>App stability Dashboard</title>
+<title>App Stability Dashboard</title>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
 <body class="bg-gray-50 text-gray-900">
 <div class="max-w-7xl mx-auto p-6">
-  <h1 class="text-3xl font-bold mb-6">App Stability Dashboard</h1>
-  <p>App stability based on test executions</p>
+  <h1 class="text-3xl font-bold mb-2">App Stability Dashboard</h1>
+  <p class="mb-6">App stability based on test executions</p>
 
   <!-- Summary Cards -->
-  <div class="grid grid-cols-1 sm:grid-cols-4 gap-4 mb-8">
+  <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 mb-8">
     <div class="bg-white shadow rounded-lg p-4 text-center">
       <p class="text-gray-500">Passed</p>
       <p id="passedCount" class="text-2xl font-bold">0</p>
@@ -23,35 +23,31 @@
       <p id="failedCount" class="text-2xl font-bold text-red-500">0</p>
     </div>
     <div class="bg-white shadow rounded-lg p-4 text-center">
-      <p class="text-gray-500">Overal Passed Rate</p>
+      <p class="text-gray-500">Overall Pass Rate</p>
       <p id="passRate" class="text-2xl font-bold">0%</p>
     </div>
     <div class="bg-white shadow rounded-lg p-4 text-center">
       <p class="text-gray-500">Last Execution Date</p>
-      <p id="date" class="text-2xl font-bold">0s</p>
+      <p id="date" class="text-sm font-bold">-</p>
     </div>
     <div class="bg-white shadow rounded-lg p-4 text-center">
-      <p class="text-gray-500">Last Execution Duration</p>
+      <p class="text-gray-500">Execution Duration</p>
       <p id="duration" class="text-2xl font-bold">0s</p>
     </div>
   </div>
 
-  <!-- Chart -->
+  <!-- Pass rate trend chart -->
   <div id="chart" class="bg-white p-4 shadow rounded-lg mb-8"></div>
 
-  <!-- Table -->
-  <div class="bg-white shadow rounded-lg p-4">
-    <h2 class="text-xl font-bold mb-4">Top Unstable Sections</h2>
-    <table class="w-full text-left border-collapse">
-      <thead>
-        <tr class="bg-gray-100">
-          <th class="p-2">#</th>
-          <th class="p-2">Section</th>
-          <th class="p-2">Pass Rate</th>
-        </tr>
-      </thead>
-      <tbody id="unstableTable"></tbody>
-    </table>
+  <!-- Section cards -->
+  <div id="sectionCards" class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8"></div>
+
+  <!-- Problem features -->
+  <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+    <div class="bg-white shadow rounded-lg p-4">
+      <h2 class="text-xl font-bold mb-4">Top 5 Features with More Problems</h2>
+      <ul id="topFeatures" class="list-none"></ul>
+    </div>
   </div>
 </div>
 
@@ -62,64 +58,88 @@ async function loadReport() {
 
   let passed = 0, failed = 0;
   const sectionStats = {};
+  const featureFails = {};
 
-  data.suites.forEach(suite => {
-    suite.suites?.forEach(sub => {
-      let secPassed = 0, secTotal = 0;
-      sub.specs?.forEach(spec => {
+  // Extract execution date & duration
+  document.getElementById("duration").innerText = (data.stats.duration / 1000).toFixed(1) + "s";
+  document.getElementById("date").innerText = new Date(data.stats.startTime).toLocaleString();
+
+  // Process sections & features
+  data.suites.forEach(sectionSuite => {
+    const sectionName = sectionSuite.title.split("\\").pop().replace(/-/g, ' ').replace(/\.spec\.ts$/, '').replace(/\b\w/g, c => c.toUpperCase());
+    let secPassed = 0, secFailed = 0;
+
+    sectionSuite.suites?.forEach(featureSuite => {
+      let featFails = 0;
+
+      featureSuite.specs?.forEach(spec => {
         spec.tests.forEach(test => {
           const status = test.results[0].status;
-          secTotal++;
-          if (status === "passed") passed++, secPassed++;
-          else failed++;
+          if (status === "passed") { passed++; secPassed++; }
+          else { failed++; secFailed++; featFails++; }
         });
       });
-      sectionStats[sub.title] = {
-        passed: secPassed,
-        total: secTotal,
-        passRate: secTotal ? (secPassed / secTotal) * 100 : 0
-      };
+
+      if (!featureFails[featureSuite.title]) featureFails[featureSuite.title] = 0;
+      featureFails[featureSuite.title] += featFails;
     });
+
+    const total = secPassed + secFailed;
+    sectionStats[sectionName] = {
+      passed: secPassed,
+      failed: secFailed,
+      passRate: total ? (secPassed / total) * 100 : 0
+    };
   });
 
-  // Update cards
+  // Update global stats
   const totalTests = passed + failed;
   document.getElementById("passedCount").innerText = passed;
   document.getElementById("failedCount").innerText = failed;
   document.getElementById("passRate").innerText = ((passed / totalTests) * 100).toFixed(1) + "%";
-  document.getElementById("duration").innerText = (data.stats.duration / 1000).toFixed(1) + "s";
-  document.getElementById("date").innerText = (data.stats.startTime.toISOString());
 
-  // Chart
+  // Render section cards
+  const sectionCardsContainer = document.getElementById("sectionCards");
+  sectionCardsContainer.innerHTML = '';
+  for (const [name, stats] of Object.entries(sectionStats)) {
+    let color = 'green';
+    if (stats.passRate < 50) color = 'red';
+    else if (stats.passRate < 80) color = 'yellow';
+
+    const card = `
+      <div class="border-2 rounded-lg p-4 ${color === 'green' ? 'border-green-500' : color === 'yellow' ? 'border-yellow-500' : 'border-red-500'}">
+        <h3 class="text-lg font-bold mb-2">${name} tests</h3>
+        <p>Passed: ${stats.passed}</p>
+        <p>Failed: ${stats.failed}</p>
+        <p class="font-bold">Pass rate: ${stats.passRate.toFixed(1)}%</p>
+      </div>
+    `;
+    sectionCardsContainer.innerHTML += card;
+  }
+
+  // Render top 5 problem features
+  const sortedFeatures = Object.entries(featureFails).sort((a,b) => b[1] - a[1]).slice(0,5);
+  const featureList = document.getElementById("topFeatures");
+  sortedFeatures.forEach(([feature, fails]) => {
+    featureList.innerHTML += `<li class="flex justify-between"><span>${feature}</span><span>Fails: ${fails}</span></li>`;
+  });
+
+  // Render pass rate trend chart (dummy data here, needs historical JSON to be real)
   const chartOptions = {
-    chart: { type: 'bar', height: 300 },
-    series: [{ name: 'Pass Rate', data: Object.values(sectionStats).map(s => s.passRate.toFixed(1)) }],
-    xaxis: { categories: Object.keys(sectionStats) },
+    chart: { type: 'line', height: 300 },
+    series: [{
+      name: 'Overall Pass Rate',
+      data: [65, 70, 72, 76] // TODO: replace with historical data
+    }],
+    xaxis: {
+      categories: ['Run 1', 'Run 2', 'Run 3', 'Run 4']
+    },
     colors: ['#16a34a']
   };
   new ApexCharts(document.querySelector("#chart"), chartOptions).render();
-
-  // Table
-  const sortedSections = Object.entries(sectionStats)
-    .sort((a,b) => a[1].passRate - b[1].passRate)
-    .slice(0,5);
-  const tableBody = document.getElementById("unstableTable");
-  sortedSections.forEach(([name, stats], i) => {
-    const row = `<tr>
-      <td class="p-2">${i+1}</td>
-      <td class="p-2">${name}</td>
-      <td class="p-2">${stats.passRate.toFixed(1)}%</td>
-    </tr>`;
-    tableBody.innerHTML += row;
-  });
 }
 
 loadReport();
 </script>
 </body>
 </html>
-
-
-
-
-
