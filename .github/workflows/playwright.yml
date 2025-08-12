@@ -33,7 +33,7 @@ jobs:
         continue-on-error: true
 
       - name: Copy JSON report to dashboard folder
-        run: cp playwright-report/test-results.json dashboard/test-results.json
+        run: cp playwright-report/test-results.json dashboard/data/test-results.json
 
       - name: 📊 Upload test report as artifact
         uses: actions/upload-artifact@v4
