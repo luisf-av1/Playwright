@@ -1,22 +1,22 @@
 [
   {
     "date": "2025-08-12T23:02:31.728Z",
-    "passRate": 0,
-    "passed": 0,
-    "failed": 0,
+    "passRate": 90,
+    "passed": 90,
+    "failed": 10,
     "duration": 33.3
   },
   {
     "date": "2025-08-12T23:25:02.773Z",
-    "passRate": 0,
-    "passed": 0,
-    "failed": 0,
+    "passRate": 70,
+    "passed": 70,
+    "failed": 30,
     "duration": 28.4
   },
   {
     "date": "2025-08-12T23:32:41.270Z",
-    "passed": 0,
-    "failed": 0,
-    "passRate": 0
+    "passed": 50,
+    "failed": 50,
+    "passRate": 50
   }
 ]
