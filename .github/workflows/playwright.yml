@@ -65,8 +65,8 @@ jobs:
           cp dashboard/history.json public/
           cp playwright-report/test-results.json public/
           cp dashboard/index.html public/
-          cp dashboard/styles.css public/
-          cp dashboard/script.js public/
+
+
 
       # -------------------------
       # Deploy to GitHub Pages
