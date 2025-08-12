@@ -4,11 +4,9 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1" />
 <title>App Stability Dashboard</title>
+<link rel="stylesheet" href="css/style.css" />
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
-<style>
-  .cursor-pointer { cursor: pointer; }
-</style>
 </head>
 <body class="bg-gray-50 text-gray-900">
   <div class="max-w-7xl mx-auto p-6">
@@ -60,7 +58,6 @@
   </div>
 
 <script>
-/* utilities */
 function titleCase(s){
   return String(s || '')
     .replace(/[-_]+/g,' ')
@@ -70,73 +67,51 @@ function titleCase(s){
     .map(w => w.charAt(0).toUpperCase() + w.slice(1))
     .join(' ');
 }
-
 function stripFileNameExt(name){
-  // remove last extension, then remove trailing .spec or .test if present
   const noExt = name.replace(/\.[^/.]+$/, '');
   return noExt.replace(/\.spec$|\.test$/i, '');
 }
 
-/* main parsing & rendering */
 async function loadReport(){
-  // load test-results.json
   let data;
   try {
-    const r = await fetch('./test-results.json');
+    const r = await fetch('./data/test-results.json');
     data = await r.json();
   } catch (err) {
     console.error('Failed to load test-results.json', err);
     return;
   }
 
-  // data structures
-  const sections = {}; // { sectionName: { passed, failed, skipped, features: {featureName: {passed,failed,skipped}} } }
+  const sections = {};
+  const featureGlobal = {};
   let totalPassed = 0, totalFailed = 0, totalSkipped = 0;
 
-  // traverse suites recursively (handles both top-level spec entries and nested suites)
   function traverse(node){
     if (!node) return;
-    // if node has specs -> process
     if (Array.isArray(node.specs) && node.specs.length){
       processSpecs(node.specs, node.file);
     }
-    // if node has nested suites -> traverse them
     if (Array.isArray(node.suites) && node.suites.length){
       node.suites.forEach(s => traverse(s));
     }
   }
-
   function processSpecs(specs, parentFile){
     specs.forEach(spec => {
       const filePath = (spec.file || parentFile || '').replace(/\\/g,'/');
       const parts = filePath.split('/').filter(Boolean);
-      // find e2e folder index (robust if path includes other prefixes)
       const e2i = parts.indexOf('e2e');
-      const sectionPart = (e2i >= 0 && parts.length > e2i + 1) ? parts[e2i + 1] : (parts.length >= 2 ? parts[1] : parts[0] || 'Unknown');
+      const sectionPart = (e2i >= 0 && parts.length > e2i + 1) ? parts[e2i + 1] : parts[0];
       const sectionName = titleCase(sectionPart || 'Unknown');
-
       const filename = parts[parts.length - 1] || filePath;
-      const rawFeature = stripFileNameExt(filename);
-      const featureName = titleCase(rawFeature);
+      const featureName = titleCase(stripFileNameExt(filename));
 
-      // init structures
       if (!sections[sectionName]) sections[sectionName] = { passed:0, failed:0, skipped:0, features: {} };
       if (!sections[sectionName].features[featureName]) sections[sectionName].features[featureName] = { passed:0, failed:0, skipped:0 };
 
-      // each spec has tests[]
       (spec.tests || []).forEach(test => {
         const results = Array.isArray(test.results) ? test.results : [];
-        if (results.length === 0){
-          // fallback: use test.status if available
-          const tstatus = (test.status || test.expectedStatus || '').toLowerCase();
-          if (tstatus === 'skipped') { sections[sectionName].skipped++; sections[sectionName].features[featureName].skipped++; totalSkipped++; }
-          else if (tstatus === 'passed' || tstatus === 'expected') { sections[sectionName].passed++; sections[sectionName].features[featureName].passed++; totalPassed++; }
-          else if (tstatus === 'failed' || tstatus === 'unexpected') { sections[sectionName].failed++; sections[sectionName].features[featureName].failed++; totalFailed++; }
-          return;
-        }
         const last = results[results.length - 1];
-        const status = (last && last.status || '').toLowerCase();
-
+        const status = (last?.status || test.status || '').toLowerCase();
         if (status === 'passed') {
           sections[sectionName].passed++;
           sections[sectionName].features[featureName].passed++;
@@ -146,7 +121,6 @@ async function loadReport(){
           sections[sectionName].features[featureName].skipped++;
           totalSkipped++;
         } else {
-          // treat anything else (failed, unexpected, timedOut...) as failure
           sections[sectionName].failed++;
           sections[sectionName].features[featureName].failed++;
           totalFailed++;
@@ -155,22 +129,19 @@ async function loadReport(){
     });
   }
 
-  // start traversal from top-level suites array
   (data.suites || []).forEach(s => traverse(s));
 
-  // update summary cards
-  const totalCount = totalPassed + totalFailed; // exclude skipped from rate calculation
+  // summary cards
+  const totalCount = totalPassed + totalFailed;
   document.getElementById('passedCount').innerText = totalPassed;
   document.getElementById('failedCount').innerText = totalFailed;
   document.getElementById('passRate').innerText = totalCount ? ((totalPassed / totalCount) * 100).toFixed(1) + '%' : 'N/A';
-  document.getElementById('duration').innerText = data.stats && data.stats.duration ? (data.stats.duration / 1000).toFixed(1) + 's' : '-';
-  document.getElementById('date').innerText = data.stats && data.stats.startTime ? new Date(data.stats.startTime).toLocaleString() : '-';
+  document.getElementById('duration').innerText = data.stats?.duration ? (data.stats.duration / 1000).toFixed(1) + 's' : '-';
+  document.getElementById('date').innerText = data.stats?.startTime ? new Date(data.stats.startTime).toLocaleString() : '-';
 
-  // build section cards
+  // section cards
   const sectionCards = document.getElementById('sectionCards');
   sectionCards.innerHTML = '';
-  const featureGlobal = {}; // collect features globally for ranking
-
   Object.entries(sections).forEach(([sectionName, s]) => {
     const denom = s.passed + s.failed;
     const passRate = denom ? (s.passed / denom * 100) : 0;
@@ -178,105 +149,68 @@ async function loadReport(){
     if (passRate < 50) borderColor = 'border-red-500';
     else if (passRate < 80) borderColor = 'border-yellow-500';
 
-    // feature table
-    const table = document.createElement('div');
-    table.className = 'mt-3 hidden';
-    const tb = document.createElement('table');
-    tb.className = 'w-full text-left text-sm';
-    tb.innerHTML = `<thead><tr class="bg-gray-100"><th class="p-2">Feature</th><th class="p-2">Passed</th><th class="p-2">Failed</th><th class="p-2">Pass Rate</th></tr></thead>`;
-    const tbody = document.createElement('tbody');
-
-    Object.entries(s.features).forEach(([fname, fstats]) => {
-      const fden = fstats.passed + fstats.failed;
-      const fRate = fden ? (fstats.passed / fden * 100) : 0;
-      const tr = document.createElement('tr');
-      tr.innerHTML = `<td class="p-2">${fname}</td><td class="p-2">${fstats.passed}</td><td class="p-2">${fstats.failed}</td><td class="p-2 font-medium">${fRate.toFixed(1)}%</td>`;
-      tbody.appendChild(tr);
-
-      // aggregate for global top features
-      if (!featureGlobal[fname]) featureGlobal[fname] = { failed: 0, passed: 0 };
-      featureGlobal[fname].failed += fstats.failed;
-      featureGlobal[fname].passed += fstats.passed;
-    });
-    tb.appendChild(tbody);
-    table.appendChild(tb);
-
-    // card container
-    const card = document.createElement('div');
-    card.className = `border-2 rounded-lg p-4 cursor-pointer ${borderColor} bg-white shadow`;
-    card.innerHTML = `<h3 class="text-lg font-bold">${sectionName} tests</h3>
+    const card = document.createElement('a');
+    card.href = `section.html?name=${encodeURIComponent(sectionName)}`;
+    card.className = `border-2 rounded-lg p-4 block ${borderColor} bg-white shadow hover:shadow-lg`;
+    card.innerHTML = `
+      <h3 class="text-lg font-bold">${sectionName} tests</h3>
       <div class="mt-1 text-sm">
         <div>Passed: <strong>${s.passed}</strong></div>
         <div>Failed: <strong class="text-red-600">${s.failed}</strong></div>
         <div class="mt-1 font-semibold">Pass rate: ${denom ? passRate.toFixed(1) + '%' : 'N/A'}</div>
       </div>
-      <div class="mt-2 text-xs text-gray-500">Click to toggle features</div>`;
-
-    // toggle on click
-    card.addEventListener('click', () => {
-      table.classList.toggle('hidden');
-      // smooth scroll into view when opening
-      if (!table.classList.contains('hidden')) card.scrollIntoView({ behavior: 'smooth', block: 'center' });
-    });
-
-    // append card + table
+      <div class="mt-2 text-xs text-gray-500">Click to view features</div>`;
     sectionCards.appendChild(card);
-    sectionCards.appendChild(table);
+
+    // aggregate features globally for top features
+    Object.entries(s.features).forEach(([fname, fstats]) => {
+      if (!featureGlobal[fname]) featureGlobal[fname] = { failed: 0, passed: 0 };
+      featureGlobal[fname].failed += fstats.failed;
+      featureGlobal[fname].passed += fstats.passed;
+    });
   });
 
-  // top 5 sections by failed count (and show pass rate)
+  // top sections
   const topSectionsEl = document.getElementById('topSections');
   topSectionsEl.innerHTML = '';
-  const sectionRanking = Object.entries(sections)
+  Object.entries(sections)
     .map(([name, s]) => {
       const den = s.passed + s.failed;
       return { name, failed: s.failed, passRate: den ? (s.passed/den*100) : 0 };
     })
     .sort((a,b) => b.failed - a.failed || a.passRate - b.passRate)
-    .slice(0,5);
-  sectionRanking.forEach(sec => {
-    const li = document.createElement('li');
-    li.className = 'flex justify-between py-1';
-    li.innerHTML = `<span>${sec.name}</span><span class="text-sm text-gray-600">Fails: ${sec.failed} • ${sec.passRate.toFixed(1)}%</span>`;
-    topSectionsEl.appendChild(li);
-  });
+    .slice(0,5)
+    .forEach(sec => {
+      const li = document.createElement('li');
+      li.className = 'flex justify-between py-1';
+      li.innerHTML = `<span>${sec.name}</span><span class="text-sm text-gray-600">Fails: ${sec.failed} • ${sec.passRate.toFixed(1)}%</span>`;
+      topSectionsEl.appendChild(li);
+    });
 
-  // top 5 features by failed count
+  // top features
   const topFeaturesEl = document.getElementById('topFeatures');
   topFeaturesEl.innerHTML = '';
-  const featureRanking = Object.entries(featureGlobal)
+  Object.entries(featureGlobal)
     .map(([name, f]) => {
       const den = f.passed + f.failed;
       return { name, failed: f.failed, passRate: den ? (f.passed/den*100) : 0 };
     })
     .sort((a,b) => b.failed - a.failed || a.passRate - b.passRate)
-    .slice(0,5);
-  featureRanking.forEach(f => {
-    const li = document.createElement('li');
-    li.className = 'flex justify-between py-1';
-    li.innerHTML = `<span>${f.name}</span><span class="text-sm text-gray-600">Fails: ${f.failed} • ${f.passRate.toFixed(1)}%</span>`;
-    topFeaturesEl.appendChild(li);
-  });
+    .slice(0,5)
+    .forEach(f => {
+      const li = document.createElement('li');
+      li.className = 'flex justify-between py-1';
+      li.innerHTML = `<span>${f.name}</span><span class="text-sm text-gray-600">Fails: ${f.failed} • ${f.passRate.toFixed(1)}%</span>`;
+      topFeaturesEl.appendChild(li);
+    });
 
-  // Try to render history chart: read history.json if present (array of {date, passRate})
-  let history = null;
-  try {
-    const r = await fetch('./history.json');
-    if (r.ok) history = await r.json();
-  } catch(e) { /* no history -> continue */ }
-
+  // chart
+  const history = null; // no history for now
   const chartEl = document.querySelector('#chart');
-  let categories = [], series = [];
-  if (history && Array.isArray(history) && history.length){
-    categories = history.map(h => h.date);
-    series = history.map(h => Number(h.passRate));
-  } else {
-    // fallback: show just the current run as single point (labelled with date)
-    const label = data.stats && data.stats.startTime ? new Date(data.stats.startTime).toLocaleString() : 'Run';
-    const currentRate = totalCount ? Number(((totalPassed / totalCount) * 100).toFixed(1)) : 0;
-    categories = [label];
-    series = [currentRate];
-  }
+  const label = data.stats?.startTime ? new Date(data.stats.startTime).toLocaleString() : 'Run';
+  const currentRate = totalCount ? Number(((totalPassed / totalCount) * 100).toFixed(1)) : 0;
+  const categories = [label];
+  const series = [currentRate];
 
   const chartOptions = {
     chart: { type: 'line', height: 300 },
@@ -290,8 +224,7 @@ async function loadReport(){
   };
   chartEl.innerHTML = '';
   new ApexCharts(chartEl, chartOptions).render();
-} // loadReport
-
+}
 loadReport();
 </script>
 </body>
