@@ -1,70 +1,43 @@
-const fs = require("fs");
-const path = require("path");
+const fs = require('fs');
 
-if (process.argv.length < 4) {
-  console.error("Usage: node update-history.js <latest-report.json> <history.json>");
+const [ , , latestPath, historyPath ] = process.argv;
+
+if (!latestPath || !historyPath) {
+  console.error('Usage: node update-history.js <latestReport> <historyFile>');
   process.exit(1);
 }
 
-const latestPath = process.argv[2];
-const historyPath = process.argv[3];
+const latestReport = JSON.parse(fs.readFileSync(latestPath, 'utf8'));
 
-if (!fs.existsSync(latestPath)) {
-  console.error(`Latest report not found: ${latestPath}`);
-  process.exit(1);
-}
-
-const latest = JSON.parse(fs.readFileSync(latestPath, "utf-8"));
-
-let totalPassed = 0;
-let totalFailed = 0;
-(latest.suites || []).forEach(suite => {
+// Calculate pass/fail
+let passed = 0, failed = 0;
+(latestReport.suites || []).forEach(suite => {
   (suite.specs || []).forEach(spec => {
     (spec.tests || []).forEach(test => {
       const results = test.results || [];
-      const last = results[results.length - 1];
-      if (!last) return;
-      if (last.status === "passed") totalPassed++;
-      else if (last.status !== "skipped") totalFailed++;
+      const status = results[results.length - 1]?.status?.toLowerCase() || '';
+      if (status === 'passed') passed++;
+      else if (status !== 'skipped') failed++;
     });
   });
 });
 
-const passRate = totalPassed + totalFailed > 0
-  ? (totalPassed / (totalPassed + totalFailed)) * 100
-  : 0;
-
+const total = passed + failed;
+const passRate = total ? ((passed / total) * 100).toFixed(1) : 0;
 const summaryEntry = {
-  date: latest.stats?.startTime
-    ? new Date(latest.stats.startTime).toISOString()
-    : new Date().toISOString(),
-  passRate: Number(passRate.toFixed(1)),
-  passed: totalPassed,
-  failed: totalFailed,
-  duration: latest.stats?.duration
-    ? Number((latest.stats.duration / 1000).toFixed(1))
-    : null
+  date: latestReport.stats?.startTime || new Date().toISOString(),
+  passed,
+  failed,
+  passRate: Number(passRate)
 };
 
-// Load existing history
+// Read existing history
 let history = [];
 if (fs.existsSync(historyPath)) {
-  try {
-    history = JSON.parse(fs.readFileSync(historyPath, "utf-8"));
-    if (!Array.isArray(history)) history = [];
-  } catch {
-    history = [];
-  }
+  history = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+  if (!Array.isArray(history)) history = [];
 }
 
-// Avoid duplicate entry for same date
-if (!history.find(h => h.date === summaryEntry.date)) {
-  history.push(summaryEntry);
-}
-
-// Sort by date
-history.sort((a, b) => new Date(a.date) - new Date(b.date));
-
-// Save
+history.push(summaryEntry);
 fs.writeFileSync(historyPath, JSON.stringify(history, null, 2));
-console.log(`History updated with ${summaryEntry.date}`);
+console.log('Updated history.json with:', summaryEntry);
