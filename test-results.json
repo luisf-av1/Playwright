@@ -106,12 +106,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 704,
+                  "duration": 608,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:05.638Z",
+                  "startTime": "2025-08-12T18:08:12.254Z",
                   "attachments": []
                 }
               ],
@@ -138,12 +138,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 732,
+                  "duration": 768,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:06.501Z",
+                  "startTime": "2025-08-12T18:08:13.001Z",
                   "attachments": []
                 }
               ],
@@ -170,12 +170,12 @@
                 {
                   "workerIndex": 3,
                   "status": "passed",
-                  "duration": 3974,
+                  "duration": 3224,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:17.054Z",
+                  "startTime": "2025-08-12T18:08:23.661Z",
                   "attachments": []
                 }
               ],
@@ -202,12 +202,12 @@
                 {
                   "workerIndex": 3,
                   "status": "passed",
-                  "duration": 1247,
+                  "duration": 1036,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:21.893Z",
+                  "startTime": "2025-08-12T18:08:27.697Z",
                   "attachments": []
                 }
               ],
@@ -226,346 +226,355 @@
       "file": "e2e/Dashboard/tagExample.spec.ts",
       "column": 0,
       "line": 0,
-      "specs": [
+      "specs": [],
+      "suites": [
         {
-          "title": "PW Test 1 @smoke",
-          "ok": true,
-          "tags": [
-            "smoke"
-          ],
-          "tests": [
-            {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
-                {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 385,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T17:53:07.240Z",
-                  "attachments": []
-                }
-              ],
-              "status": "expected"
-            }
-          ],
-          "id": "e8e2887e388e90e84672-ea642d6cfadd3f20b0df",
+          "title": "TS | Dashboard",
           "file": "e2e/Dashboard/tagExample.spec.ts",
           "line": 6,
-          "column": 5
-        },
-        {
-          "title": "PW Test 2 @regression",
-          "ok": true,
-          "tags": [
-            "regression"
-          ],
-          "tests": [
+          "column": 6,
+          "specs": [
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "PW Test 1 @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 405,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T17:53:07.631Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 402,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T18:08:13.777Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "e8e2887e388e90e84672-7990dd0c66b29ae536df",
-          "file": "e2e/Dashboard/tagExample.spec.ts",
-          "line": 10,
-          "column": 5
-        },
-        {
-          "title": "PW Test 3 @smoke",
-          "ok": true,
-          "tags": [
-            "smoke"
-          ],
-          "tests": [
+              "id": "e8e2887e388e90e84672-13a69c90b6527cd92e21",
+              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "line": 8,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "PW Test 2 @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 386,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T17:53:08.041Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 377,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T18:08:14.185Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "e8e2887e388e90e84672-31f50d44559579620a40",
-          "file": "e2e/Dashboard/tagExample.spec.ts",
-          "line": 14,
-          "column": 5
-        },
-        {
-          "title": "PW Test 4 @regression",
-          "ok": true,
-          "tags": [
-            "regression"
-          ],
-          "tests": [
+              "id": "e8e2887e388e90e84672-8f9086bfbe42bdf70517",
+              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "line": 12,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "PW Test 3 @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 401,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T17:53:08.432Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 403,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T18:08:14.567Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "e8e2887e388e90e84672-05e4de887a3164482e64",
-          "file": "e2e/Dashboard/tagExample.spec.ts",
-          "line": 18,
-          "column": 5
-        },
-        {
-          "title": "PW Test 5 @smoke",
-          "ok": true,
-          "tags": [
-            "smoke"
-          ],
-          "tests": [
+              "id": "e8e2887e388e90e84672-17c26fc95a1aa533047b",
+              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "line": 16,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "chromium",
-              "projectName": "chromium",
-              "results": [
+              "title": "PW Test 4 @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 0,
-                  "status": "passed",
-                  "duration": 390,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T17:53:08.837Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 391,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T18:08:14.975Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "e8e2887e388e90e84672-003efb2f617a6adcbba0",
-          "file": "e2e/Dashboard/tagExample.spec.ts",
-          "line": 22,
-          "column": 5
-        },
-        {
-          "title": "PW Test 1 @smoke",
-          "ok": true,
-          "tags": [
-            "smoke"
-          ],
-          "tests": [
+              "id": "e8e2887e388e90e84672-459a5672829bd0970fd5",
+              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "line": 20,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
+              "title": "PW Test 5 @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 609,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T17:53:23.149Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 0,
+                      "status": "passed",
+                      "duration": 380,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T18:08:15.371Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "e8e2887e388e90e84672-51891e260573670c8aa2",
-          "file": "e2e/Dashboard/tagExample.spec.ts",
-          "line": 6,
-          "column": 5
-        },
-        {
-          "title": "PW Test 2 @regression",
-          "ok": true,
-          "tags": [
-            "regression"
-          ],
-          "tests": [
+              "id": "e8e2887e388e90e84672-14f67849bc5361445514",
+              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "line": 24,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
+              "title": "PW Test 1 @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 616,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T17:53:23.763Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 642,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T18:08:28.743Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "e8e2887e388e90e84672-d8264a754ece4ea36394",
-          "file": "e2e/Dashboard/tagExample.spec.ts",
-          "line": 10,
-          "column": 5
-        },
-        {
-          "title": "PW Test 3 @smoke",
-          "ok": true,
-          "tags": [
-            "smoke"
-          ],
-          "tests": [
+              "id": "e8e2887e388e90e84672-807283665c9a946c3056",
+              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "line": 8,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
+              "title": "PW Test 2 @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 638,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T17:53:24.384Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 617,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T18:08:29.395Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "e8e2887e388e90e84672-d1a08c5151a9813f3bb0",
-          "file": "e2e/Dashboard/tagExample.spec.ts",
-          "line": 14,
-          "column": 5
-        },
-        {
-          "title": "PW Test 4 @regression",
-          "ok": true,
-          "tags": [
-            "regression"
-          ],
-          "tests": [
+              "id": "e8e2887e388e90e84672-e76fa50479f9d4cbc1fa",
+              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "line": 12,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
+              "title": "PW Test 3 @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 589,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T17:53:25.030Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 634,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T18:08:30.017Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
-            }
-          ],
-          "id": "e8e2887e388e90e84672-8e90699f7f137e34b711",
-          "file": "e2e/Dashboard/tagExample.spec.ts",
-          "line": 18,
-          "column": 5
-        },
-        {
-          "title": "PW Test 5 @smoke",
-          "ok": true,
-          "tags": [
-            "smoke"
-          ],
-          "tests": [
+              "id": "e8e2887e388e90e84672-3ac9f2f82d7fec54a253",
+              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "line": 16,
+              "column": 9
+            },
             {
-              "timeout": 30000,
-              "annotations": [],
-              "expectedStatus": "passed",
-              "projectId": "Mobile Safari",
-              "projectName": "Mobile Safari",
-              "results": [
+              "title": "PW Test 4 @regression",
+              "ok": true,
+              "tags": [
+                "regression"
+              ],
+              "tests": [
                 {
-                  "workerIndex": 3,
-                  "status": "passed",
-                  "duration": 647,
-                  "errors": [],
-                  "stdout": [],
-                  "stderr": [],
-                  "retry": 0,
-                  "startTime": "2025-08-12T17:53:25.623Z",
-                  "attachments": []
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 716,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T18:08:30.657Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
-              "status": "expected"
+              "id": "e8e2887e388e90e84672-fbd2030f238e170cdcdd",
+              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "line": 20,
+              "column": 9
+            },
+            {
+              "title": "PW Test 5 @smoke",
+              "ok": true,
+              "tags": [
+                "smoke"
+              ],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "status": "passed",
+                      "duration": 653,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2025-08-12T18:08:31.378Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "e8e2887e388e90e84672-1b93ac8bd306833b66d4",
+              "file": "e2e/Dashboard/tagExample.spec.ts",
+              "line": 24,
+              "column": 9
             }
-          ],
-          "id": "e8e2887e388e90e84672-7a7910456c89f72bc459",
-          "file": "e2e/Dashboard/tagExample.spec.ts",
-          "line": 22,
-          "column": 5
+          ]
         }
       ]
     },
@@ -597,12 +606,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 412,
+                      "duration": 417,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:09.234Z",
+                      "startTime": "2025-08-12T18:08:15.758Z",
                       "attachments": []
                     }
                   ],
@@ -629,12 +638,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 394,
+                      "duration": 359,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:09.651Z",
+                      "startTime": "2025-08-12T18:08:16.181Z",
                       "attachments": []
                     }
                   ],
@@ -661,12 +670,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 362,
+                      "duration": 341,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:10.050Z",
+                      "startTime": "2025-08-12T18:08:16.545Z",
                       "attachments": []
                     }
                   ],
@@ -693,12 +702,12 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 804,
+                      "duration": 776,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:26.277Z",
+                      "startTime": "2025-08-12T18:08:32.038Z",
                       "attachments": []
                     }
                   ],
@@ -725,12 +734,12 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 814,
+                      "duration": 815,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:27.087Z",
+                      "startTime": "2025-08-12T18:08:32.820Z",
                       "attachments": []
                     }
                   ],
@@ -757,12 +766,12 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 732,
+                      "duration": 730,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:27.907Z",
+                      "startTime": "2025-08-12T18:08:33.642Z",
                       "attachments": []
                     }
                   ],
@@ -806,7 +815,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 396,
+                      "duration": 416,
                       "errors": [],
                       "stdout": [
                         {
@@ -818,7 +827,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:10.418Z",
+                      "startTime": "2025-08-12T18:08:16.892Z",
                       "attachments": []
                     }
                   ],
@@ -845,7 +854,7 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 376,
+                      "duration": 393,
                       "errors": [],
                       "stdout": [
                         {
@@ -857,7 +866,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:10.818Z",
+                      "startTime": "2025-08-12T18:08:17.313Z",
                       "attachments": []
                     }
                   ],
@@ -896,7 +905,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:11.199Z",
+                      "startTime": "2025-08-12T18:08:17.711Z",
                       "attachments": []
                     }
                   ],
@@ -923,7 +932,7 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 800,
+                      "duration": 795,
                       "errors": [],
                       "stdout": [
                         {
@@ -935,7 +944,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:28.646Z",
+                      "startTime": "2025-08-12T18:08:34.380Z",
                       "attachments": []
                     }
                   ],
@@ -962,7 +971,7 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 820,
+                      "duration": 776,
                       "errors": [],
                       "stdout": [
                         {
@@ -974,7 +983,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:29.452Z",
+                      "startTime": "2025-08-12T18:08:35.180Z",
                       "attachments": []
                     }
                   ],
@@ -1001,7 +1010,7 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 740,
+                      "duration": 695,
                       "errors": [],
                       "stdout": [
                         {
@@ -1013,7 +1022,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:30.277Z",
+                      "startTime": "2025-08-12T18:08:35.962Z",
                       "attachments": []
                     }
                   ],
@@ -1057,12 +1066,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 271,
+                      "duration": 273,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:11.545Z",
+                      "startTime": "2025-08-12T18:08:18.057Z",
                       "attachments": []
                     }
                   ],
@@ -1089,12 +1098,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 263,
+                      "duration": 274,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:11.820Z",
+                      "startTime": "2025-08-12T18:08:18.335Z",
                       "attachments": []
                     }
                   ],
@@ -1121,12 +1130,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 276,
+                      "duration": 265,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:12.088Z",
+                      "startTime": "2025-08-12T18:08:18.613Z",
                       "attachments": []
                     }
                   ],
@@ -1153,12 +1162,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 285,
+                      "duration": 279,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:12.369Z",
+                      "startTime": "2025-08-12T18:08:18.882Z",
                       "attachments": []
                     }
                   ],
@@ -1185,12 +1194,12 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 570,
+                      "duration": 529,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:31.024Z",
+                      "startTime": "2025-08-12T18:08:36.664Z",
                       "attachments": []
                     }
                   ],
@@ -1217,12 +1226,12 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 609,
+                      "duration": 567,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:31.598Z",
+                      "startTime": "2025-08-12T18:08:37.197Z",
                       "attachments": []
                     }
                   ],
@@ -1249,12 +1258,12 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 615,
+                      "duration": 657,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:32.212Z",
+                      "startTime": "2025-08-12T18:08:37.769Z",
                       "attachments": []
                     }
                   ],
@@ -1281,12 +1290,12 @@
                     {
                       "workerIndex": 3,
                       "status": "passed",
-                      "duration": 612,
+                      "duration": 597,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2025-08-12T17:53:32.832Z",
+                      "startTime": "2025-08-12T18:08:38.430Z",
                       "attachments": []
                     }
                   ],
@@ -1327,12 +1336,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 396,
+                  "duration": 390,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:12.661Z",
+                  "startTime": "2025-08-12T18:08:19.167Z",
                   "attachments": []
                 }
               ],
@@ -1366,12 +1375,12 @@
                 {
                   "workerIndex": 0,
                   "status": "passed",
-                  "duration": 395,
+                  "duration": 414,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:13.062Z",
+                  "startTime": "2025-08-12T18:08:19.561Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1388,12 +1397,12 @@
                 {
                   "workerIndex": 1,
                   "status": "passed",
-                  "duration": 555,
+                  "duration": 589,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-08-12T17:53:13.906Z",
+                  "startTime": "2025-08-12T18:08:20.434Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1448,7 +1457,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:14.659Z",
+                  "startTime": "2025-08-12T18:08:21.225Z",
                   "attachments": []
                 }
               ],
@@ -1487,7 +1496,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:14.659Z",
+                  "startTime": "2025-08-12T18:08:21.225Z",
                   "attachments": []
                 }
               ],
@@ -1518,12 +1527,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 421,
+                  "duration": 480,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:15.071Z",
+                  "startTime": "2025-08-12T18:08:21.643Z",
                   "attachments": []
                 }
               ],
@@ -1554,12 +1563,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 409,
+                  "duration": 420,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:15.587Z",
+                  "startTime": "2025-08-12T18:08:22.214Z",
                   "attachments": []
                 }
               ],
@@ -1590,12 +1599,12 @@
                 {
                   "workerIndex": 2,
                   "status": "passed",
-                  "duration": 607,
+                  "duration": 576,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:16.002Z",
+                  "startTime": "2025-08-12T18:08:22.640Z",
                   "attachments": []
                 }
               ],
@@ -1626,12 +1635,12 @@
                 {
                   "workerIndex": 3,
                   "status": "passed",
-                  "duration": 607,
+                  "duration": 778,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:33.450Z",
+                  "startTime": "2025-08-12T18:08:39.034Z",
                   "attachments": []
                 }
               ],
@@ -1665,12 +1674,12 @@
                 {
                   "workerIndex": 3,
                   "status": "passed",
-                  "duration": 689,
+                  "duration": 566,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:34.062Z",
+                  "startTime": "2025-08-12T18:08:39.817Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1687,12 +1696,12 @@
                 {
                   "workerIndex": 4,
                   "status": "passed",
-                  "duration": 1061,
+                  "duration": 966,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 1,
-                  "startTime": "2025-08-12T17:53:35.236Z",
+                  "startTime": "2025-08-12T18:08:40.856Z",
                   "attachments": [
                     {
                       "name": "screenshot",
@@ -1747,7 +1756,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:36.501Z",
+                  "startTime": "2025-08-12T18:08:42.028Z",
                   "attachments": []
                 }
               ],
@@ -1786,7 +1795,7 @@
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:36.501Z",
+                  "startTime": "2025-08-12T18:08:42.028Z",
                   "attachments": []
                 }
               ],
@@ -1817,12 +1826,12 @@
                 {
                   "workerIndex": 5,
                   "status": "passed",
-                  "duration": 693,
+                  "duration": 727,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:36.914Z",
+                  "startTime": "2025-08-12T18:08:42.445Z",
                   "attachments": []
                 }
               ],
@@ -1853,12 +1862,12 @@
                 {
                   "workerIndex": 5,
                   "status": "passed",
-                  "duration": 786,
+                  "duration": 774,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:37.695Z",
+                  "startTime": "2025-08-12T18:08:43.264Z",
                   "attachments": []
                 }
               ],
@@ -1889,12 +1898,12 @@
                 {
                   "workerIndex": 5,
                   "status": "passed",
-                  "duration": 1033,
+                  "duration": 1069,
                   "errors": [],
                   "stdout": [],
                   "stderr": [],
                   "retry": 0,
-                  "startTime": "2025-08-12T17:53:38.487Z",
+                  "startTime": "2025-08-12T18:08:44.048Z",
                   "attachments": []
                 }
               ],
@@ -1911,8 +1920,8 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2025-08-12T17:53:05.128Z",
-    "duration": 34441.223,
+    "startTime": "2025-08-12T18:08:11.743Z",
+    "duration": 33425.135,
     "expected": 42,
     "skipped": 4,
     "unexpected": 2,
