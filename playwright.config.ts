@@ -25,7 +25,7 @@ export default defineConfig({
   reporter: [
     ['html', {  outputFile: 'dashboard/html/test-results.html' }, { open: 'never' }],
     ['list'],
-    ['dot'],S
+    ['dot'],
     ['junit', {  outputFile: 'dashboard/test-results.xml' }],
     ['json', {  outputFile: 'dashboard/test-results.json' }]
   ],
