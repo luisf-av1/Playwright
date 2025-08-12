@@ -88,7 +88,7 @@ async function loadReport() {
   document.getElementById("failedCount").innerText = failed;
   document.getElementById("passRate").innerText = ((passed / totalTests) * 100).toFixed(1) + "%";
   document.getElementById("duration").innerText = (data.stats.duration / 1000).toFixed(1) + "s";
-  document.getElementById("date").innerText = (data.stats.startTime);
+  document.getElementById("date").innerText = (data.stats.startTime.toISOString());
 
   // Chart
   const chartOptions = {
@@ -118,5 +118,6 @@ loadReport();
 </script>
 </body>
 </html>
+
 
 
