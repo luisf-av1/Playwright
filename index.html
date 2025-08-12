@@ -162,7 +162,6 @@ async function loadReport(){
       <div class="mt-2 text-xs text-gray-500">Click to view features</div>`;
     sectionCards.appendChild(card);
 
-    // aggregate features globally for top features
     Object.entries(s.features).forEach(([fname, fstats]) => {
       if (!featureGlobal[fname]) featureGlobal[fname] = { failed: 0, passed: 0 };
       featureGlobal[fname].failed += fstats.failed;
@@ -204,13 +203,27 @@ async function loadReport(){
       topFeaturesEl.appendChild(li);
     });
 
-  // chart
-  const history = null; // no history for now
-  const chartEl = document.querySelector('#chart');
-  const label = data.stats?.startTime ? new Date(data.stats.startTime).toLocaleString() : 'Run';
-  const currentRate = totalCount ? Number(((totalPassed / totalCount) * 100).toFixed(1)) : 0;
-  const categories = [label];
-  const series = [currentRate];
+  // Load history.json for chart
+  let historyData = [];
+  try {
+    const h = await fetch('./data/history.json');
+    if (h.ok) {
+      historyData = await h.json();
+    }
+  } catch(e) {
+    console.warn('No history.json found, showing only current run');
+  }
+
+  let categories = [], series = [];
+  if (Array.isArray(historyData) && historyData.length) {
+    categories = historyData.map(h => new Date(h.date).toLocaleDateString());
+    series = historyData.map(h => Number(h.passRate));
+  } else {
+    const label = data.stats?.startTime ? new Date(data.stats.startTime).toLocaleString() : 'Run';
+    const currentRate = totalCount ? Number(((totalPassed / totalCount) * 100).toFixed(1)) : 0;
+    categories = [label];
+    series = [currentRate];
+  }
 
   const chartOptions = {
     chart: { type: 'line', height: 300 },
@@ -222,8 +235,8 @@ async function loadReport(){
     markers: { size: 4 },
     colors: ['#16a34a']
   };
-  chartEl.innerHTML = '';
-  new ApexCharts(chartEl, chartOptions).render();
+  document.querySelector('#chart').innerHTML = '';
+  new ApexCharts(document.querySelector('#chart'), chartOptions).render();
 }
 loadReport();
 </script>
