@@ -2,7 +2,8 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Playwright Test Dashboard</title>
+<title>App stability Dashboard</title>
+<p>App stability based on test executions</p>
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <script src="https://cdn.tailwindcss.com"></script>
 <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
@@ -22,11 +23,15 @@
       <p id="failedCount" class="text-2xl font-bold text-red-500">0</p>
     </div>
     <div class="bg-white shadow rounded-lg p-4 text-center">
-      <p class="text-gray-500">Pass Rate</p>
+      <p class="text-gray-500">Overal Passed Rate</p>
       <p id="passRate" class="text-2xl font-bold">0%</p>
     </div>
     <div class="bg-white shadow rounded-lg p-4 text-center">
-      <p class="text-gray-500">Duration</p>
+      <p class="text-gray-500">Last Execution Date</p>
+      <p id="duration" class="text-2xl font-bold">0s</p>
+    </div>
+    <div class="bg-white shadow rounded-lg p-4 text-center">
+      <p class="text-gray-500">Last Execution Duration</p>
       <p id="duration" class="text-2xl font-bold">0s</p>
     </div>
   </div>
@@ -112,3 +117,4 @@ loadReport();
 </script>
 </body>
 </html>
+
