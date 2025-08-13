@@ -60,7 +60,7 @@ jobs:
       # --- Update history.json summary ---
       - name: 🛠 Update history summary
         run: |
-          node scripts/update-history.js dashboard/data/test-results.json dashboard/data/history.json
+          node scripts/update-history.js dashboard/data/test-results.json ../dashboard/data/history.json
 
       - name: 📊 Upload raw test report as artifact
         uses: actions/upload-artifact@v4
