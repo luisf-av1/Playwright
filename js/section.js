@@ -12,49 +12,6 @@ function stripFileNameExt(name) {
   return name.replace(/\.[^/.]+$/, '').replace(/\.spec$|\.test$/i, '');
 }
 
-function getSectionStatsFromRun(run, sectionName) {
-  let totalPassed = 0, totalFailed = 0;
-
-  function traverse(node) {
-    if (!node) return;
-    if (Array.isArray(node.specs) && node.specs.length) {
-      processSpecs(node.specs, node.file);
-    }
-    if (Array.isArray(node.suites) && node.suites.length) {
-      node.suites.forEach(s => traverse(s));
-    }
-  }
-
-  function processSpecs(specs, parentFile) {
-    specs.forEach(spec => {
-      const filePath = (spec.file || parentFile || '').replace(/\\/g, '/');
-      const parts = filePath.split('/').filter(Boolean);
-      const e2i = parts.indexOf('e2e');
-      const secPart = (e2i >= 0 && parts.length > e2i + 1) ? parts[e2i + 1] : '';
-      const secName = titleCase(secPart);
-      if (secName !== sectionName) return;
-
-      (spec.tests || []).forEach(test => {
-        const last = test.results?.[test.results.length - 1];
-        const status = last?.status || test.status || '';
-        if (status.toLowerCase() === 'passed') {
-          totalPassed++;
-        } else if (status.toLowerCase() !== 'skipped') {
-          totalFailed++;
-        }
-      });
-    });
-  }
-
-  traverse(run.rawReport);
-  const totalCount = totalPassed + totalFailed;
-  return {
-    passed: totalPassed,
-    failed: totalFailed,
-    passRate: totalCount ? (totalPassed / totalCount * 100).toFixed(1) : 0
-  };
-}
-
 async function loadSection() {
   const params = new URLSearchParams(window.location.search);
   const sectionName = params.get('name');
@@ -64,106 +21,126 @@ async function loadSection() {
   }
   document.getElementById('sectionTitle').textContent = sectionName;
 
-  // Load history.json
-  let historyData = [];
+  let history = [];
   try {
-    const h = await fetch('./data/history.json');
-    if (h.ok) {
-      historyData = await h.json();
+    const res = await fetch('./data/history.json');
+    if (res.ok) {
+      history = await res.json();
     }
-  } catch (e) {
+  } catch (err) {
     console.warn('No history.json found');
   }
 
-  // Sort newest first
-  historyData.sort((a, b) => new Date(b.date) - new Date(a.date));
+  // Cache of run reports by timestamp
+  const runReports = {};
 
-  const historyListEl = document.getElementById('historyList');
-  const tbody = document.getElementById('featureRows');
-  tbody.innerHTML = '';
+  function renderFeaturesFromReport(report) {
+    const features = {};
+    function traverse(node) {
+      if (!node) return;
+      if (Array.isArray(node.specs) && node.specs.length) {
+        processSpecs(node.specs, node.file);
+      }
+      if (Array.isArray(node.suites) && node.suites.length) {
+        node.suites.forEach(s => traverse(s));
+      }
+    }
+    function processSpecs(specs, parentFile) {
+      specs.forEach(spec => {
+        const filePath = (spec.file || parentFile || '').replace(/\\/g, '/');
+        const parts = filePath.split('/').filter(Boolean);
+        const e2i = parts.indexOf('e2e');
+        const secPart = (e2i >= 0 && parts.length > e2i + 1) ? parts[e2i + 1] : '';
+        const secName = titleCase(secPart);
+        if (secName !== sectionName) return;
 
-  historyData.forEach((run, idx) => {
-    const { passed, failed, passRate } = getSectionStatsFromRun(run, sectionName);
+        const filename = parts[parts.length - 1];
+        const featureName = titleCase(stripFileNameExt(filename));
+        if (!features[featureName]) features[featureName] = { passed: 0, failed: 0 };
 
-    const li = document.createElement('li');
-    li.className = 'p-2 border-b cursor-pointer hover:bg-gray-100';
-    li.innerHTML = `
-      <div class="flex justify-between">
-        <span>${new Date(run.date).toLocaleString()} (${run.duration || '-'}s)</span>
-        <span>Passed: ${passed} | Failed: ${failed} | Rate: ${passRate}%</span>
-      </div>
-    `;
-    li.addEventListener('click', () => {
-      renderFeaturesFromReport(run.rawReport, sectionName, run.date, run.duration);
+        (spec.tests || []).forEach(test => {
+          const last = test.results?.[test.results.length - 1];
+          const status = last?.status || test.status || '';
+          if (status.toLowerCase() === 'passed') {
+            features[featureName].passed++;
+          } else if (status.toLowerCase() !== 'skipped') {
+            features[featureName].failed++;
+          }
+        });
+      });
+    }
+
+    (report.suites || []).forEach(s => traverse(s));
+
+    const tbody = document.getElementById('featureRows');
+    tbody.innerHTML = '';
+    Object.entries(features).forEach(([fname, stats]) => {
+      const denom = stats.passed + stats.failed;
+      const rate = denom ? (stats.passed / denom * 100) : 0;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td class="p-2">${fname}</td>
+        <td class="p-2">${stats.passed}</td>
+        <td class="p-2">${stats.failed}</td>
+        <td class="p-2 font-medium">${rate.toFixed(1)}%</td>
+      `;
+      tbody.appendChild(tr);
     });
-
-    // Default: show latest run
-    if (idx === 0) {
-      renderFeaturesFromReport(run.rawReport, sectionName, run.date, run.duration);
-    }
-
-    historyListEl.appendChild(li);
-  });
-}
-
-function renderFeaturesFromReport(report, sectionName, date, duration) {
-  const features = {};
-
-  function traverse(node) {
-    if (!node) return;
-    if (Array.isArray(node.specs) && node.specs.length) {
-      processSpecs(node.specs, node.file);
-    }
-    if (Array.isArray(node.suites) && node.suites.length) {
-      node.suites.forEach(s => traverse(s));
-    }
   }
 
-  function processSpecs(specs, parentFile) {
-    specs.forEach(spec => {
-      const filePath = (spec.file || parentFile || '').replace(/\\/g, '/');
-      const parts = filePath.split('/').filter(Boolean);
-      const e2i = parts.indexOf('e2e');
-      const secPart = (e2i >= 0 && parts.length > e2i + 1) ? parts[e2i + 1] : '';
-      const secName = titleCase(secPart);
-      if (secName !== sectionName) return;
+  function createBadge(text, bgClass, textClass) {
+    return `<span class="px-2 py-1 text-xs rounded-full ${bgClass} ${textClass}">${text}</span>`;
+  }
 
-      const filename = parts[parts.length - 1];
-      const featureName = titleCase(stripFileNameExt(filename));
-      if (!features[featureName]) features[featureName] = { passed: 0, failed: 0 };
+  const historyList = document.getElementById('historyList');
+  historyList.innerHTML = '';
 
-      (spec.tests || []).forEach(test => {
-        const last = test.results?.[test.results.length - 1];
-        const status = last?.status || test.status || '';
-        if (status.toLowerCase() === 'passed') {
-          features[featureName].passed++;
-        } else if (status.toLowerCase() !== 'skipped') {
-          features[featureName].failed++;
+  history
+    .sort((a, b) => new Date(b.date) - new Date(a.date))
+    .forEach((run, idx) => {
+      const li = document.createElement('li');
+      li.className = 'flex justify-between items-center p-2 border-b hover:bg-gray-50 cursor-pointer';
+
+      const dateText = new Date(run.date).toLocaleString();
+      const rateColor =
+        run.passRate < 50 ? 'bg-red-100 text-red-700' :
+        run.passRate < 80 ? 'bg-yellow-100 text-yellow-700' :
+        'bg-green-100 text-green-700';
+
+      li.innerHTML = `
+        <div>
+          <div class="font-medium">${dateText}</div>
+          <div class="text-xs text-gray-500">Duration: ${run.duration || '-'}s</div>
+        </div>
+        <div class="flex gap-2">
+          ${createBadge(`P: ${run.passed}`, 'bg-green-100', 'text-green-700')}
+          ${createBadge(`F: ${run.failed}`, 'bg-red-100', 'text-red-700')}
+          ${createBadge(`${run.passRate.toFixed(1)}%`, rateColor.split(' ')[0], rateColor.split(' ')[1])}
+        </div>
+      `;
+
+      // Store the report in memory
+      runReports[run.date] = run.report;
+
+      // Click handler to show this run's details
+      li.addEventListener('click', () => {
+        const rep = runReports[run.date];
+        if (rep) {
+          document.getElementById('runInfo').textContent =
+            `${dateText} • Duration: ${run.duration || '-'}s`;
+          renderFeaturesFromReport(rep);
         }
       });
+
+      historyList.appendChild(li);
+
+      // On first (latest) run, show details immediately
+      if (idx === 0) {
+        document.getElementById('runInfo').textContent =
+          `${dateText} • Duration: ${run.duration || '-'}s`;
+        renderFeaturesFromReport(run.report);
+      }
     });
-  }
-
-  traverse(report);
-
-  // Update table title
-  document.querySelector('#featureTable h2').innerText =
-    `Features — ${new Date(date).toLocaleString()} (${duration || '-'}s)`;
-
-  const tbody = document.getElementById('featureRows');
-  tbody.innerHTML = '';
-  Object.entries(features).forEach(([fname, stats]) => {
-    const denom = stats.passed + stats.failed;
-    const rate = denom ? (stats.passed / denom * 100) : 0;
-    const tr = document.createElement('tr');
-    tr.innerHTML = `
-      <td class="p-2">${fname}</td>
-      <td class="p-2">${stats.passed}</td>
-      <td class="p-2">${stats.failed}</td>
-      <td class="p-2 font-medium">${rate.toFixed(1)}%</td>
-    `;
-    tbody.appendChild(tr);
-  });
 }
 
 loadSection();
