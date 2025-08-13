@@ -93,7 +93,7 @@ async function loadSection() {
         <div class="flex items-center gap-2 shrink-0">
             <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">P: ${passed}</span>
             <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700">F: ${failed}</span>
-            <span class="px-2 py-1 text-xs rounded-full ${pillRateClass}">${passRate}%</span>
+            <span class="px-2 py-1 text-xs rounded-full">R: ${passRate.toFixed(1)}%</span>
         </div>
       </div>
     `;
