@@ -18,5 +18,12 @@
     "passed": 50,
     "failed": 50,
     "passRate": 50
+  },
+  {
+    "date": "2025-08-13T13:00:43.754Z",
+    "passed": 38,
+    "failed": 0,
+    "passRate": 100,
+    "duration": 29.4
   }
 ]
