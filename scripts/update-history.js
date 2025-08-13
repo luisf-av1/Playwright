@@ -2,12 +2,13 @@
 const fs = require('fs');
 const path = require('path');
 
-const reportPath = path.join(__dirname, 'dashboard', 'data', 'test-results.json');
-const historyPath = path.join(__dirname, 'dashboard', 'data', 'history.json');
+const [,, reportPathArg, historyPathArg] = process.argv;
+const reportPath = path.resolve(reportPathArg || 'dashboard/data/test-results.json');
+const historyPath = path.resolve(historyPathArg || 'dashboard/data/history.json');
 
 if (!fs.existsSync(reportPath)) {
   console.error('❌ No test-results.json found at', reportPath);
-  process.exit(0);
+  process.exit(1);
 }
 
 const data = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
@@ -15,19 +16,16 @@ let passed = 0, failed = 0;
 
 function traverse(node) {
   if (!node) return;
-
   if (Array.isArray(node.specs)) {
     node.specs.forEach(spec => {
       (spec.tests || []).forEach(test => {
-        const results = Array.isArray(test.results) ? test.results : [];
-        const last = results[results.length - 1];
+        const last = test.results?.[test.results.length - 1];
         const status = (last?.status || test.status || '').toLowerCase();
         if (status === 'passed') passed++;
         else if (status && status !== 'skipped') failed++;
       });
     });
   }
-
   if (Array.isArray(node.suites)) {
     node.suites.forEach(traverse);
   }
@@ -43,7 +41,6 @@ if (fs.existsSync(historyPath)) {
   history = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
 }
 
-// Append the new record
 history.push({
   date: new Date().toISOString(),
   passed,
