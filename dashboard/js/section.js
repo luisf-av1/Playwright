@@ -165,7 +165,7 @@ function renderFeaturesFromReport(report, sectionName, date, duration) {
     tr.innerHTML = `
         <div class="flex items-center justify-between">
           <div class="min-w-0">
-            <div class="font-medium truncate">${dateTxt}</div>
+            <div class="font-medium truncate">${new Date(date).toLocaleString()}}</div>
             <div class="text-xs text-gray-500 mt-0.5">Duration: ${duration}</div>
           </div>
           <div class="flex items-center gap-2 shrink-0">
