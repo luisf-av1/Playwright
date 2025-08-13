@@ -7,6 +7,7 @@ test.describe('TS | Recent Data', () => {
 
     test("PW Test 1 @smoke", async({page})=>{
         await page.goto("https://playwright.dev");
+        expect(false).toBe(True)
     });
     
     test("PW Test 2 @regression", async({page})=>{
