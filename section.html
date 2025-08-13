@@ -1,47 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Section Details</title>
-  <script src="https://cdn.tailwindcss.com"></script>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Section Details</title>
+<script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-900 p-6">
-  <a href="index.html" class="text-blue-600 hover:underline">← Back to Dashboard</a>
-
+  <a href="index.html" class="text-blue-500 underline">← Back to Dashboard</a>
   <h1 id="sectionTitle" class="text-3xl font-bold mt-4 mb-6"></h1>
 
-  <!-- Latest run table -->
-  <div class="bg-white shadow rounded-lg p-4 mb-8">
-    <div class="flex items-center justify-between mb-3">
-      <h2 id="tableTitle" class="text-xl font-bold">Latest Run</h2>
-      <div id="tableMeta" class="text-sm text-gray-500"></div>
-    </div>
-
-    <div class="overflow-x-auto">
-      <table class="w-full text-left border-collapse">
-        <thead>
-          <tr class="bg-gray-100 text-sm">
-            <th class="p-2">Feature</th>
-            <th class="p-2">Passed</th>
-            <th class="p-2">Failed</th>
-            <th class="p-2">Pass Rate</th>
-          </tr>
-        </thead>
-        <tbody id="featureRows"></tbody>
-      </table>
-    </div>
+  <!-- Latest Run Table -->
+  <div id="featureTable" class="bg-white shadow rounded-lg p-4 mb-8">
+    <h2 id="latestRunTitle" class="text-xl font-bold mb-4">Latest Run</h2>
+    <table class="w-full text-left border-collapse">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="p-2">Feature</th>
+          <th class="p-2">Passed</th>
+          <th class="p-2">Failed</th>
+          <th class="p-2">Pass Rate</th>
+        </tr>
+      </thead>
+      <tbody id="featureRows"></tbody>
+    </table>
   </div>
 
-  <!-- Execution history -->
+  <!-- History List -->
   <div class="bg-white shadow rounded-lg p-4">
     <h2 class="text-xl font-bold mb-4">Execution History</h2>
-
-    <ul id="historyList" class="space-y-2">
-      <!-- items injected by JS -->
-    </ul>
+    <ul id="historyList" class="divide-y divide-gray-200"></ul>
   </div>
 
-  <script src="js/section.js"></script>
+<script src="js/section.js"></script>
 </body>
 </html>
