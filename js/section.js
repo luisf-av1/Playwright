@@ -21,103 +21,84 @@ async function loadSection() {
   }
   document.getElementById('sectionTitle').textContent = sectionName;
 
-  // Load latest test-results.json
-  let latestData;
+  // Load current report
+  const res = await fetch('./data/test-results.json');
+  const data = await res.json();
+  renderFeaturesFromReport(data, sectionName, 'featureRows', 'Current Execution');
+
+  // Load history
+  let history = [];
   try {
-    const res = await fetch('./data/test-results.json');
-    latestData = await res.json();
-  } catch {
-    document.body.innerHTML = "<p class='text-red-500'>Failed to load latest results.</p>";
-    return;
+    const h = await fetch('./data/history.json');
+    if (h.ok) history = await h.json();
+  } catch (e) {
+    console.warn('No history.json found');
   }
 
-  // Render latest features
-  renderFeaturesFromReport(latestData, sectionName, document.getElementById('featureRows'));
-
-  // Load history.json for historical tables
-  let historyData = [];
-  try {
-    const res = await fetch('./data/history.json');
-    if (res.ok) historyData = await res.json();
-  } catch(e) {
-    console.warn('No history.json found.');
-  }
-
-  // Filter for historical runs (excluding latest one)
-  const historyContainer = document.getElementById('historyContainer');
-  historyContainer.innerHTML = '';
-  historyData
-    .slice(0, -1) // remove last entry (latest run)
-    .reverse() // oldest first when toggled
-    .forEach(run => {
-      const sectionTable = document.createElement('div');
-      sectionTable.className = "bg-white shadow rounded-lg p-4";
-      sectionTable.innerHTML = `
-        <h2 class="text-xl font-bold mb-4">Features - ${new Date(run.date).toLocaleString()}</h2>
-        <table class="w-full text-left border-collapse">
-          <thead>
-            <tr class="bg-gray-100">
-              <th class="p-2">Feature</th>
-              <th class="p-2">Passed</th>
-              <th class="p-2">Failed</th>
-              <th class="p-2">Pass Rate</th>
-            </tr>
-          </thead>
-          <tbody></tbody>
-        </table>
-      `;
-      const tbody = sectionTable.querySelector('tbody');
-      renderFeaturesFromReport(run.rawReport, sectionName, tbody);
-      historyContainer.appendChild(sectionTable);
-    });
-
-  // Toggle button
-  document.getElementById('toggleHistory').addEventListener('click', () => {
-    historyContainer.classList.toggle('hidden');
-    const btn = document.getElementById('toggleHistory');
-    btn.textContent = historyContainer.classList.contains('hidden')
-      ? 'Show Historical Data'
-      : 'Hide Historical Data';
+  // Render each historical entry that has rawReport
+  history.forEach(entry => {
+    if (!entry.rawReport || !entry.rawReport.suites) {
+      console.warn(`Skipping history entry for ${entry.date} — no rawReport`);
+      return;
+    }
+    const tableId = `history-${entry.date}`;
+    const container = document.createElement('div');
+    container.className = 'bg-white shadow rounded-lg p-4 mt-6';
+    container.innerHTML = `
+      <h2 class="text-lg font-bold mb-4">
+        Features — ${new Date(entry.date).toLocaleString()}
+      </h2>
+      <table class="w-full text-left border-collapse">
+        <thead>
+          <tr class="bg-gray-100">
+            <th class="p-2">Feature</th>
+            <th class="p-2">Passed</th>
+            <th class="p-2">Failed</th>
+            <th class="p-2">Pass Rate</th>
+          </tr>
+        </thead>
+        <tbody id="${tableId}"></tbody>
+      </table>
+    `;
+    document.body.appendChild(container);
+    renderFeaturesFromReport(entry.rawReport, sectionName, tableId, entry.date);
   });
 }
 
-function renderFeaturesFromReport(reportData, sectionName, tbodyEl) {
+function renderFeaturesFromReport(report, sectionName, tableBodyId) {
   const features = {};
   function traverse(node) {
     if (!node) return;
-    if (Array.isArray(node.specs) && node.specs.length) {
-      processSpecs(node.specs, node.file);
+    if (Array.isArray(node.specs)) {
+      node.specs.forEach(spec => {
+        const filePath = (spec.file || '').replace(/\\/g, '/');
+        const parts = filePath.split('/').filter(Boolean);
+        const e2i = parts.indexOf('e2e');
+        const secPart = (e2i >= 0 && parts.length > e2i + 1) ? parts[e2i + 1] : '';
+        if (titleCase(secPart) !== sectionName) return;
+
+        const filename = parts[parts.length - 1];
+        const featureName = titleCase(stripFileNameExt(filename));
+        if (!features[featureName]) features[featureName] = { passed: 0, failed: 0 };
+
+        (spec.tests || []).forEach(test => {
+          const last = test.results?.[test.results.length - 1];
+          const status = last?.status || test.status || '';
+          if (status.toLowerCase() === 'passed') {
+            features[featureName].passed++;
+          } else if (status.toLowerCase() !== 'skipped') {
+            features[featureName].failed++;
+          }
+        });
+      });
     }
-    if (Array.isArray(node.suites) && node.suites.length) {
+    if (Array.isArray(node.suites)) {
       node.suites.forEach(s => traverse(s));
     }
   }
-  function processSpecs(specs, parentFile) {
-    specs.forEach(spec => {
-      const filePath = (spec.file || parentFile || '').replace(/\\/g,'/');
-      const parts = filePath.split('/').filter(Boolean);
-      const e2i = parts.indexOf('e2e');
-      const secPart = (e2i >= 0 && parts.length > e2i + 1) ? parts[e2i + 1] : '';
-      const secName = titleCase(secPart);
-      if (secName !== sectionName) return;
+  (report.suites || []).forEach(s => traverse(s));
 
-      const filename = parts[parts.length - 1];
-      const featureName = titleCase(stripFileNameExt(filename));
-      if (!features[featureName]) features[featureName] = { passed: 0, failed: 0 };
-
-      (spec.tests || []).forEach(test => {
-        const last = test.results?.[test.results.length - 1];
-        const status = last?.status || test.status || '';
-        if (status.toLowerCase() === 'passed') {
-          features[featureName].passed++;
-        } else if (status.toLowerCase() !== 'skipped') {
-          features[featureName].failed++;
-        }
-      });
-    });
-  }
-  (reportData.suites || []).forEach(s => traverse(s));
-
+  const tbody = document.getElementById(tableBodyId);
   Object.entries(features).forEach(([fname, stats]) => {
     const denom = stats.passed + stats.failed;
     const rate = denom ? (stats.passed / denom * 100) : 0;
@@ -128,7 +109,7 @@ function renderFeaturesFromReport(reportData, sectionName, tbodyEl) {
       <td class="p-2">${stats.failed}</td>
       <td class="p-2 font-medium">${rate.toFixed(1)}%</td>
     `;
-    tbodyEl.appendChild(tr);
+    tbody.appendChild(tr);
   });
 }
 
