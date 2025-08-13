@@ -1,7 +1,7 @@
 function titleCase(s) {
   return String(s || '')
-    .replace(/[-_]+/g,' ')
-    .replace(/\s+/g,' ')
+    .replace(/[-_]+/g, ' ')
+    .replace(/\s+/g, ' ')
     .trim()
     .split(' ')
     .map(w => w.charAt(0).toUpperCase() + w.slice(1))
@@ -10,6 +10,49 @@ function titleCase(s) {
 
 function stripFileNameExt(name) {
   return name.replace(/\.[^/.]+$/, '').replace(/\.spec$|\.test$/i, '');
+}
+
+function getSectionStatsFromRun(run, sectionName) {
+  let totalPassed = 0, totalFailed = 0;
+
+  function traverse(node) {
+    if (!node) return;
+    if (Array.isArray(node.specs) && node.specs.length) {
+      processSpecs(node.specs, node.file);
+    }
+    if (Array.isArray(node.suites) && node.suites.length) {
+      node.suites.forEach(s => traverse(s));
+    }
+  }
+
+  function processSpecs(specs, parentFile) {
+    specs.forEach(spec => {
+      const filePath = (spec.file || parentFile || '').replace(/\\/g, '/');
+      const parts = filePath.split('/').filter(Boolean);
+      const e2i = parts.indexOf('e2e');
+      const secPart = (e2i >= 0 && parts.length > e2i + 1) ? parts[e2i + 1] : '';
+      const secName = titleCase(secPart);
+      if (secName !== sectionName) return;
+
+      (spec.tests || []).forEach(test => {
+        const last = test.results?.[test.results.length - 1];
+        const status = last?.status || test.status || '';
+        if (status.toLowerCase() === 'passed') {
+          totalPassed++;
+        } else if (status.toLowerCase() !== 'skipped') {
+          totalFailed++;
+        }
+      });
+    });
+  }
+
+  traverse(run.rawReport);
+  const totalCount = totalPassed + totalFailed;
+  return {
+    passed: totalPassed,
+    failed: totalFailed,
+    passRate: totalCount ? (totalPassed / totalCount * 100).toFixed(1) : 0
+  };
 }
 
 async function loadSection() {
@@ -21,76 +64,60 @@ async function loadSection() {
   }
   document.getElementById('sectionTitle').textContent = sectionName;
 
+  // Load history.json
   let historyData = [];
   try {
     const h = await fetch('./data/history.json');
-    if (h.ok) historyData = await h.json();
+    if (h.ok) {
+      historyData = await h.json();
+    }
   } catch (e) {
     console.warn('No history.json found');
   }
 
-  // newest first
+  // Sort newest first
   historyData.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-  // Render history list
-  const historyList = document.getElementById('historyList');
-  historyList.innerHTML = '';
+  const historyListEl = document.getElementById('historyList');
+  const tbody = document.getElementById('featureRows');
+  tbody.innerHTML = '';
+
   historyData.forEach((run, idx) => {
+    const { passed, failed, passRate } = getSectionStatsFromRun(run, sectionName);
+
     const li = document.createElement('li');
-    li.className = 'py-3 flex justify-between items-center hover:bg-gray-50 cursor-pointer px-2 rounded';
+    li.className = 'p-2 border-b cursor-pointer hover:bg-gray-100';
     li.innerHTML = `
-      <div>
-        <div class="font-semibold">${new Date(run.date).toLocaleString()}</div>
-        <div class="text-sm text-gray-500">Duration: ${run.duration || '-'}s</div>
-      </div>
-      <div class="text-sm">
-        Pass: <span class="text-green-600">${run.passed}</span> • 
-        Fail: <span class="text-red-600">${run.failed}</span> • 
-        <span class="font-semibold">${run.passRate}%</span>
+      <div class="flex justify-between">
+        <span>${new Date(run.date).toLocaleString()} (${run.duration || '-'}s)</span>
+        <span>Passed: ${passed} | Failed: ${failed} | Rate: ${passRate}%</span>
       </div>
     `;
-    li.addEventListener('click', () => renderFeaturesFromReport(run.rawReport || {}, sectionName, run.date, run.duration));
-    historyList.appendChild(li);
+    li.addEventListener('click', () => {
+      renderFeaturesFromReport(run.rawReport, sectionName, run.date, run.duration);
+    });
 
-    // First item is the latest run
+    // Default: show latest run
     if (idx === 0) {
-      renderFeaturesFromReport(run.rawReport || {}, sectionName, run.date, run.duration);
+      renderFeaturesFromReport(run.rawReport, sectionName, run.date, run.duration);
     }
+
+    historyListEl.appendChild(li);
   });
 }
 
-function renderFeaturesFromReport(data, sectionName, date, duration) {
+function renderFeaturesFromReport(report, sectionName, date, duration) {
   const features = {};
+
   function traverse(node) {
     if (!node) return;
-    if (Array.isArray(node.specs)) {
-      node.specs.forEach(spec => {
-        const filePath = (spec.file || '').replace(/\\/g, '/');
-        const parts = filePath.split('/').filter(Boolean);
-        const e2i = parts.indexOf('e2e');
-        const secPart = (e2i >= 0 && parts.length > e2i + 1) ? parts[e2i + 1] : '';
-        if (titleCase(secPart) !== sectionName) return;
-
-        const filename = parts[parts.length - 1];
-        const featureName = titleCase(stripFileNameExt(filename));
-        if (!features[featureName]) features[featureName] = { passed: 0, failed: 0 };
-
-        (spec.tests || []).forEach(test => {
-          const last = test.results?.[test.results.length - 1];
-          const status = last?.status || test.status || '';
-          if (status.toLowerCase() === 'passed') {
-            features[featureName].passed++;
-          } else if (status.toLowerCase() !== 'skipped') {
-            features[featureName].failed++;
-          }
-        });
-      });
+    if (Array.isArray(node.specs) && node.specs.length) {
+      processSpecs(node.specs, node.file);
     }
-    if (Array.isArray(node.suites)) {
+    if (Array.isArray(node.suites) && node.suites.length) {
       node.suites.forEach(s => traverse(s));
     }
   }
-  (report.suites || []).forEach(s => traverse(s));
 
   function processSpecs(specs, parentFile) {
     specs.forEach(spec => {
@@ -117,7 +144,11 @@ function renderFeaturesFromReport(data, sectionName, date, duration) {
     });
   }
 
-  (data.suites || []).forEach(s => traverse(s));
+  traverse(report);
+
+  // Update table title
+  document.querySelector('#featureTable h2').innerText =
+    `Features — ${new Date(date).toLocaleString()} (${duration || '-'}s)`;
 
   const tbody = document.getElementById('featureRows');
   tbody.innerHTML = '';
@@ -133,9 +164,6 @@ function renderFeaturesFromReport(data, sectionName, date, duration) {
     `;
     tbody.appendChild(tr);
   });
-
-  document.getElementById('latestRunTitle').textContent =
-    `Latest Run — ${new Date(date).toLocaleString()} (Duration: ${duration || '-'}s)`;
 }
 
 loadSection();
