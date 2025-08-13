@@ -90,7 +90,11 @@ async function loadSection() {
     li.innerHTML = `
       <div class="flex justify-between">
         <span>${new Date(run.date).toLocaleString()} (${run.duration || '-'}s)</span>
-        <span>Passed: ${passed} | Failed: ${failed} | Rate: ${passRate}%</span>
+        <div class="flex items-center gap-2 shrink-0">
+            <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">P: ${passed}</span>
+            <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700">F: ${failed}</span>
+            <span class="px-2 py-1 text-xs rounded-full ${pillRateClass}">${passRate.toFixed(1)}%</span>
+        </div>
       </div>
     `;
     li.addEventListener('click', () => {
@@ -157,13 +161,12 @@ function renderFeaturesFromReport(report, sectionName, date, duration) {
     const rate = denom ? (stats.passed / denom * 100) : 0;
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td class="px-2 py-1 text-xs rounded-full">${fname}</td>
-      <td class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">${stats.passed}</td>
-      <td class="px-2 py-1 text-xs rounded-full bg-green-100 text-red-700">${stats.failed}</td>
-      <td class="px-2 py-1 text-xs rounded-full">${rate.toFixed(1)}%</td>
+      <td class="p-2">${fname}</td>
+      <td class="p-2">${stats.passed}</td>
+      <td class="p-2">${stats.failed}</td>
+      <td class="p-2 font-medium">${rate.toFixed(1)}%</td>
     `;
     tbody.appendChild(tr);
   });
-}
-
+} 
 loadSection();
