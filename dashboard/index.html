@@ -1,279 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="utf-8" />
-<meta name="viewport" content="width=device-width,initial-scale=1" />
-<title>App Stability Dashboard</title>
-<link rel="stylesheet" href="css/style.css" />
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Section Details</title>
 <script src="https://cdn.tailwindcss.com"></script>
-<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
 </head>
-<body class="bg-gray-50 text-gray-900">
-  <div class="max-w-7xl mx-auto p-6">
-    <h1 class="text-3xl font-bold mb-2">App Stability Dashboard</h1>
-    <p class="mb-6 text-sm text-gray-600">App stability based on Playwright JSON test runs</p>
+<body class="bg-gray-50 text-gray-900 p-6">
+  <a href="index.html" class="text-blue-500 underline">← Back to Dashboard</a>
+  <h1 id="sectionTitle" class="text-3xl font-bold mt-4 mb-6"></h1>
 
-    <!-- Summary -->
-    <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 mb-8">
-      <div class="bg-white shadow rounded-lg p-4 text-center">
-        <p class="text-gray-400">Passed</p>
-        <p id="passedCount" class="text-2xl font-bold text-green-500">0</p>
-      </div>
-      <div class="bg-white shadow rounded-lg p-4 text-center">
-        <p class="text-gray-400">Failed</p>
-        <p id="failedCount" class="text-2xl font-bold text-red-500">0</p>
-      </div>
-      <div class="bg-white shadow rounded-lg p-4 text-center">
-        <p class="text-gray-400">Overall Pass Rate</p>
-        <p id="passRate" class="text-2xl font-bold">0%</p>
-      </div>
-      <div class="bg-white shadow rounded-lg p-4 text-center">
-        <p class="text-gray-400">Last Execution Date</p>
-        <p id="date" class="text-sm font-bold">-</p>
-      </div>
-      <div class="bg-white shadow rounded-lg p-4 text-center">
-        <p class="text-gray-400">Last Execution Duration</p>
-        <p id="duration" class="text-2xl font-bold">0s</p>
-      </div>
+  <!-- Run Details -->
+  <div class="bg-white shadow rounded-lg p-4 mb-6">
+    <div class="flex justify-between items-center mb-4">
+      <h2 class="text-xl font-bold">Run Details</h2>
+      <span id="runInfo" class="text-sm text-gray-500">-</span>
     </div>
-
-    <!-- Trend chart -->
-    <div id="chart" class="bg-white p-4 shadow rounded-lg mb-8"></div>
-
-    <!-- Sections -->
-    <h2 class="text-xl font-bold mb-4">Sections</h2>
-    <div id="sectionCards" class="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-8"></div>
-
-    <!-- Problems lists -->
-    <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-      <div class="bg-white shadow rounded-lg p-4">
-        <h3 class="text-lg font-bold mb-3">Top 5 Sections with More Problems</h3>
-        <ul id="topSections" class="list-none"></ul>
-      </div>
-      <div class="bg-white shadow rounded-lg p-4">
-        <h3 class="text-lg font-bold mb-3">Top 5 Features with More Problems</h3>
-        <ul id="topFeatures" class="list-none"></ul>
-      </div>
-    </div>
+    <table class="w-full text-left border-collapse">
+      <thead>
+        <tr class="bg-gray-100">
+          <th class="p-2">Feature</th>
+          <th class="p-2">Passed</th>
+          <th class="p-2">Failed</th>
+          <th class="p-2">Pass Rate</th>
+        </tr>
+      </thead>
+      <tbody id="featureRows"></tbody>
+    </table>
   </div>
 
-<script>
-function titleCase(s){
-  return String(s || '')
-    .replace(/[-_]+/g,' ')
-    .replace(/\s+/g,' ')
-    .trim()
-    .split(' ')
-    .map(w => w.charAt(0).toUpperCase() + w.slice(1))
-    .join(' ');
-}
-function stripFileNameExt(name){
-  const noExt = name.replace(/\.[^/.]+$/, '');
-  return noExt.replace(/\.spec$|\.test$/i, '');
-}
+  <!-- Execution History -->
+  <div class="bg-white shadow rounded-lg p-4">
+    <h2 class="text-xl font-bold mb-4">Execution History</h2>
+    <ul id="historyList" class="divide-y divide-gray-200"></ul>
+  </div>
 
-async function loadReport(){
-  let data;
-  try {
-    const r = await fetch('./data/test-results.json');
-    data = await r.json();
-  } catch (err) {
-    console.error('Failed to load test-results.json', err);
-    return;
-  }
-
-  // Load history.json for streak calculation and chart
-  let historyData = [];
-  try {
-    const h = await fetch('./data/history.json');
-    if (h.ok) {
-      historyData = await h.json();
-    }
-  } catch(e) {
-    console.warn('No history.json found');
-  }
-
-  const sections = {};
-  const featureGlobal = {};
-  let totalPassed = 0, totalFailed = 0, totalSkipped = 0;
-
-  function traverse(node){
-    if (!node) return;
-    if (Array.isArray(node.specs) && node.specs.length){
-      processSpecs(node.specs, node.file);
-    }
-    if (Array.isArray(node.suites) && node.suites.length){
-      node.suites.forEach(s => traverse(s));
-    }
-  }
-  function processSpecs(specs, parentFile){
-    specs.forEach(spec => {
-      const filePath = (spec.file || parentFile || '').replace(/\\/g,'/');
-      const parts = filePath.split('/').filter(Boolean);
-      const e2i = parts.indexOf('e2e');
-      const sectionPart = (e2i >= 0 && parts.length > e2i + 1) ? parts[e2i + 1] : parts[0];
-      const sectionName = titleCase(sectionPart || 'Unknown');
-      const filename = parts[parts.length - 1] || filePath;
-      const featureName = titleCase(stripFileNameExt(filename));
-
-      if (!sections[sectionName]) sections[sectionName] = { passed:0, failed:0, skipped:0, features: {} };
-      if (!sections[sectionName].features[featureName]) sections[sectionName].features[featureName] = { passed:0, failed:0, skipped:0 };
-
-      (spec.tests || []).forEach(test => {
-        const results = Array.isArray(test.results) ? test.results : [];
-        const last = results[results.length - 1];
-        const status = (last?.status || test.status || '').toLowerCase();
-        if (status === 'passed') {
-          sections[sectionName].passed++;
-          sections[sectionName].features[featureName].passed++;
-          totalPassed++;
-        } else if (status === 'skipped') {
-          sections[sectionName].skipped++;
-          sections[sectionName].features[featureName].skipped++;
-          totalSkipped++;
-        } else {
-          sections[sectionName].failed++;
-          sections[sectionName].features[featureName].failed++;
-          totalFailed++;
-        }
-      });
-    });
-  }
-
-  (data.suites || []).forEach(s => traverse(s));
-
-  const totalCount = totalPassed + totalFailed;
-
-  // Summary cards
-  document.getElementById('passedCount').innerText = totalPassed;
-  document.getElementById('failedCount').innerText = totalFailed;
-
-  const passRate = totalCount ? ((totalPassed / totalCount) * 100).toFixed(1) : 0;
-  const passRateEl = document.getElementById('passRate');
-  passRateEl.innerText = passRate + '%';
-  if (passRate < 50) passRateEl.classList.add('text-red-500');
-  else if (passRate < 80) passRateEl.classList.add('text-yellow-500');
-  else passRateEl.classList.add('text-green-500');
-
-  document.getElementById('duration').innerText = data.stats?.duration ? (data.stats.duration / 1000).toFixed(1) + 's' : '-';
-  document.getElementById('date').innerText = data.stats?.startTime ? new Date(data.stats.startTime).toLocaleString() : '-';
-
-  // Days without incidents (per day streak)
-  let streak = 0;
-  if (historyData.length) {
-    const byDay = {};
-    historyData.forEach(run => {
-      const day = new Date(run.date).toISOString().slice(0,10);
-      if (!byDay[day]) byDay[day] = { failed: 0 };
-      byDay[day].failed += run.failed;
-    });
-    const days = Object.keys(byDay).sort((a,b) => new Date(b) - new Date(a));
-    for (let day of days) {
-      if (byDay[day].failed === 0) streak++;
-      else break;
-    }
-  }
-  const daysCard = document.createElement('div');
-  daysCard.className = "bg-white shadow rounded-lg p-4 text-center";
-  daysCard.innerHTML = `<p class="text-gray-400">Days Without Incidents</p><p class="text-2xl font-bold text-blue-500">${streak}</p>`;
-  document.querySelector('.grid.grid-cols-1.sm\\:grid-cols-5').appendChild(daysCard);
-
-  // Section cards
-  const sectionCards = document.getElementById('sectionCards');
-  sectionCards.innerHTML = '';
-  Object.entries(sections).forEach(([sectionName, s]) => {
-    const denom = s.passed + s.failed;
-    const passRate = denom ? (s.passed / denom * 100) : 0;
-    let borderColor = 'border-green-500';
-    if (passRate < 50) borderColor = 'border-red-500';
-    else if (passRate < 80) borderColor = 'border-yellow-500';
-
-    const card = document.createElement('a');
-    card.href = `section.html?name=${encodeURIComponent(sectionName)}`;
-    card.className = `border-2 rounded-lg p-4 block ${borderColor} bg-white shadow hover:shadow-lg`;
-    card.innerHTML = `
-      <h3 class="text-lg font-bold">${sectionName} tests</h3>
-      <div class="mt-1 text-sm">
-        <div>Passed: <strong>${s.passed}</strong></div>
-        <div>Failed: <strong class="text-red-600">${s.failed}</strong></div>
-        <div class="mt-1 font-semibold">Pass rate: ${denom ? passRate.toFixed(1) + '%' : 'N/A'}</div>
-      </div>
-      <div class="mt-2 text-xs text-gray-500">Click to view features</div>`;
-    sectionCards.appendChild(card);
-
-    Object.entries(s.features).forEach(([fname, fstats]) => {
-      if (!featureGlobal[fname]) featureGlobal[fname] = { failed: 0, passed: 0 };
-      featureGlobal[fname].failed += fstats.failed;
-      featureGlobal[fname].passed += fstats.passed;
-    });
-  });
-
-  // Top sections (with colored rows)
-  const topSectionsEl = document.getElementById('topSections');
-  topSectionsEl.innerHTML = '';
-  Object.entries(sections)
-    .map(([name, s]) => {
-      const den = s.passed + s.failed;
-      return { name, failed: s.failed, passRate: den ? (s.passed/den*100) : 0 };
-    })
-    .sort((a,b) => b.failed - a.failed || a.passRate - b.passRate)
-    .slice(0,5)
-    .forEach(sec => {
-      let bg = 'bg-green-50';
-      if (sec.passRate < 50) bg = 'bg-red-50';
-      else if (sec.passRate < 80) bg = 'bg-yellow-50';
-      const li = document.createElement('li');
-      li.className = `flex justify-between py-1 px-2 rounded ${bg}`;
-      li.innerHTML = `<span>${sec.name}</span><span class="text-sm text-gray-600">Fails: ${sec.failed} • ${sec.passRate.toFixed(1)}%</span>`;
-      topSectionsEl.appendChild(li);
-    });
-
-  // Top features (with colored rows)
-  const topFeaturesEl = document.getElementById('topFeatures');
-  topFeaturesEl.innerHTML = '';
-  Object.entries(featureGlobal)
-    .map(([name, f]) => {
-      const den = f.passed + f.failed;
-      return { name, failed: f.failed, passRate: den ? (f.passed/den*100) : 0 };
-    })
-    .sort((a,b) => b.failed - a.failed || a.passRate - b.passRate)
-    .slice(0,5)
-    .forEach(f => {
-      let bg = 'bg-green-50';
-      if (f.passRate < 50) bg = 'bg-red-50';
-      else if (f.passRate < 80) bg = 'bg-yellow-50';
-      const li = document.createElement('li');
-      li.className = `flex justify-between py-1 px-2 rounded ${bg}`;
-      li.innerHTML = `<span>${f.name}</span><span class="text-sm text-gray-600">Fails: ${f.failed} • ${f.passRate.toFixed(1)}%</span>`;
-      topFeaturesEl.appendChild(li);
-    });
-
-  // Chart (with hour+minutes in label)
-  let categories = [], series = [];
-  if (Array.isArray(historyData) && historyData.length) {
-    categories = historyData.map(h => new Date(h.date).toLocaleString());
-    series = historyData.map(h => Number(h.passRate));
-  } else {
-    const label = data.stats?.startTime ? new Date(data.stats.startTime).toLocaleString() : 'Run';
-    const currentRate = totalCount ? Number(((totalPassed / totalCount) * 100).toFixed(1)) : 0;
-    categories = [label];
-    series = [currentRate];
-  }
-
-  const chartOptions = {
-    chart: { type: 'line', height: 300 },
-    series: [{ name: 'Overall Pass Rate', data: series }],
-    xaxis: { categories },
-    stroke: { curve: 'smooth' },
-    yaxis: { min: 0, max: 100, tickAmount: 5 },
-    tooltip: { y: { formatter: val => val + '%' } },
-    markers: { size: 4 },
-    colors: ['#16a34a']
-  };
-  document.querySelector('#chart').innerHTML = '';
-  new ApexCharts(document.querySelector('#chart'), chartOptions).render();
-}
-loadReport();
-</script>
+<script src="js/section.js"></script>
 </body>
 </html>
