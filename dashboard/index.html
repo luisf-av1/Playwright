@@ -14,7 +14,7 @@
     <p class="mb-6 text-sm text-gray-600">App stability based on Playwright JSON test runs</p>
 
     <!-- Summary -->
-    <div class="grid grid-cols-1 sm:grid-cols-5 gap-4 mb-8">
+    <div class="grid grid-cols-1 sm:grid-cols-6 gap-4 mb-8">
       <div class="bg-white shadow rounded-lg p-4 text-center">
         <p class="text-gray-400">Passed</p>
         <p id="passedCount" class="text-2xl font-bold text-green-500">0</p>
@@ -34,6 +34,10 @@
       <div class="bg-white shadow rounded-lg p-4 text-center">
         <p class="text-gray-400">Last Execution Duration</p>
         <p id="duration" class="text-2xl font-bold">0s</p>
+      </div>
+      <div class="bg-white shadow rounded-lg p-4 text-center">
+        <p class="text-gray-400">Days Without Incidents</p>
+        <p id="daysWithoutIncidents" class="text-2xl font-bold text-green-500">0</p>
       </div>
     </div>
 
@@ -70,6 +74,16 @@ function titleCase(s){
 function stripFileNameExt(name){
   const noExt = name.replace(/\.[^/.]+$/, '');
   return noExt.replace(/\.spec$|\.test$/i, '');
+}
+function getPassRateColor(rate) {
+  if (rate < 50) return 'text-red-500';
+  if (rate < 80) return 'text-yellow-500';
+  return 'text-green-500';
+}
+function getRowBg(rate) {
+  if (rate < 50) return 'bg-red-100';
+  if (rate < 80) return 'bg-yellow-100';
+  return 'bg-green-100';
 }
 
 async function loadReport(){
@@ -133,9 +147,12 @@ async function loadReport(){
 
   // summary cards
   const totalCount = totalPassed + totalFailed;
+  const overallPassRate = totalCount ? ((totalPassed / totalCount) * 100).toFixed(1) : 0;
   document.getElementById('passedCount').innerText = totalPassed;
   document.getElementById('failedCount').innerText = totalFailed;
-  document.getElementById('passRate').innerText = totalCount ? ((totalPassed / totalCount) * 100).toFixed(1) + '%' : 'N/A';
+  const passRateEl = document.getElementById('passRate');
+  passRateEl.innerText = overallPassRate + '%';
+  passRateEl.classList.add(getPassRateColor(overallPassRate));
   document.getElementById('duration').innerText = data.stats?.duration ? (data.stats.duration / 1000).toFixed(1) + 's' : '-';
   document.getElementById('date').innerText = data.stats?.startTime ? new Date(data.stats.startTime).toLocaleString() : '-';
 
@@ -181,8 +198,8 @@ async function loadReport(){
     .slice(0,5)
     .forEach(sec => {
       const li = document.createElement('li');
-      li.className = 'flex justify-between py-1';
-      li.innerHTML = `<span>${sec.name}</span><span class="text-sm text-gray-600">Fails: ${sec.failed} • ${sec.passRate.toFixed(1)}%</span>`;
+      li.className = `flex justify-between py-1 px-2 rounded ${getRowBg(sec.passRate)}`;
+      li.innerHTML = `<span>${sec.name}</span><span class="text-sm">Fails: ${sec.failed} • ${sec.passRate.toFixed(1)}%</span>`;
       topSectionsEl.appendChild(li);
     });
 
@@ -198,12 +215,12 @@ async function loadReport(){
     .slice(0,5)
     .forEach(f => {
       const li = document.createElement('li');
-      li.className = 'flex justify-between py-1';
-      li.innerHTML = `<span>${f.name}</span><span class="text-sm text-gray-600">Fails: ${f.failed} • ${f.passRate.toFixed(1)}%</span>`;
+      li.className = `flex justify-between py-1 px-2 rounded ${getRowBg(f.passRate)}`;
+      li.innerHTML = `<span>${f.name}</span><span class="text-sm">Fails: ${f.failed} • ${f.passRate.toFixed(1)}%</span>`;
       topFeaturesEl.appendChild(li);
     });
 
-  // Load history.json for chart
+  // Load history.json for chart & days without incidents
   let historyData = [];
   try {
     const h = await fetch('./data/history.json');
@@ -214,12 +231,29 @@ async function loadReport(){
     console.warn('No history.json found, showing only current run');
   }
 
+  // Days without incidents
+  let streak = 0;
+  if (historyData.length) {
+    // Sort by date descending
+    const sorted = [...historyData].sort((a,b) => new Date(b.date) - new Date(a.date));
+    for (const run of sorted) {
+      if (run.failed && run.failed > 0) break;
+      streak++;
+    }
+  }
+  document.getElementById('daysWithoutIncidents').innerText = streak;
+
+  // Chart with hour:minute
   let categories = [], series = [];
   if (Array.isArray(historyData) && historyData.length) {
-    categories = historyData.map(h => new Date(h.date).toLocaleDateString());
+    categories = historyData.map(h => {
+      const d = new Date(h.date);
+      return `${d.getMonth()+1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')}`;
+    });
     series = historyData.map(h => Number(h.passRate));
   } else {
-    const label = data.stats?.startTime ? new Date(data.stats.startTime).toLocaleString() : 'Run';
+    const d = new Date(data.stats?.startTime);
+    const label = `${d.getMonth()+1}/${d.getDate()} ${d.getHours()}:${String(d.getMinutes()).padStart(2,'0')}`;
     const currentRate = totalCount ? Number(((totalPassed / totalCount) * 100).toFixed(1)) : 0;
     categories = [label];
     series = [currentRate];
