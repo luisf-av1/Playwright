@@ -40,5 +40,13 @@
     "failed": 0,
     "duration": "33.2",
     "fileName": "2025-08-13T13-18-18-269Z.json"
+  },
+  {
+    "date": "2025-08-13T13:35:47.966Z",
+    "passRate": 100,
+    "passed": 38,
+    "failed": 0,
+    "duration": "31.1",
+    "fileName": "2025-08-13T13-35-47-966Z.json"
   }
 ]
