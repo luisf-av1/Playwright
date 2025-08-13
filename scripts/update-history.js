@@ -1,28 +1,36 @@
-// update-history.js
-const fs = require('fs');
-const path = require('path');
+// scripts/update-history.js
+const fs = require("fs");
+const path = require("path");
 
-const [,, reportPathArg, historyPathArg] = process.argv;
-const reportPath = path.resolve(reportPathArg || 'dashboard/data/test-results.json');
-const historyPath = path.resolve(historyPathArg || 'dashboard/data/history.json');
-
-if (!fs.existsSync(reportPath)) {
-  console.error('❌ No test-results.json found at', reportPath);
+if (process.argv.length < 4) {
+  console.error("Usage: node update-history.js <currentReportPath> <historyFilePath>");
   process.exit(1);
 }
 
-const data = JSON.parse(fs.readFileSync(reportPath, 'utf8'));
-let passed = 0, failed = 0;
+const currentReportPath = process.argv[2];
+const historyFilePath = process.argv[3];
+const historyDir = path.dirname(historyFilePath);
 
+if (!fs.existsSync(currentReportPath)) {
+  console.error(`❌ No test-results.json found at ${currentReportPath}`);
+  process.exit(1);
+}
+
+const reportData = JSON.parse(fs.readFileSync(currentReportPath, "utf-8"));
+
+// Calculate pass/fail counts
+let passed = 0;
+let failed = 0;
 function traverse(node) {
   if (!node) return;
   if (Array.isArray(node.specs)) {
     node.specs.forEach(spec => {
       (spec.tests || []).forEach(test => {
-        const last = test.results?.[test.results.length - 1];
-        const status = (last?.status || test.status || '').toLowerCase();
-        if (status === 'passed') passed++;
-        else if (status && status !== 'skipped') failed++;
+        const results = Array.isArray(test.results) ? test.results : [];
+        const last = results[results.length - 1];
+        const status = (last?.status || test.status || "").toLowerCase();
+        if (status === "passed") passed++;
+        else if (status !== "skipped") failed++;
       });
     });
   }
@@ -30,24 +38,38 @@ function traverse(node) {
     node.suites.forEach(traverse);
   }
 }
+(reportData.suites || []).forEach(traverse);
 
-(data.suites || []).forEach(traverse);
+const totalCount = passed + failed;
+const passRate = totalCount ? Number(((passed / totalCount) * 100).toFixed(1)) : 0;
 
-const total = passed + failed;
-const passRate = total ? (passed / total) * 100 : 0;
-
-let history = [];
-if (fs.existsSync(historyPath)) {
-  history = JSON.parse(fs.readFileSync(historyPath, 'utf8'));
+// Make sure history folder exists
+if (!fs.existsSync(historyDir)) {
+  fs.mkdirSync(historyDir, { recursive: true });
 }
 
+// Load existing history
+let history = [];
+if (fs.existsSync(historyFilePath)) {
+  history = JSON.parse(fs.readFileSync(historyFilePath, "utf-8"));
+}
+
+// Save current report file with date-based name
+const timestamp = new Date().toISOString().replace(/[:.]/g, "-");
+const savedReportName = `${timestamp}.json`;
+const savedReportPath = path.join(historyDir, savedReportName);
+fs.copyFileSync(currentReportPath, savedReportPath);
+
+// Append to history
 history.push({
   date: new Date().toISOString(),
+  passRate,
   passed,
   failed,
-  passRate: Number(passRate.toFixed(1)),
-  duration: data.stats?.duration ? Number((data.stats.duration / 1000).toFixed(1)) : null
+  duration: reportData.stats?.duration ? (reportData.stats.duration / 1000).toFixed(1) : null,
+  fileName: savedReportName
 });
 
-fs.writeFileSync(historyPath, JSON.stringify(history, null, 2));
-console.log('✅ Updated history.json');
+// Save updated history.json
+fs.writeFileSync(historyFilePath, JSON.stringify(history, null, 2));
+console.log(`✅ History updated with ${savedReportName}`);

@@ -10,8 +10,9 @@
   <a href="index.html" class="text-blue-500 underline">← Back to Dashboard</a>
   <h1 id="sectionTitle" class="text-3xl font-bold mt-4 mb-6"></h1>
 
-  <div id="featureTable" class="bg-white shadow rounded-lg p-4">
-    <h2 class="text-xl font-bold mb-4">Features</h2>
+  <!-- Last Execution -->
+  <div id="featureTable" class="bg-white shadow rounded-lg p-4 mb-6">
+    <h2 class="text-xl font-bold mb-4">Last Execution (<span id="lastExecDate">-</span>)</h2>
     <table class="w-full text-left border-collapse">
       <thead>
         <tr class="bg-gray-100">
@@ -25,6 +26,22 @@
     </table>
   </div>
 
+  <!-- Toggle History -->
+  <button id="toggleHistory" class="px-4 py-2 bg-blue-500 text-white rounded shadow hover:bg-blue-600">
+    Show History
+  </button>
+
+  <!-- Historical Tables -->
+  <div id="historicalTables" class="mt-6 hidden"></div>
+
 <script src="js/section.js"></script>
+<script>
+  document.getElementById('toggleHistory').addEventListener('click', () => {
+    const hist = document.getElementById('historicalTables');
+    hist.classList.toggle('hidden');
+    document.getElementById('toggleHistory').innerText =
+      hist.classList.contains('hidden') ? 'Show History' : 'Hide History';
+  });
+</script>
 </body>
 </html>
