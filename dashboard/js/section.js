@@ -148,7 +148,7 @@ function renderFeaturesFromReport(report, sectionName, date, duration) {
 
   // Update table title
   document.querySelector('#featureTable h2').innerText =
-    `${new Date(date).toLocaleString()} (${duration || '-'}s)`;
+    `Features — ${new Date(date).toLocaleString()} (${duration || '-'}s)`;
 
   const tbody = document.getElementById('featureRows');
   tbody.innerHTML = '';
@@ -157,23 +157,11 @@ function renderFeaturesFromReport(report, sectionName, date, duration) {
     const rate = denom ? (stats.passed / denom * 100) : 0;
     const tr = document.createElement('tr');
     tr.innerHTML = `
-      <td class="p-2">${fname}</td>
-      <td class="p-2">${stats.passed}</td>
-      <td class="p-2">${stats.failed}</td>
-      <td class="p-2 font-medium">${rate.toFixed(1)}%</td>
+      <td class="px-2 py-1 text-xs rounded-full">${fname}</td>
+      <td class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">${stats.passed}</td>
+      <td class="px-2 py-1 text-xs rounded-full bg-green-100 text-red-700">${stats.failed}</td>
+      <td class="px-2 py-1 text-xs rounded-full">${rate.toFixed(1)}%</td>
     `;
-    tr.innerHTML = `
-        <div class="flex items-center justify-between">
-          <div class="min-w-0">
-            <div class="font-medium truncate">${new Date(date).toLocaleString()}}</div>
-            <div class="text-xs text-gray-500 mt-0.5">Duration: ${duration}</div>
-          </div>
-          <div class="flex items-center gap-2 shrink-0">
-            <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">P: ${stats.passed}</span>
-            <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700">F: ${stats.failed}</span>
-            <span class="px-2 py-1 text-xs rounded-full ${pillRateClass}">${rate.toFixed(1)}%</span>
-          </div>
-        </div>`;
     tbody.appendChild(tr);
   });
 }
