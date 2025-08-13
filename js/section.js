@@ -148,7 +148,7 @@ function renderFeaturesFromReport(report, sectionName, date, duration) {
 
   // Update table title
   document.querySelector('#featureTable h2').innerText =
-    `Features — ${new Date(date).toLocaleString()} (${duration || '-'}s)`;
+    `${new Date(date).toLocaleString()} (${duration || '-'}s)`;
 
   const tbody = document.getElementById('featureRows');
   tbody.innerHTML = '';
@@ -162,6 +162,18 @@ function renderFeaturesFromReport(report, sectionName, date, duration) {
       <td class="p-2">${stats.failed}</td>
       <td class="p-2 font-medium">${rate.toFixed(1)}%</td>
     `;
+    tr.innerHTML = `
+        <div class="flex items-center justify-between">
+          <div class="min-w-0">
+            <div class="font-medium truncate">${dateTxt}</div>
+            <div class="text-xs text-gray-500 mt-0.5">Duration: ${duration}</div>
+          </div>
+          <div class="flex items-center gap-2 shrink-0">
+            <span class="px-2 py-1 text-xs rounded-full bg-green-100 text-green-700">P: ${stats.passed}</span>
+            <span class="px-2 py-1 text-xs rounded-full bg-red-100 text-red-700">F: ${stats.failed}</span>
+            <span class="px-2 py-1 text-xs rounded-full ${pillRateClass}">${rate.toFixed(1)}%</span>
+          </div>
+        </div>`;
     tbody.appendChild(tr);
   });
 }
