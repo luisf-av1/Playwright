@@ -3,9 +3,9 @@ name: Tests Dashboard
 on:
   workflow_dispatch:
   push:
-    branches: [ "staging", "main" ]
+    branches: [ "staging", "main", "test" ]
   pull_request:
-    branches: [ "staging", "main" ]
+    branches:  [ "staging", "main", "test" ]
   schedule:
     - cron: "0 9 * * 1-5"
 
