@@ -79,7 +79,7 @@ jobs:
             git push origin HEAD:main
           fi
         env:
-          GITHUB_TOKEN: ${{ secrets.GH_PAT }}
+          GITHUB_TOKEN: ${{ secrets.DEPLOY }}
 
       # --- Deploy to GitHub Pages ---
       # - name: 🌐 Deploy dashboard to GitHub Pages
