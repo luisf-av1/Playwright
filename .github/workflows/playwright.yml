@@ -32,18 +32,33 @@ jobs:
         run: npx playwright test
         continue-on-error: true
 
-      # --- Preserve history ---
-      - name: 📂 Create history folder
-        run: mkdir -p dashboard/data/history
+      # --- Preserve history from gh-pages branch ---
+      - name: 📂 Checkout gh-pages branch to preserve history
+        uses: actions/checkout@v4
+        with:
+          ref: gh-pages
+          path: gh-pages
 
+      - name: 📂 Copy old history into dashboard
+        run: |
+          mkdir -p dashboard/data/history
+          if [ -f gh-pages/data/history.json ]; then
+            cp gh-pages/data/history.json dashboard/data/history.json
+          fi
+          if [ -d gh-pages/data/history ]; then
+            cp gh-pages/data/history/*.json dashboard/data/history/ || true
+          fi
+      # --- Save latest report ---
       - name: 💾 Save latest JSON report
         run: |
+          mkdir -p dashboard/data/history
           cp playwright-report/test-results.json dashboard/data/test-results.json
           ts=$(date -u +"%Y-%m-%dT%H-%M-%S")
           cp playwright-report/test-results.json dashboard/data/history/${ts}.json
-
+      # --- Update history.json summary ---
       - name: 📜 Update history.json
         run: node scripts/update-history.js dashboard/data/test-results.json dashboard/data/history.json
+
 
       - name: 📊 Upload raw test report as artifact
         uses: actions/upload-artifact@v4
@@ -51,8 +66,10 @@ jobs:
           name: test-report
           path: playwright-report/
 
-      # --- Deploy to Vercel ---
-      - name: 🚀 Deploy to Vercel
-        run: npx vercel deploy --prod --yes --token $VERCEL_TOKEN --scope your-team-name --cwd ./dashboard
-        env:
-          VERCEL_TOKEN: ${{ secrets.VERCEL }}
+      # --- Deploy to GitHub Pages ---
+      # - name: 🌐 Deploy dashboard to GitHub Pages
+      #  uses: peaceiris/actions-gh-pages@v4
+      #  with:
+      #    github_token: ${{ secrets.GH_PAT }}
+      #    publish_dir: ./dashboard
+      #    publish_branch: gh-pages
