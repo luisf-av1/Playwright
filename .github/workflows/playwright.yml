@@ -32,35 +32,18 @@ jobs:
         run: npx playwright test
         continue-on-error: true
 
-      # --- Preserve history from gh-pages branch ---
-      - name: 📂 Checkout gh-pages branch to preserve history
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages
+      # --- Preserve history ---
+      - name: 📂 Create history folder
+        run: mkdir -p dashboard/data/history
 
-      - name: 📂 Copy old history into dashboard
-        run: |
-          mkdir -p dashboard/data/history
-          if [ -f gh-pages/data/history.json ]; then
-            cp gh-pages/data/history.json dashboard/data/history.json
-          fi
-          if [ -d gh-pages/data/history ]; then
-            cp gh-pages/data/history/*.json dashboard/data/history/ || true
-          fi
-
-      # --- Save latest report ---
       - name: 💾 Save latest JSON report
         run: |
-          mkdir -p dashboard/data/history
           cp playwright-report/test-results.json dashboard/data/test-results.json
           ts=$(date -u +"%Y-%m-%dT%H-%M-%S")
           cp playwright-report/test-results.json dashboard/data/history/${ts}.json
 
-      # --- Update history.json summary ---
       - name: 📜 Update history.json
         run: node scripts/update-history.js dashboard/data/test-results.json dashboard/data/history.json
-
 
       - name: 📊 Upload raw test report as artifact
         uses: actions/upload-artifact@v4
@@ -68,10 +51,66 @@ jobs:
           name: test-report
           path: playwright-report/
 
-      # --- Deploy to GitHub Pages ---
-      - name: 🌐 Deploy dashboard to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+      # --- Deploy to Vercel ---
+      - name: 🚀 Deploy to Vercel
+        run: npx vercel deploy --prod --yes --token $VERCEL_TOKEN --scope your-team-name --cwd ./dashboard
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL_TOKEN }}
+name: Tests Dashboard
+
+on:
+  workflow_dispatch:
+  push:
+    branches: [ "staging", "main" ]
+  pull_request:
+    branches: [ "staging", "main" ]
+  schedule:
+    - cron: "0 9 * * 1-5"
+
+jobs:
+  test-execution:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: ⬇️ Checkout source code
+        uses: actions/checkout@v4
+
+      - name: ⚙️ Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          github_token: ${{ secrets.GH_PAT }}
-          publish_dir: ./dashboard
-          publish_branch: gh-pages
+          node-version: 20
+
+      - name: 📦 Install dependencies
+        run: npm ci
+
+      - name: 📦 Install Playwright Browsers
+        run: npx playwright install --with-deps
+
+      - name: 🧪 Run Playwright tests
+        run: npx playwright test
+        continue-on-error: true
+
+      # --- Preserve history ---
+      - name: 📂 Create history folder
+        run: mkdir -p dashboard/data/history
+
+      - name: 💾 Save latest JSON report
+        run: |
+          cp playwright-report/test-results.json dashboard/data/test-results.json
+          ts=$(date -u +"%Y-%m-%dT%H-%M-%S")
+          cp playwright-report/test-results.json dashboard/data/history/${ts}.json
+
+      - name: 📜 Update history.json
+        run: node scripts/update-history.js dashboard/data/test-results.json dashboard/data/history.json
+
+      - name: 📊 Upload raw test report as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: test-report
+          path: playwright-report/
+
+      # --- Deploy to Vercel ---
+      - name: 🚀 Deploy to Vercel
+        run: npx vercel deploy --prod --yes --token $VERCEL_TOKEN --scope your-team-name --cwd ./dashboard
+        env:
+          VERCEL_TOKEN: ${{ secrets.VERCEL }}
