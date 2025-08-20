@@ -39,7 +39,7 @@ jobs:
       #    ref: gh-pages
       #    path: gh-pages
 
-      - name: 📂 Copy old history into dashboard
+      - name: 📂 Copy history into dashboard
         run: |
           mkdir -p dashboard/data/history
           # if [ -f gh-pages/data/history.json ]; then
