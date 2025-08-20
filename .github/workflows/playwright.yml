@@ -78,6 +78,9 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GH_PAT }}
 
+      - name: 🚀 Trigger Vercel Deploy
+        run: curl -X POST "${{ secrets.VERCEL_DEPLOY_HOOK }}"
+
       # --- Deploy to GitHub Pages ---
       # - name: 🌐 Deploy dashboard to GitHub Pages
       #  uses: peaceiris/actions-gh-pages@v4
