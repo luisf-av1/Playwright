@@ -33,21 +33,21 @@ jobs:
         continue-on-error: true
 
       # --- Preserve history from gh-pages branch ---
-      - name: 📂 Checkout gh-pages branch to preserve history
-        uses: actions/checkout@v4
-        with:
-          ref: gh-pages
-          path: gh-pages
+      # - name: 📂 Checkout gh-pages branch to preserve history
+      #  uses: actions/checkout@v4
+      #  with:
+      #    ref: gh-pages
+      #    path: gh-pages
 
       - name: 📂 Copy old history into dashboard
         run: |
           mkdir -p dashboard/data/history
-          if [ -f gh-pages/data/history.json ]; then
-            cp gh-pages/data/history.json dashboard/data/history.json
-          fi
-          if [ -d gh-pages/data/history ]; then
-            cp gh-pages/data/history/*.json dashboard/data/history/ || true
-          fi
+          # if [ -f gh-pages/data/history.json ]; then
+          #  cp gh-pages/data/history.json dashboard/data/history.json
+          # fi
+          # if [ -d gh-pages/data/history ]; then
+          #  cp gh-pages/data/history/*.json dashboard/data/history/ || true
+          # fi
       # --- Save latest report ---
       - name: 💾 Save latest JSON report
         run: |
