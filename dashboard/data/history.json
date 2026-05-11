@@ -1,2276 +1,5 @@
 [
   {
-    "date": "2026-03-02T09:56:15.218Z",
-    "passRate": 94.7,
-    "passed": 36,
-    "failed": 2,
-    "duration": "51.9",
-    "rawReport": {
-      "config": {
-        "configFile": "/home/runner/work/Playwright/Playwright/playwright.config.ts",
-        "rootDir": "/home/runner/work/Playwright/Playwright/tests",
-        "forbidOnly": true,
-        "fullyParallel": true,
-        "globalSetup": null,
-        "globalTeardown": null,
-        "globalTimeout": 0,
-        "grep": {},
-        "grepInvert": null,
-        "maxFailures": 0,
-        "metadata": {
-          "actualWorkers": 1
-        },
-        "preserveOutput": "always",
-        "reporter": [
-          [
-            "html",
-            {
-              "outputFile": "playwright-report/test-results.html",
-              "open": "never"
-            }
-          ],
-          [
-            "list",
-            null
-          ],
-          [
-            "dot",
-            null
-          ],
-          [
-            "junit",
-            {
-              "outputFile": "playwright-report/test-results.xml"
-            }
-          ],
-          [
-            "json",
-            {
-              "outputFile": "playwright-report/test-results.json"
-            }
-          ]
-        ],
-        "reportSlowTests": {
-          "max": 5,
-          "threshold": 15000
-        },
-        "quiet": false,
-        "projects": [
-          {
-            "outputDir": "/home/runner/work/Playwright/Playwright/test-results",
-            "repeatEach": 1,
-            "retries": 1,
-            "metadata": {},
-            "id": "chromium",
-            "name": "chromium",
-            "testDir": "/home/runner/work/Playwright/Playwright/tests",
-            "testIgnore": [],
-            "testMatch": [
-              "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-            ],
-            "timeout": 30000
-          },
-          {
-            "outputDir": "/home/runner/work/Playwright/Playwright/test-results",
-            "repeatEach": 1,
-            "retries": 1,
-            "metadata": {},
-            "id": "Mobile Safari",
-            "name": "Mobile Safari",
-            "testDir": "/home/runner/work/Playwright/Playwright/tests",
-            "testIgnore": [],
-            "testMatch": [
-              "**/*.@(spec|test).?(c|m)[jt]s?(x)"
-            ],
-            "timeout": 30000
-          }
-        ],
-        "shard": null,
-        "updateSnapshots": "missing",
-        "version": "1.47.2",
-        "workers": 1,
-        "webServer": null
-      },
-      "suites": [
-        {
-          "title": "e2e/dashboard/insights.spec.ts",
-          "file": "e2e/dashboard/insights.spec.ts",
-          "column": 0,
-          "line": 0,
-          "specs": [],
-          "suites": [
-            {
-              "title": "TS | Insights",
-              "file": "e2e/dashboard/insights.spec.ts",
-              "line": 3,
-              "column": 6,
-              "specs": [
-                {
-                  "title": "has title",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "status": "passed",
-                          "duration": 635,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:15.767Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6962b941958be13f5d4d-860e863631f16a967221",
-                  "file": "e2e/dashboard/insights.spec.ts",
-                  "line": 5,
-                  "column": 9
-                },
-                {
-                  "title": "get started link",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "status": "passed",
-                          "duration": 830,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:16.510Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6962b941958be13f5d4d-1a5c1457dfb8e93c26a9",
-                  "file": "e2e/dashboard/insights.spec.ts",
-                  "line": 12,
-                  "column": 9
-                },
-                {
-                  "title": "has title",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 4,
-                          "status": "passed",
-                          "duration": 3575,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:34.350Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6962b941958be13f5d4d-be8a4114b81fa5c43364",
-                  "file": "e2e/dashboard/insights.spec.ts",
-                  "line": 5,
-                  "column": 9
-                },
-                {
-                  "title": "get started link",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 4,
-                          "status": "passed",
-                          "duration": 1239,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:38.509Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6962b941958be13f5d4d-d2711f87a998d31a0f14",
-                  "file": "e2e/dashboard/insights.spec.ts",
-                  "line": 12,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "e2e/dashboard/recent_data.spec.ts",
-          "file": "e2e/dashboard/recent_data.spec.ts",
-          "column": 0,
-          "line": 0,
-          "specs": [],
-          "suites": [
-            {
-              "title": "TS | Recent Data",
-              "file": "e2e/dashboard/recent_data.spec.ts",
-              "line": 6,
-              "column": 6,
-              "specs": [
-                {
-                  "title": "PW Test 1 @smoke",
-                  "ok": false,
-                  "tags": [
-                    "smoke"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 0,
-                          "status": "failed",
-                          "duration": 429,
-                          "error": {
-                            "message": "ReferenceError: True is not defined",
-                            "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
-                            "location": {
-                              "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                              "column": 28,
-                              "line": 10
-                            },
-                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                                "column": 28,
-                                "line": 10
-                              },
-                              "message": "ReferenceError: True is not defined\n\n\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:17.348Z",
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-chromium/test-failed-1.png"
-                            },
-                            {
-                              "name": "video",
-                              "contentType": "video/webm",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-chromium/video.webm"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                            "column": 28,
-                            "line": 10
-                          }
-                        },
-                        {
-                          "workerIndex": 1,
-                          "status": "failed",
-                          "duration": 641,
-                          "error": {
-                            "message": "ReferenceError: True is not defined",
-                            "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
-                            "location": {
-                              "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                              "column": 28,
-                              "line": 10
-                            },
-                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                                "column": 28,
-                                "line": 10
-                              },
-                              "message": "ReferenceError: True is not defined\n\n\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:56:18.245Z",
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-chromium-retry1/test-failed-1.png"
-                            },
-                            {
-                              "name": "video",
-                              "contentType": "video/webm",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-chromium-retry1/video.webm"
-                            },
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-chromium-retry1/trace.zip"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                            "column": 28,
-                            "line": 10
-                          }
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "id": "8bb3dbcfefd710cbf953-b7f92cf7c4ea8ab7430e",
-                  "file": "e2e/dashboard/recent_data.spec.ts",
-                  "line": 8,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 2 @regression",
-                  "ok": true,
-                  "tags": [
-                    "regression"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 487,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:19.548Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "8bb3dbcfefd710cbf953-7d2881f36c3b887f1619",
-                  "file": "e2e/dashboard/recent_data.spec.ts",
-                  "line": 13,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 3 @smoke",
-                  "ok": true,
-                  "tags": [
-                    "smoke"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 425,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:20.135Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "8bb3dbcfefd710cbf953-1848c06ba649d6985a7e",
-                  "file": "e2e/dashboard/recent_data.spec.ts",
-                  "line": 17,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 4 @regression",
-                  "ok": true,
-                  "tags": [
-                    "regression"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 429,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:20.568Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "8bb3dbcfefd710cbf953-92393a54fa99646cb28c",
-                  "file": "e2e/dashboard/recent_data.spec.ts",
-                  "line": 21,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 5 @smoke",
-                  "ok": true,
-                  "tags": [
-                    "smoke"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 431,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:21.003Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "8bb3dbcfefd710cbf953-0052c0069a5a821af6cc",
-                  "file": "e2e/dashboard/recent_data.spec.ts",
-                  "line": 25,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 1 @smoke",
-                  "ok": false,
-                  "tags": [
-                    "smoke"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 4,
-                          "status": "failed",
-                          "duration": 778,
-                          "error": {
-                            "message": "ReferenceError: True is not defined",
-                            "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
-                            "location": {
-                              "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                              "column": 28,
-                              "line": 10
-                            },
-                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                                "column": 28,
-                                "line": 10
-                              },
-                              "message": "ReferenceError: True is not defined\n\n\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:39.760Z",
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-Mobile-Safari/test-failed-1.png"
-                            },
-                            {
-                              "name": "video",
-                              "contentType": "video/webm",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-Mobile-Safari/video.webm"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                            "column": 28,
-                            "line": 10
-                          }
-                        },
-                        {
-                          "workerIndex": 5,
-                          "status": "failed",
-                          "duration": 1123,
-                          "error": {
-                            "message": "ReferenceError: True is not defined",
-                            "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
-                            "location": {
-                              "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                              "column": 28,
-                              "line": 10
-                            },
-                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m"
-                          },
-                          "errors": [
-                            {
-                              "location": {
-                                "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                                "column": 28,
-                                "line": 10
-                              },
-                              "message": "ReferenceError: True is not defined\n\n\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28"
-                            }
-                          ],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:56:41.093Z",
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-Mobile-Safari-retry1/test-failed-1.png"
-                            },
-                            {
-                              "name": "video",
-                              "contentType": "video/webm",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-Mobile-Safari-retry1/video.webm"
-                            },
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-Mobile-Safari-retry1/trace.zip"
-                            }
-                          ],
-                          "errorLocation": {
-                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
-                            "column": 28,
-                            "line": 10
-                          }
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "id": "8bb3dbcfefd710cbf953-58ea48f51f820ee211ee",
-                  "file": "e2e/dashboard/recent_data.spec.ts",
-                  "line": 8,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 2 @regression",
-                  "ok": true,
-                  "tags": [
-                    "regression"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 746,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:42.883Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "8bb3dbcfefd710cbf953-1967ae9ab1c6c3f6d008",
-                  "file": "e2e/dashboard/recent_data.spec.ts",
-                  "line": 13,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 3 @smoke",
-                  "ok": true,
-                  "tags": [
-                    "smoke"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 700,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:43.725Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "8bb3dbcfefd710cbf953-bc087890e633d53b9cdc",
-                  "file": "e2e/dashboard/recent_data.spec.ts",
-                  "line": 17,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 4 @regression",
-                  "ok": true,
-                  "tags": [
-                    "regression"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 655,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:44.433Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "8bb3dbcfefd710cbf953-e5395c4d042e765ce84b",
-                  "file": "e2e/dashboard/recent_data.spec.ts",
-                  "line": 21,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 5 @smoke",
-                  "ok": true,
-                  "tags": [
-                    "smoke"
-                  ],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 675,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:45.098Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "8bb3dbcfefd710cbf953-b09b80ef898ee4b3215e",
-                  "file": "e2e/dashboard/recent_data.spec.ts",
-                  "line": 25,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "e2e/logIn/signIn.spec.ts",
-          "file": "e2e/logIn/signIn.spec.ts",
-          "column": 0,
-          "line": 0,
-          "specs": [],
-          "suites": [
-            {
-              "title": "TS | SignIn",
-              "file": "e2e/logIn/signIn.spec.ts",
-              "line": 3,
-              "column": 15,
-              "specs": [
-                {
-                  "title": "TC1",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 1058,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:21.442Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6e98309bb1c4a85b1e33-ff9d756d2251c3772f37",
-                  "file": "e2e/logIn/signIn.spec.ts",
-                  "line": 9,
-                  "column": 9
-                },
-                {
-                  "title": "TC2",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 1044,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:22.507Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6e98309bb1c4a85b1e33-30aa4ef2b6d8c3c117ce",
-                  "file": "e2e/logIn/signIn.spec.ts",
-                  "line": 14,
-                  "column": 9
-                },
-                {
-                  "title": "TC3",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 1027,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:23.556Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6e98309bb1c4a85b1e33-f6158952d55d9134b4c6",
-                  "file": "e2e/logIn/signIn.spec.ts",
-                  "line": 19,
-                  "column": 9
-                },
-                {
-                  "title": "TC1",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 1845,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:45.784Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6e98309bb1c4a85b1e33-da63949e23c8fefea79f",
-                  "file": "e2e/logIn/signIn.spec.ts",
-                  "line": 9,
-                  "column": 9
-                },
-                {
-                  "title": "TC2",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 1871,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:47.637Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6e98309bb1c4a85b1e33-551609a88759436287dd",
-                  "file": "e2e/logIn/signIn.spec.ts",
-                  "line": 14,
-                  "column": 9
-                },
-                {
-                  "title": "TC3",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 1823,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:49.514Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6e98309bb1c4a85b1e33-c6b6f84c2612689b2fb8",
-                  "file": "e2e/logIn/signIn.spec.ts",
-                  "line": 19,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "e2e/settings/notifications.spec.ts",
-          "file": "e2e/settings/notifications.spec.ts",
-          "column": 0,
-          "line": 0,
-          "specs": [],
-          "suites": [
-            {
-              "title": "TS | Notifications",
-              "file": "e2e/settings/notifications.spec.ts",
-              "line": 3,
-              "column": 6,
-              "specs": [
-                {
-                  "title": "PW Test 1",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 867,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:24.590Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "f08996c82dfe12fe76d6-1f4a02f73b1bceb67002",
-                  "file": "e2e/settings/notifications.spec.ts",
-                  "line": 5,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 2",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 870,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:25.461Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "f08996c82dfe12fe76d6-437d70c2b5da636f00c6",
-                  "file": "e2e/settings/notifications.spec.ts",
-                  "line": 9,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 3",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 871,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:26.336Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "f08996c82dfe12fe76d6-9711ba6228c2db4d31d7",
-                  "file": "e2e/settings/notifications.spec.ts",
-                  "line": 13,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 4",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 881,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:27.211Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "f08996c82dfe12fe76d6-f6176cb59f4ca7aea3a1",
-                  "file": "e2e/settings/notifications.spec.ts",
-                  "line": 17,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 1",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 1535,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:51.349Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "f08996c82dfe12fe76d6-bb968a3002435af963db",
-                  "file": "e2e/settings/notifications.spec.ts",
-                  "line": 5,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 2",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 1587,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:52.889Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "f08996c82dfe12fe76d6-82930bf0046e759f443a",
-                  "file": "e2e/settings/notifications.spec.ts",
-                  "line": 9,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 3",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 1584,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:54.482Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "f08996c82dfe12fe76d6-844d42812689566c5a0f",
-                  "file": "e2e/settings/notifications.spec.ts",
-                  "line": 13,
-                  "column": 9
-                },
-                {
-                  "title": "PW Test 4",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 1549,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:56.072Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "f08996c82dfe12fe76d6-58b615d4c66727d46b85",
-                  "file": "e2e/settings/notifications.spec.ts",
-                  "line": 17,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "e2e/settings/profile.spec.ts",
-          "file": "e2e/settings/profile.spec.ts",
-          "column": 0,
-          "line": 0,
-          "specs": [],
-          "suites": [
-            {
-              "title": "TS | Profile",
-              "file": "e2e/settings/profile.spec.ts",
-              "line": 3,
-              "column": 15,
-              "specs": [
-                {
-                  "title": "TC1",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 1055,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "\nTC1 starting...\n"
-                            },
-                            {
-                              "text": "Test finished.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:28.099Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6b88d00c63841bd7ee72-e66d60ddae7ee10ea089",
-                  "file": "e2e/settings/profile.spec.ts",
-                  "line": 14,
-                  "column": 9
-                },
-                {
-                  "title": "TC2",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 1025,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "\nTC2 starting...\n"
-                            },
-                            {
-                              "text": "Test finished.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:29.159Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6b88d00c63841bd7ee72-ab1f59a35a78916513bf",
-                  "file": "e2e/settings/profile.spec.ts",
-                  "line": 19,
-                  "column": 9
-                },
-                {
-                  "title": "TC3",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 1040,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "\nTC3 starting...\n"
-                            },
-                            {
-                              "text": "Test finished.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:30.189Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6b88d00c63841bd7ee72-2e7a672ccbdd443a298b",
-                  "file": "e2e/settings/profile.spec.ts",
-                  "line": 24,
-                  "column": 9
-                },
-                {
-                  "title": "TC1",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 1843,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "\nTC1 starting...\n"
-                            },
-                            {
-                              "text": "Test finished.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:57.627Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6b88d00c63841bd7ee72-3bfa494b8cb1e04aeb7e",
-                  "file": "e2e/settings/profile.spec.ts",
-                  "line": 14,
-                  "column": 9
-                },
-                {
-                  "title": "TC2",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 1810,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "\nTC2 starting...\n"
-                            },
-                            {
-                              "text": "Test finished.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:59.475Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6b88d00c63841bd7ee72-ff8744b0e7f8837adaa5",
-                  "file": "e2e/settings/profile.spec.ts",
-                  "line": 19,
-                  "column": 9
-                },
-                {
-                  "title": "TC3",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 1787,
-                          "errors": [],
-                          "stdout": [
-                            {
-                              "text": "\nTC3 starting...\n"
-                            },
-                            {
-                              "text": "Test finished.\n"
-                            }
-                          ],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:57:01.291Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "6b88d00c63841bd7ee72-15091783266bc3ab0f6b",
-                  "file": "e2e/settings/profile.spec.ts",
-                  "line": 24,
-                  "column": 9
-                }
-              ]
-            }
-          ]
-        },
-        {
-          "title": "e2e/usage/billing.spec.ts",
-          "file": "e2e/usage/billing.spec.ts",
-          "column": 0,
-          "line": 0,
-          "specs": [],
-          "suites": [
-            {
-              "title": "TS | billing",
-              "file": "e2e/usage/billing.spec.ts",
-              "line": 3,
-              "column": 15,
-              "specs": [
-                {
-                  "title": "First PW Test",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 90000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 412,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:31.235Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": 3,
-                          "status": "passed",
-                          "duration": 558,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:56:32.548Z",
-                          "attachments": [
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-First-PW-Test-chromium-retry1/trace.zip"
-                            }
-                          ]
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-374b73d5aca28c4c277c",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 4,
-                  "column": 5
-                },
-                {
-                  "title": "Fail PW Test",
-                  "ok": false,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 90000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        },
-                        {
-                          "type": "fail"
-                        }
-                      ],
-                      "expectedStatus": "failed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": 2,
-                          "status": "passed",
-                          "duration": 425,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:31.651Z",
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-chromium/test-failed-1.png"
-                            },
-                            {
-                              "name": "video",
-                              "contentType": "video/webm",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-chromium/video.webm"
-                            }
-                          ]
-                        },
-                        {
-                          "workerIndex": 3,
-                          "status": "passed",
-                          "duration": 536,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:56:33.274Z",
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-chromium-retry1/test-failed-1.png"
-                            },
-                            {
-                              "name": "video",
-                              "contentType": "video/webm",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-chromium-retry1/video.webm"
-                            },
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-chromium-retry1/trace.zip"
-                            }
-                          ]
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-5d6befa49b1b343c6ee6",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 8,
-                  "column": 10
-                },
-                {
-                  "title": "Fix me PW Test",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        },
-                        {
-                          "type": "fixme"
-                        }
-                      ],
-                      "expectedStatus": "skipped",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:32.109Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:56:33.914Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-9e9b984ae1d0f7832cdb",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 12,
-                  "column": 10
-                },
-                {
-                  "title": "Skip PW Test",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        },
-                        {
-                          "type": "skip"
-                        }
-                      ],
-                      "expectedStatus": "skipped",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:32.109Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:56:33.915Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-6c5b43ed7021e2b4b263",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 20,
-                  "column": 10
-                },
-                {
-                  "title": "Conditional skip PW Test",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:32.109Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:56:33.915Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-3ce8bb773f5ed8bf4b64",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 24,
-                  "column": 5
-                },
-                {
-                  "title": "Locator example",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:32.109Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:56:33.915Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-d6218007877846128bdc",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 29,
-                  "column": 5
-                },
-                {
-                  "title": "Simple click test",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "chromium",
-                      "projectName": "chromium",
-                      "results": [
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:56:32.109Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:56:33.915Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-f458f673d7230a336a2d",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 39,
-                  "column": 5
-                },
-                {
-                  "title": "First PW Test",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 90000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 655,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:57:03.088Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": 7,
-                          "status": "passed",
-                          "duration": 962,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:57:04.942Z",
-                          "attachments": [
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-First-PW-Test-Mobile-Safari-retry1/trace.zip"
-                            }
-                          ]
-                        }
-                      ],
-                      "status": "expected"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-afef484980451c05eea4",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 4,
-                  "column": 5
-                },
-                {
-                  "title": "Fail PW Test",
-                  "ok": false,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 90000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        },
-                        {
-                          "type": "fail"
-                        }
-                      ],
-                      "expectedStatus": "failed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": 6,
-                          "status": "passed",
-                          "duration": 720,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:57:03.747Z",
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-Mobile-Safari/test-failed-1.png"
-                            },
-                            {
-                              "name": "video",
-                              "contentType": "video/webm",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-Mobile-Safari/video.webm"
-                            }
-                          ]
-                        },
-                        {
-                          "workerIndex": 7,
-                          "status": "passed",
-                          "duration": 945,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:57:06.064Z",
-                          "attachments": [
-                            {
-                              "name": "screenshot",
-                              "contentType": "image/png",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-Mobile-Safari-retry1/test-failed-1.png"
-                            },
-                            {
-                              "name": "video",
-                              "contentType": "video/webm",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-Mobile-Safari-retry1/video.webm"
-                            },
-                            {
-                              "name": "trace",
-                              "contentType": "application/zip",
-                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-Mobile-Safari-retry1/trace.zip"
-                            }
-                          ]
-                        }
-                      ],
-                      "status": "unexpected"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-60f46f460dc7b00ffc9a",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 8,
-                  "column": 10
-                },
-                {
-                  "title": "Fix me PW Test",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        },
-                        {
-                          "type": "fixme"
-                        }
-                      ],
-                      "expectedStatus": "skipped",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:57:04.509Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:57:07.136Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-f7bc453758ba1a3a00b4",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 12,
-                  "column": 10
-                },
-                {
-                  "title": "Skip PW Test",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        },
-                        {
-                          "type": "skip"
-                        }
-                      ],
-                      "expectedStatus": "skipped",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:57:04.509Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:57:07.136Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-9ddc5da2e1793b43c56a",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 20,
-                  "column": 10
-                },
-                {
-                  "title": "Conditional skip PW Test",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:57:04.509Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:57:07.136Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-68832d9b3f4d89641237",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 24,
-                  "column": 5
-                },
-                {
-                  "title": "Locator example",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:57:04.509Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:57:07.137Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-40cac621f558ee6604b8",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 29,
-                  "column": 5
-                },
-                {
-                  "title": "Simple click test",
-                  "ok": true,
-                  "tags": [],
-                  "tests": [
-                    {
-                      "timeout": 30000,
-                      "annotations": [
-                        {
-                          "type": "slow"
-                        }
-                      ],
-                      "expectedStatus": "passed",
-                      "projectId": "Mobile Safari",
-                      "projectName": "Mobile Safari",
-                      "results": [
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 0,
-                          "startTime": "2026-03-02T09:57:04.510Z",
-                          "attachments": []
-                        },
-                        {
-                          "workerIndex": -1,
-                          "status": "skipped",
-                          "duration": 0,
-                          "errors": [],
-                          "stdout": [],
-                          "stderr": [],
-                          "retry": 1,
-                          "startTime": "2026-03-02T09:57:07.137Z",
-                          "attachments": []
-                        }
-                      ],
-                      "status": "skipped"
-                    }
-                  ],
-                  "id": "2aa2f6a6114df58e9837-11af27869c028acd2a26",
-                  "file": "e2e/usage/billing.spec.ts",
-                  "line": 39,
-                  "column": 5
-                }
-              ]
-            }
-          ]
-        }
-      ],
-      "errors": [],
-      "stats": {
-        "startTime": "2026-03-02T09:56:15.218Z",
-        "duration": 51933.828,
-        "expected": 34,
-        "skipped": 10,
-        "unexpected": 4,
-        "flaky": 0
-      }
-    }
-  },
-  {
     "date": "2026-03-03T09:50:33.274Z",
     "passRate": 94.7,
     "passed": 36,
@@ -113542,6 +111271,2277 @@
       "stats": {
         "startTime": "2026-05-08T10:27:18.398Z",
         "duration": 56695.88,
+        "expected": 34,
+        "skipped": 10,
+        "unexpected": 4,
+        "flaky": 0
+      }
+    }
+  },
+  {
+    "date": "2026-05-11T12:14:05.589Z",
+    "passRate": 94.7,
+    "passed": 36,
+    "failed": 2,
+    "duration": "36.1",
+    "rawReport": {
+      "config": {
+        "configFile": "/home/runner/work/Playwright/Playwright/playwright.config.ts",
+        "rootDir": "/home/runner/work/Playwright/Playwright/tests",
+        "forbidOnly": true,
+        "fullyParallel": true,
+        "globalSetup": null,
+        "globalTeardown": null,
+        "globalTimeout": 0,
+        "grep": {},
+        "grepInvert": null,
+        "maxFailures": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "preserveOutput": "always",
+        "reporter": [
+          [
+            "html",
+            {
+              "outputFile": "playwright-report/test-results.html",
+              "open": "never"
+            }
+          ],
+          [
+            "list",
+            null
+          ],
+          [
+            "dot",
+            null
+          ],
+          [
+            "junit",
+            {
+              "outputFile": "playwright-report/test-results.xml"
+            }
+          ],
+          [
+            "json",
+            {
+              "outputFile": "playwright-report/test-results.json"
+            }
+          ]
+        ],
+        "reportSlowTests": {
+          "max": 5,
+          "threshold": 15000
+        },
+        "quiet": false,
+        "projects": [
+          {
+            "outputDir": "/home/runner/work/Playwright/Playwright/test-results",
+            "repeatEach": 1,
+            "retries": 1,
+            "metadata": {},
+            "id": "chromium",
+            "name": "chromium",
+            "testDir": "/home/runner/work/Playwright/Playwright/tests",
+            "testIgnore": [],
+            "testMatch": [
+              "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+            ],
+            "timeout": 30000
+          },
+          {
+            "outputDir": "/home/runner/work/Playwright/Playwright/test-results",
+            "repeatEach": 1,
+            "retries": 1,
+            "metadata": {},
+            "id": "Mobile Safari",
+            "name": "Mobile Safari",
+            "testDir": "/home/runner/work/Playwright/Playwright/tests",
+            "testIgnore": [],
+            "testMatch": [
+              "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+            ],
+            "timeout": 30000
+          }
+        ],
+        "shard": null,
+        "updateSnapshots": "missing",
+        "version": "1.47.2",
+        "workers": 1,
+        "webServer": null
+      },
+      "suites": [
+        {
+          "title": "e2e/dashboard/insights.spec.ts",
+          "file": "e2e/dashboard/insights.spec.ts",
+          "column": 0,
+          "line": 0,
+          "specs": [],
+          "suites": [
+            {
+              "title": "TS | Insights",
+              "file": "e2e/dashboard/insights.spec.ts",
+              "line": 3,
+              "column": 6,
+              "specs": [
+                {
+                  "title": "has title",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "status": "passed",
+                          "duration": 618,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:06.116Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6962b941958be13f5d4d-860e863631f16a967221",
+                  "file": "e2e/dashboard/insights.spec.ts",
+                  "line": 5,
+                  "column": 9
+                },
+                {
+                  "title": "get started link",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "status": "passed",
+                          "duration": 819,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:06.845Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6962b941958be13f5d4d-1a5c1457dfb8e93c26a9",
+                  "file": "e2e/dashboard/insights.spec.ts",
+                  "line": 12,
+                  "column": 9
+                },
+                {
+                  "title": "has title",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "status": "passed",
+                          "duration": 2858,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:19.444Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6962b941958be13f5d4d-be8a4114b81fa5c43364",
+                  "file": "e2e/dashboard/insights.spec.ts",
+                  "line": 5,
+                  "column": 9
+                },
+                {
+                  "title": "get started link",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "status": "passed",
+                          "duration": 1062,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:23.170Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6962b941958be13f5d4d-d2711f87a998d31a0f14",
+                  "file": "e2e/dashboard/insights.spec.ts",
+                  "line": 12,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "e2e/dashboard/recent_data.spec.ts",
+          "file": "e2e/dashboard/recent_data.spec.ts",
+          "column": 0,
+          "line": 0,
+          "specs": [],
+          "suites": [
+            {
+              "title": "TS | Recent Data",
+              "file": "e2e/dashboard/recent_data.spec.ts",
+              "line": 6,
+              "column": 6,
+              "specs": [
+                {
+                  "title": "PW Test 1 @smoke",
+                  "ok": false,
+                  "tags": [
+                    "smoke"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 0,
+                          "status": "failed",
+                          "duration": 536,
+                          "error": {
+                            "message": "ReferenceError: True is not defined",
+                            "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
+                            "location": {
+                              "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                              "column": 28,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                                "column": 28,
+                                "line": 10
+                              },
+                              "message": "ReferenceError: True is not defined\n\n\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:07.672Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-chromium/test-failed-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-chromium/video.webm"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                            "column": 28,
+                            "line": 10
+                          }
+                        },
+                        {
+                          "workerIndex": 1,
+                          "status": "failed",
+                          "duration": 718,
+                          "error": {
+                            "message": "ReferenceError: True is not defined",
+                            "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
+                            "location": {
+                              "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                              "column": 28,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                                "column": 28,
+                                "line": 10
+                              },
+                              "message": "ReferenceError: True is not defined\n\n\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:08.668Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-chromium-retry1/test-failed-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-chromium-retry1/video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-chromium-retry1/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                            "column": 28,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "8bb3dbcfefd710cbf953-b7f92cf7c4ea8ab7430e",
+                  "file": "e2e/dashboard/recent_data.spec.ts",
+                  "line": 8,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 2 @regression",
+                  "ok": true,
+                  "tags": [
+                    "regression"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 565,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:10.036Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "8bb3dbcfefd710cbf953-7d2881f36c3b887f1619",
+                  "file": "e2e/dashboard/recent_data.spec.ts",
+                  "line": 13,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 3 @smoke",
+                  "ok": true,
+                  "tags": [
+                    "smoke"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 529,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:10.704Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "8bb3dbcfefd710cbf953-1848c06ba649d6985a7e",
+                  "file": "e2e/dashboard/recent_data.spec.ts",
+                  "line": 17,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 4 @regression",
+                  "ok": true,
+                  "tags": [
+                    "regression"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 517,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:11.239Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "8bb3dbcfefd710cbf953-92393a54fa99646cb28c",
+                  "file": "e2e/dashboard/recent_data.spec.ts",
+                  "line": 21,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 5 @smoke",
+                  "ok": true,
+                  "tags": [
+                    "smoke"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 528,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:11.761Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "8bb3dbcfefd710cbf953-0052c0069a5a821af6cc",
+                  "file": "e2e/dashboard/recent_data.spec.ts",
+                  "line": 25,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 1 @smoke",
+                  "ok": false,
+                  "tags": [
+                    "smoke"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 4,
+                          "status": "failed",
+                          "duration": 686,
+                          "error": {
+                            "message": "ReferenceError: True is not defined",
+                            "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
+                            "location": {
+                              "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                              "column": 28,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                                "column": 28,
+                                "line": 10
+                              },
+                              "message": "ReferenceError: True is not defined\n\n\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:24.240Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-Mobile-Safari/test-failed-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-Mobile-Safari/video.webm"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                            "column": 28,
+                            "line": 10
+                          }
+                        },
+                        {
+                          "workerIndex": 5,
+                          "status": "failed",
+                          "duration": 1048,
+                          "error": {
+                            "message": "ReferenceError: True is not defined",
+                            "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
+                            "location": {
+                              "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                              "column": 28,
+                              "line": 10
+                            },
+                            "snippet": "\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m"
+                          },
+                          "errors": [
+                            {
+                              "location": {
+                                "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                                "column": 28,
+                                "line": 10
+                              },
+                              "message": "ReferenceError: True is not defined\n\n\u001b[0m \u001b[90m  8 |\u001b[39m     test(\u001b[32m\"PW Test 1 @smoke\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\n \u001b[90m  9 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://playwright.dev\"\u001b[39m)\u001b[33m;\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         expect(\u001b[36mfalse\u001b[39m)\u001b[33m.\u001b[39mtoBe(\u001b[33mTrue\u001b[39m)\n \u001b[90m    |\u001b[39m                            \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m     \n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 2 @regression\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m({page})\u001b[33m=>\u001b[39m{\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28"
+                            }
+                          ],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:25.420Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-Mobile-Safari-retry1/test-failed-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-Mobile-Safari-retry1/video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-dashboard-recent_data-TS-Recent-Data-PW-Test-1-smoke-Mobile-Safari-retry1/trace.zip"
+                            }
+                          ],
+                          "errorLocation": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts",
+                            "column": 28,
+                            "line": 10
+                          }
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "8bb3dbcfefd710cbf953-58ea48f51f820ee211ee",
+                  "file": "e2e/dashboard/recent_data.spec.ts",
+                  "line": 8,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 2 @regression",
+                  "ok": true,
+                  "tags": [
+                    "regression"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 759,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:27.127Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "8bb3dbcfefd710cbf953-1967ae9ab1c6c3f6d008",
+                  "file": "e2e/dashboard/recent_data.spec.ts",
+                  "line": 13,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 3 @smoke",
+                  "ok": true,
+                  "tags": [
+                    "smoke"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 643,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:27.981Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "8bb3dbcfefd710cbf953-bc087890e633d53b9cdc",
+                  "file": "e2e/dashboard/recent_data.spec.ts",
+                  "line": 17,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 4 @regression",
+                  "ok": true,
+                  "tags": [
+                    "regression"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 745,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:28.639Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "8bb3dbcfefd710cbf953-e5395c4d042e765ce84b",
+                  "file": "e2e/dashboard/recent_data.spec.ts",
+                  "line": 21,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 5 @smoke",
+                  "ok": true,
+                  "tags": [
+                    "smoke"
+                  ],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 654,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:29.396Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "8bb3dbcfefd710cbf953-b09b80ef898ee4b3215e",
+                  "file": "e2e/dashboard/recent_data.spec.ts",
+                  "line": 25,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "e2e/logIn/signIn.spec.ts",
+          "file": "e2e/logIn/signIn.spec.ts",
+          "column": 0,
+          "line": 0,
+          "specs": [],
+          "suites": [
+            {
+              "title": "TS | SignIn",
+              "file": "e2e/logIn/signIn.spec.ts",
+              "line": 3,
+              "column": 15,
+              "specs": [
+                {
+                  "title": "TC1",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 424,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:12.297Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6e98309bb1c4a85b1e33-ff9d756d2251c3772f37",
+                  "file": "e2e/logIn/signIn.spec.ts",
+                  "line": 9,
+                  "column": 9
+                },
+                {
+                  "title": "TC2",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 416,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:12.728Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6e98309bb1c4a85b1e33-30aa4ef2b6d8c3c117ce",
+                  "file": "e2e/logIn/signIn.spec.ts",
+                  "line": 14,
+                  "column": 9
+                },
+                {
+                  "title": "TC3",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 378,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:13.149Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6e98309bb1c4a85b1e33-f6158952d55d9134b4c6",
+                  "file": "e2e/logIn/signIn.spec.ts",
+                  "line": 19,
+                  "column": 9
+                },
+                {
+                  "title": "TC1",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 863,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:30.058Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6e98309bb1c4a85b1e33-da63949e23c8fefea79f",
+                  "file": "e2e/logIn/signIn.spec.ts",
+                  "line": 9,
+                  "column": 9
+                },
+                {
+                  "title": "TC2",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 813,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:30.927Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6e98309bb1c4a85b1e33-551609a88759436287dd",
+                  "file": "e2e/logIn/signIn.spec.ts",
+                  "line": 14,
+                  "column": 9
+                },
+                {
+                  "title": "TC3",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 773,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:31.747Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6e98309bb1c4a85b1e33-c6b6f84c2612689b2fb8",
+                  "file": "e2e/logIn/signIn.spec.ts",
+                  "line": 19,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "e2e/settings/notifications.spec.ts",
+          "file": "e2e/settings/notifications.spec.ts",
+          "column": 0,
+          "line": 0,
+          "specs": [],
+          "suites": [
+            {
+              "title": "TS | Notifications",
+              "file": "e2e/settings/notifications.spec.ts",
+              "line": 3,
+              "column": 6,
+              "specs": [
+                {
+                  "title": "PW Test 1",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 291,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:13.534Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f08996c82dfe12fe76d6-1f4a02f73b1bceb67002",
+                  "file": "e2e/settings/notifications.spec.ts",
+                  "line": 5,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 2",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 283,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:13.830Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f08996c82dfe12fe76d6-437d70c2b5da636f00c6",
+                  "file": "e2e/settings/notifications.spec.ts",
+                  "line": 9,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 3",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 286,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:14.118Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f08996c82dfe12fe76d6-9711ba6228c2db4d31d7",
+                  "file": "e2e/settings/notifications.spec.ts",
+                  "line": 13,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 4",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 302,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:14.412Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f08996c82dfe12fe76d6-f6176cb59f4ca7aea3a1",
+                  "file": "e2e/settings/notifications.spec.ts",
+                  "line": 17,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 1",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 735,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:32.527Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f08996c82dfe12fe76d6-bb968a3002435af963db",
+                  "file": "e2e/settings/notifications.spec.ts",
+                  "line": 5,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 2",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 628,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:33.269Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f08996c82dfe12fe76d6-82930bf0046e759f443a",
+                  "file": "e2e/settings/notifications.spec.ts",
+                  "line": 9,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 3",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 662,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:33.904Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f08996c82dfe12fe76d6-844d42812689566c5a0f",
+                  "file": "e2e/settings/notifications.spec.ts",
+                  "line": 13,
+                  "column": 9
+                },
+                {
+                  "title": "PW Test 4",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 647,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:34.571Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "f08996c82dfe12fe76d6-58b615d4c66727d46b85",
+                  "file": "e2e/settings/notifications.spec.ts",
+                  "line": 17,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "e2e/settings/profile.spec.ts",
+          "file": "e2e/settings/profile.spec.ts",
+          "column": 0,
+          "line": 0,
+          "specs": [],
+          "suites": [
+            {
+              "title": "TS | Profile",
+              "file": "e2e/settings/profile.spec.ts",
+              "line": 3,
+              "column": 15,
+              "specs": [
+                {
+                  "title": "TC1",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 405,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "\nTC1 starting...\n"
+                            },
+                            {
+                              "text": "Test finished.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:14.720Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6b88d00c63841bd7ee72-e66d60ddae7ee10ea089",
+                  "file": "e2e/settings/profile.spec.ts",
+                  "line": 14,
+                  "column": 9
+                },
+                {
+                  "title": "TC2",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 410,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "\nTC2 starting...\n"
+                            },
+                            {
+                              "text": "Test finished.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:15.129Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6b88d00c63841bd7ee72-ab1f59a35a78916513bf",
+                  "file": "e2e/settings/profile.spec.ts",
+                  "line": 19,
+                  "column": 9
+                },
+                {
+                  "title": "TC3",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 353,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "\nTC3 starting...\n"
+                            },
+                            {
+                              "text": "Test finished.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:15.544Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6b88d00c63841bd7ee72-2e7a672ccbdd443a298b",
+                  "file": "e2e/settings/profile.spec.ts",
+                  "line": 24,
+                  "column": 9
+                },
+                {
+                  "title": "TC1",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 832,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "\nTC1 starting...\n"
+                            },
+                            {
+                              "text": "Test finished.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:35.225Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6b88d00c63841bd7ee72-3bfa494b8cb1e04aeb7e",
+                  "file": "e2e/settings/profile.spec.ts",
+                  "line": 14,
+                  "column": 9
+                },
+                {
+                  "title": "TC2",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 813,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "\nTC2 starting...\n"
+                            },
+                            {
+                              "text": "Test finished.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:36.061Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6b88d00c63841bd7ee72-ff8744b0e7f8837adaa5",
+                  "file": "e2e/settings/profile.spec.ts",
+                  "line": 19,
+                  "column": 9
+                },
+                {
+                  "title": "TC3",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 755,
+                          "errors": [],
+                          "stdout": [
+                            {
+                              "text": "\nTC3 starting...\n"
+                            },
+                            {
+                              "text": "Test finished.\n"
+                            }
+                          ],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:36.879Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "6b88d00c63841bd7ee72-15091783266bc3ab0f6b",
+                  "file": "e2e/settings/profile.spec.ts",
+                  "line": 24,
+                  "column": 9
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "title": "e2e/usage/billing.spec.ts",
+          "file": "e2e/usage/billing.spec.ts",
+          "column": 0,
+          "line": 0,
+          "specs": [],
+          "suites": [
+            {
+              "title": "TS | billing",
+              "file": "e2e/usage/billing.spec.ts",
+              "line": 3,
+              "column": 15,
+              "specs": [
+                {
+                  "title": "First PW Test",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 90000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 514,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:15.904Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": 3,
+                          "status": "passed",
+                          "duration": 672,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:17.413Z",
+                          "attachments": [
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-First-PW-Test-chromium-retry1/trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-374b73d5aca28c4c277c",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 4,
+                  "column": 5
+                },
+                {
+                  "title": "Fail PW Test",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 90000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        },
+                        {
+                          "type": "fail"
+                        }
+                      ],
+                      "expectedStatus": "failed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": 2,
+                          "status": "passed",
+                          "duration": 534,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:16.422Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-chromium/test-failed-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-chromium/video.webm"
+                            }
+                          ]
+                        },
+                        {
+                          "workerIndex": 3,
+                          "status": "passed",
+                          "duration": 641,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:18.252Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-chromium-retry1/test-failed-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-chromium-retry1/video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-chromium-retry1/trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-5d6befa49b1b343c6ee6",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 8,
+                  "column": 10
+                },
+                {
+                  "title": "Fix me PW Test",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        },
+                        {
+                          "type": "fixme"
+                        }
+                      ],
+                      "expectedStatus": "skipped",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:16.980Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:19.017Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-9e9b984ae1d0f7832cdb",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 12,
+                  "column": 10
+                },
+                {
+                  "title": "Skip PW Test",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        },
+                        {
+                          "type": "skip"
+                        }
+                      ],
+                      "expectedStatus": "skipped",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:16.981Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:19.017Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-6c5b43ed7021e2b4b263",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 20,
+                  "column": 10
+                },
+                {
+                  "title": "Conditional skip PW Test",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:16.981Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:19.017Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-3ce8bb773f5ed8bf4b64",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 24,
+                  "column": 5
+                },
+                {
+                  "title": "Locator example",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:16.981Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:19.017Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-d6218007877846128bdc",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 29,
+                  "column": 5
+                },
+                {
+                  "title": "Simple click test",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "chromium",
+                      "projectName": "chromium",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:16.981Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:19.017Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-f458f673d7230a336a2d",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 39,
+                  "column": 5
+                },
+                {
+                  "title": "First PW Test",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 90000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 686,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:37.643Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": 7,
+                          "status": "passed",
+                          "duration": 961,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:39.470Z",
+                          "attachments": [
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-First-PW-Test-Mobile-Safari-retry1/trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "expected"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-afef484980451c05eea4",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 4,
+                  "column": 5
+                },
+                {
+                  "title": "Fail PW Test",
+                  "ok": false,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 90000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        },
+                        {
+                          "type": "fail"
+                        }
+                      ],
+                      "expectedStatus": "failed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": 6,
+                          "status": "passed",
+                          "duration": 653,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:38.333Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-Mobile-Safari/test-failed-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-Mobile-Safari/video.webm"
+                            }
+                          ]
+                        },
+                        {
+                          "workerIndex": 7,
+                          "status": "passed",
+                          "duration": 917,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:40.592Z",
+                          "attachments": [
+                            {
+                              "name": "screenshot",
+                              "contentType": "image/png",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-Mobile-Safari-retry1/test-failed-1.png"
+                            },
+                            {
+                              "name": "video",
+                              "contentType": "video/webm",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-Mobile-Safari-retry1/video.webm"
+                            },
+                            {
+                              "name": "trace",
+                              "contentType": "application/zip",
+                              "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-usage-billing-TS-billing-Fail-PW-Test-Mobile-Safari-retry1/trace.zip"
+                            }
+                          ]
+                        }
+                      ],
+                      "status": "unexpected"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-60f46f460dc7b00ffc9a",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 8,
+                  "column": 10
+                },
+                {
+                  "title": "Fix me PW Test",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        },
+                        {
+                          "type": "fixme"
+                        }
+                      ],
+                      "expectedStatus": "skipped",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:39.044Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:41.634Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-f7bc453758ba1a3a00b4",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 12,
+                  "column": 10
+                },
+                {
+                  "title": "Skip PW Test",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        },
+                        {
+                          "type": "skip"
+                        }
+                      ],
+                      "expectedStatus": "skipped",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:39.044Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:41.634Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-9ddc5da2e1793b43c56a",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 20,
+                  "column": 10
+                },
+                {
+                  "title": "Conditional skip PW Test",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:39.044Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:41.634Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-68832d9b3f4d89641237",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 24,
+                  "column": 5
+                },
+                {
+                  "title": "Locator example",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:39.044Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:41.634Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-40cac621f558ee6604b8",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 29,
+                  "column": 5
+                },
+                {
+                  "title": "Simple click test",
+                  "ok": true,
+                  "tags": [],
+                  "tests": [
+                    {
+                      "timeout": 30000,
+                      "annotations": [
+                        {
+                          "type": "slow"
+                        }
+                      ],
+                      "expectedStatus": "passed",
+                      "projectId": "Mobile Safari",
+                      "projectName": "Mobile Safari",
+                      "results": [
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 0,
+                          "startTime": "2026-05-11T12:14:39.044Z",
+                          "attachments": []
+                        },
+                        {
+                          "workerIndex": -1,
+                          "status": "skipped",
+                          "duration": 0,
+                          "errors": [],
+                          "stdout": [],
+                          "stderr": [],
+                          "retry": 1,
+                          "startTime": "2026-05-11T12:14:41.634Z",
+                          "attachments": []
+                        }
+                      ],
+                      "status": "skipped"
+                    }
+                  ],
+                  "id": "2aa2f6a6114df58e9837-11af27869c028acd2a26",
+                  "file": "e2e/usage/billing.spec.ts",
+                  "line": 39,
+                  "column": 5
+                }
+              ]
+            }
+          ]
+        }
+      ],
+      "errors": [],
+      "stats": {
+        "startTime": "2026-05-11T12:14:05.589Z",
+        "duration": 36063.57,
         "expected": 34,
         "skipped": 10,
         "unexpected": 4,
