@@ -113,12 +113,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 633,
+                      "duration": 590,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T15:57:16.551Z",
+                      "startTime": "2026-10-12T18:46:26.555Z",
                       "attachments": []
                     }
                   ],
@@ -145,12 +145,12 @@
                     {
                       "workerIndex": 0,
                       "status": "passed",
-                      "duration": 793,
+                      "duration": 657,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T15:57:17.307Z",
+                      "startTime": "2026-10-12T18:46:27.272Z",
                       "attachments": []
                     }
                   ],
@@ -175,14 +175,14 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 20,
                       "status": "passed",
-                      "duration": 1984,
+                      "duration": 1790,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:43.320Z",
+                      "startTime": "2026-10-12T18:55:18.751Z",
                       "attachments": []
                     }
                   ],
@@ -207,14 +207,14 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 20,
                       "status": "passed",
-                      "duration": 1197,
+                      "duration": 1130,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:45.849Z",
+                      "startTime": "2026-10-12T18:55:21.078Z",
                       "attachments": []
                     }
                   ],
@@ -260,7 +260,7 @@
                     {
                       "workerIndex": 0,
                       "status": "failed",
-                      "duration": 471,
+                      "duration": 444,
                       "error": {
                         "message": "ReferenceError: True is not defined",
                         "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
@@ -284,7 +284,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T15:57:18.109Z",
+                      "startTime": "2026-10-12T18:46:27.937Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -306,7 +306,7 @@
                     {
                       "workerIndex": 1,
                       "status": "failed",
-                      "duration": 719,
+                      "duration": 547,
                       "error": {
                         "message": "ReferenceError: True is not defined",
                         "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
@@ -330,7 +330,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T15:57:19.042Z",
+                      "startTime": "2026-10-12T18:46:28.696Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -380,12 +380,12 @@
                     {
                       "workerIndex": 2,
                       "status": "passed",
-                      "duration": 559,
+                      "duration": 492,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T15:57:20.440Z",
+                      "startTime": "2026-10-12T18:46:29.703Z",
                       "attachments": []
                     }
                   ],
@@ -414,12 +414,12 @@
                     {
                       "workerIndex": 2,
                       "status": "passed",
-                      "duration": 492,
+                      "duration": 406,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T15:57:21.104Z",
+                      "startTime": "2026-10-12T18:46:30.285Z",
                       "attachments": []
                     }
                   ],
@@ -448,12 +448,12 @@
                     {
                       "workerIndex": 2,
                       "status": "passed",
-                      "duration": 456,
+                      "duration": 442,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T15:57:21.602Z",
+                      "startTime": "2026-10-12T18:46:30.697Z",
                       "attachments": []
                     }
                   ],
@@ -482,12 +482,12 @@
                     {
                       "workerIndex": 2,
                       "status": "passed",
-                      "duration": 467,
+                      "duration": 380,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T15:57:22.064Z",
+                      "startTime": "2026-10-12T18:46:31.143Z",
                       "attachments": []
                     }
                   ],
@@ -514,9 +514,9 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 17,
+                      "workerIndex": 20,
                       "status": "failed",
-                      "duration": 736,
+                      "duration": 493,
                       "error": {
                         "message": "ReferenceError: True is not defined",
                         "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
@@ -540,7 +540,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:47.059Z",
+                      "startTime": "2026-10-12T18:55:22.215Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -560,9 +560,9 @@
                       }
                     },
                     {
-                      "workerIndex": 18,
+                      "workerIndex": 21,
                       "status": "failed",
-                      "duration": 1024,
+                      "duration": 726,
                       "error": {
                         "message": "ReferenceError: True is not defined",
                         "stack": "ReferenceError: True is not defined\n    at /home/runner/work/Playwright/Playwright/tests/e2e/dashboard/recent_data.spec.ts:10:28",
@@ -586,7 +586,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:48.433Z",
+                      "startTime": "2026-10-12T18:55:23.033Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -634,14 +634,14 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 19,
+                      "workerIndex": 22,
                       "status": "passed",
-                      "duration": 782,
+                      "duration": 589,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:50.100Z",
+                      "startTime": "2026-10-12T18:55:24.172Z",
                       "attachments": []
                     }
                   ],
@@ -668,14 +668,14 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 19,
+                      "workerIndex": 22,
                       "status": "passed",
-                      "duration": 755,
+                      "duration": 564,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:50.979Z",
+                      "startTime": "2026-10-12T18:55:24.831Z",
                       "attachments": []
                     }
                   ],
@@ -702,14 +702,14 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 19,
+                      "workerIndex": 22,
                       "status": "passed",
-                      "duration": 671,
+                      "duration": 516,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:51.742Z",
+                      "startTime": "2026-10-12T18:55:25.405Z",
                       "attachments": []
                     }
                   ],
@@ -736,14 +736,14 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 19,
+                      "workerIndex": 22,
                       "status": "passed",
-                      "duration": 724,
+                      "duration": 549,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:52.418Z",
+                      "startTime": "2026-10-12T18:55:25.928Z",
                       "attachments": []
                     }
                   ],
@@ -787,7 +787,7 @@
                     {
                       "workerIndex": 2,
                       "status": "timedOut",
-                      "duration": 32337,
+                      "duration": 31687,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
@@ -811,7 +811,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T15:57:22.537Z",
+                      "startTime": "2026-10-12T18:46:31.528Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -833,7 +833,7 @@
                     {
                       "workerIndex": 3,
                       "status": "timedOut",
-                      "duration": 32381,
+                      "duration": 31601,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
@@ -852,12 +852,20 @@
                             "line": 5
                           },
                           "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://the-internet.herokuapp.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m     test(\u001b[32m\"TC1\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:6:20"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T15:57:55.334Z",
+                      "startTime": "2026-10-12T18:47:03.546Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -905,7 +913,7 @@
                     {
                       "workerIndex": 4,
                       "status": "timedOut",
-                      "duration": 32352,
+                      "duration": 31536,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
@@ -929,7 +937,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T15:58:28.304Z",
+                      "startTime": "2026-10-12T18:47:35.550Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -951,7 +959,7 @@
                     {
                       "workerIndex": 5,
                       "status": "timedOut",
-                      "duration": 32451,
+                      "duration": 31541,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
@@ -975,7 +983,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T15:59:01.227Z",
+                      "startTime": "2026-10-12T18:48:07.453Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -1010,7 +1018,7 @@
             },
             {
               "title": "TC3",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -1022,40 +1030,8 @@
                   "results": [
                     {
                       "workerIndex": 6,
-                      "status": "passed",
-                      "duration": 31966,
-                      "errors": [],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-09T15:59:34.257Z",
-                      "attachments": []
-                    }
-                  ],
-                  "status": "expected"
-                }
-              ],
-              "id": "6e98309bb1c4a85b1e33-f6158952d55d9134b4c6",
-              "file": "e2e/logIn/signIn.spec.ts",
-              "line": 19,
-              "column": 9
-            },
-            {
-              "title": "TC1",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Safari",
-                  "projectName": "Mobile Safari",
-                  "results": [
-                    {
-                      "workerIndex": 19,
                       "status": "timedOut",
-                      "duration": 30431,
+                      "duration": 31606,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
@@ -1079,7 +1055,128 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:53.152Z",
+                      "startTime": "2026-10-12T18:48:39.408Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC3-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC3-chromium/video.webm"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
+                        "column": 10,
+                        "line": 5
+                      }
+                    },
+                    {
+                      "workerIndex": 7,
+                      "status": "timedOut",
+                      "duration": 36558,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
+                        "location": {
+                          "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
+                          "column": 10,
+                          "line": 5
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
+                            "column": 10,
+                            "line": 5
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://the-internet.herokuapp.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m     test(\u001b[32m\"TC1\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:6:20"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-10-12T18:49:11.392Z",
+                      "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC3-chromium-retry1/video.webm"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC3-chromium-retry1/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
+                        "column": 10,
+                        "line": 5
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "6e98309bb1c4a85b1e33-f6158952d55d9134b4c6",
+              "file": "e2e/logIn/signIn.spec.ts",
+              "line": 19,
+              "column": 9
+            },
+            {
+              "title": "TC1",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 22,
+                      "status": "timedOut",
+                      "duration": 31270,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
+                        "location": {
+                          "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
+                          "column": 10,
+                          "line": 5
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
+                            "column": 10,
+                            "line": 5
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T18:55:26.488Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -1099,58 +1196,24 @@
                       }
                     },
                     {
-                      "workerIndex": 20,
-                      "status": "timedOut",
-                      "duration": 32034,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
-                        "location": {
-                          "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                          "column": 10,
-                          "line": 5
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                            "column": 10,
-                            "line": 5
-                          },
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10"
-                        }
-                      ],
+                      "workerIndex": 23,
+                      "status": "passed",
+                      "duration": 1083,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:06:24.036Z",
+                      "startTime": "2026-10-12T18:55:58.029Z",
                       "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC1-Mobile-Safari-retry1/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC1-Mobile-Safari-retry1/video.webm"
-                        },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
                           "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC1-Mobile-Safari-retry1/trace.zip"
                         }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                        "column": 10,
-                        "line": 5
-                      }
+                      ]
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "flaky"
                 }
               ],
               "id": "6e98309bb1c4a85b1e33-da63949e23c8fefea79f",
@@ -1160,125 +1223,7 @@
             },
             {
               "title": "TC2",
-              "ok": false,
-              "tags": [],
-              "tests": [
-                {
-                  "timeout": 30000,
-                  "annotations": [],
-                  "expectedStatus": "passed",
-                  "projectId": "Mobile Safari",
-                  "projectName": "Mobile Safari",
-                  "results": [
-                    {
-                      "workerIndex": 21,
-                      "status": "timedOut",
-                      "duration": 32006,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
-                        "location": {
-                          "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                          "column": 10,
-                          "line": 5
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                            "column": 10,
-                            "line": 5
-                          },
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-09T16:06:56.637Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC2-Mobile-Safari/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC2-Mobile-Safari/video.webm"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                        "column": 10,
-                        "line": 5
-                      }
-                    },
-                    {
-                      "workerIndex": 22,
-                      "status": "timedOut",
-                      "duration": 32034,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
-                        "location": {
-                          "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                          "column": 10,
-                          "line": 5
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                            "column": 10,
-                            "line": 5
-                          },
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 1,
-                      "startTime": "2026-10-09T16:07:29.172Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC2-Mobile-Safari-retry1/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC2-Mobile-Safari-retry1/video.webm"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC2-Mobile-Safari-retry1/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                        "column": 10,
-                        "line": 5
-                      }
-                    }
-                  ],
-                  "status": "unexpected"
-                }
-              ],
-              "id": "6e98309bb1c4a85b1e33-551609a88759436287dd",
-              "file": "e2e/logIn/signIn.spec.ts",
-              "line": 14,
-              "column": 9
-            },
-            {
-              "title": "TC3",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1290,103 +1235,49 @@
                   "results": [
                     {
                       "workerIndex": 23,
-                      "status": "timedOut",
-                      "duration": 31973,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
-                        "location": {
-                          "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                          "column": 10,
-                          "line": 5
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                            "column": 10,
-                            "line": 5
-                          },
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10"
-                        }
-                      ],
+                      "status": "passed",
+                      "duration": 30435,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:08:01.776Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC3-Mobile-Safari/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC3-Mobile-Safari/video.webm"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                        "column": 10,
-                        "line": 5
-                      }
-                    },
-                    {
-                      "workerIndex": 24,
-                      "status": "timedOut",
-                      "duration": 32034,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10",
-                        "location": {
-                          "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                          "column": 10,
-                          "line": 5
-                        },
-                        "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m"
-                      },
-                      "errors": [
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                            "column": 10,
-                            "line": 5
-                          },
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mparallel(\u001b[32m\"TS | SignIn\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts:5:10"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 1,
-                      "startTime": "2026-10-09T16:08:34.271Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC3-Mobile-Safari-retry1/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC3-Mobile-Safari-retry1/video.webm"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-logIn-signIn-TS-SignIn-TC3-Mobile-Safari-retry1/trace.zip"
-                        }
-                      ],
-                      "errorLocation": {
-                        "file": "/home/runner/work/Playwright/Playwright/tests/e2e/logIn/signIn.spec.ts",
-                        "column": 10,
-                        "line": 5
-                      }
+                      "startTime": "2026-10-12T18:55:59.195Z",
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
+                }
+              ],
+              "id": "6e98309bb1c4a85b1e33-551609a88759436287dd",
+              "file": "e2e/logIn/signIn.spec.ts",
+              "line": 14,
+              "column": 9
+            },
+            {
+              "title": "TC3",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "Mobile Safari",
+                  "projectName": "Mobile Safari",
+                  "results": [
+                    {
+                      "workerIndex": 23,
+                      "status": "passed",
+                      "duration": 930,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-10-12T18:56:29.637Z",
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
                 }
               ],
               "id": "6e98309bb1c4a85b1e33-c6b6f84c2612689b2fb8",
@@ -1413,7 +1304,7 @@
           "specs": [
             {
               "title": "PW Test 1",
-              "ok": true,
+              "ok": false,
               "tags": [],
               "tests": [
                 {
@@ -1424,9 +1315,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 6,
+                      "workerIndex": 8,
                       "status": "timedOut",
-                      "duration": 32247,
+                      "duration": 30461,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -1439,7 +1330,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:00:06.339Z",
+                      "startTime": "2026-10-12T18:49:48.334Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -1454,15 +1345,36 @@
                       ]
                     },
                     {
-                      "workerIndex": 7,
-                      "status": "passed",
-                      "duration": 32083,
-                      "errors": [],
+                      "workerIndex": 9,
+                      "status": "timedOut",
+                      "duration": 36495,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/settings/notifications.spec.ts",
+                            "column": 20,
+                            "line": 6
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://the-internet.herokuapp.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 4 |\u001b[39m\n \u001b[90m 5 |\u001b[39m     test(\u001b[32m\"PW Test 1\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 6 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m   |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 7 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m\n \u001b[90m 9 |\u001b[39m     test(\u001b[32m\"PW Test 2\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/settings/notifications.spec.ts:6:20"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:00:39.038Z",
+                      "startTime": "2026-10-12T18:50:19.154Z",
                       "attachments": [
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-1-chromium-retry1/video.webm"
+                        },
                         {
                           "name": "trace",
                           "contentType": "application/zip",
@@ -1471,7 +1383,7 @@
                       ]
                     }
                   ],
-                  "status": "flaky"
+                  "status": "unexpected"
                 }
               ],
               "id": "f08996c82dfe12fe76d6-1f4a02f73b1bceb67002",
@@ -1492,9 +1404,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 7,
+                      "workerIndex": 10,
                       "status": "timedOut",
-                      "duration": 37544,
+                      "duration": 31548,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -1502,21 +1414,18 @@
                       "errors": [
                         {
                           "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        },
-                        {
-                          "location": {
-                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/settings/notifications.spec.ts",
-                            "column": 20,
-                            "line": 10
-                          },
-                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://the-internet.herokuapp.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m  8 |\u001b[39m\n \u001b[90m  9 |\u001b[39m     test(\u001b[32m\"PW Test 2\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 10 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 11 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 3\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/settings/notifications.spec.ts:10:20"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:01:11.257Z",
+                      "startTime": "2026-10-12T18:50:56.021Z",
                       "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-2-chromium/test-failed-1.png"
+                        },
                         {
                           "name": "video",
                           "contentType": "video/webm",
@@ -1525,9 +1434,9 @@
                       ]
                     },
                     {
-                      "workerIndex": 8,
+                      "workerIndex": 11,
                       "status": "timedOut",
-                      "duration": 32334,
+                      "duration": 31497,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -1540,7 +1449,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:01:49.257Z",
+                      "startTime": "2026-10-12T18:51:27.929Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -1581,9 +1490,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 9,
+                      "workerIndex": 12,
                       "status": "timedOut",
-                      "duration": 32390,
+                      "duration": 31489,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -1591,12 +1500,20 @@
                       "errors": [
                         {
                           "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/settings/notifications.spec.ts",
+                            "column": 20,
+                            "line": 14
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://the-internet.herokuapp.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 12 |\u001b[39m\n \u001b[90m 13 |\u001b[39m     test(\u001b[32m\"PW Test 3\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 14 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"/\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 15 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     test(\u001b[32m\"PW Test 4\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/settings/notifications.spec.ts:14:20"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:02:22.170Z",
+                      "startTime": "2026-10-12T18:51:59.805Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -1611,9 +1528,9 @@
                       ]
                     },
                     {
-                      "workerIndex": 10,
+                      "workerIndex": 13,
                       "status": "timedOut",
-                      "duration": 32314,
+                      "duration": 31625,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -1626,7 +1543,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:02:55.113Z",
+                      "startTime": "2026-10-12T18:52:31.642Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -1667,9 +1584,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 11,
+                      "workerIndex": 14,
                       "status": "timedOut",
-                      "duration": 32335,
+                      "duration": 36347,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -1677,18 +1594,21 @@
                       "errors": [
                         {
                           "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/settings/notifications.spec.ts",
+                            "column": 20,
+                            "line": 18
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://the-internet.herokuapp.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     test(\u001b[32m\"PW Test 4\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://the-internet.herokuapp.com\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m })\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/settings/notifications.spec.ts:18:20"
                         }
                       ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:03:28.018Z",
+                      "startTime": "2026-10-12T18:53:03.651Z",
                       "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-4-chromium/test-failed-1.png"
-                        },
                         {
                           "name": "video",
                           "contentType": "video/webm",
@@ -1697,9 +1617,9 @@
                       ]
                     },
                     {
-                      "workerIndex": 12,
+                      "workerIndex": 15,
                       "status": "timedOut",
-                      "duration": 32367,
+                      "duration": 31537,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -1712,7 +1632,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:04:00.929Z",
+                      "startTime": "2026-10-12T18:53:40.350Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -1753,9 +1673,9 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 25,
+                      "workerIndex": 23,
                       "status": "timedOut",
-                      "duration": 31960,
+                      "duration": 31300,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -1768,7 +1688,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:09:06.885Z",
+                      "startTime": "2026-10-12T18:56:30.574Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -1783,9 +1703,9 @@
                       ]
                     },
                     {
-                      "workerIndex": 26,
+                      "workerIndex": 24,
                       "status": "timedOut",
-                      "duration": 32033,
+                      "duration": 31339,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -1798,7 +1718,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:09:39.371Z",
+                      "startTime": "2026-10-12T18:57:02.142Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -1839,39 +1759,9 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 27,
+                      "workerIndex": 25,
                       "status": "timedOut",
-                      "duration": 31964,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 0,
-                      "startTime": "2026-10-09T16:10:11.970Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-2-Mobile-Safari/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-2-Mobile-Safari/video.webm"
-                        }
-                      ]
-                    },
-                    {
-                      "workerIndex": 28,
-                      "status": "timedOut",
-                      "duration": 36788,
+                      "duration": 30056,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
@@ -1891,9 +1781,44 @@
                       ],
                       "stdout": [],
                       "stderr": [],
-                      "retry": 1,
-                      "startTime": "2026-10-09T16:10:44.455Z",
+                      "retry": 0,
+                      "startTime": "2026-10-12T18:57:33.893Z",
                       "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-2-Mobile-Safari/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-2-Mobile-Safari/video.webm"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 26,
+                      "status": "timedOut",
+                      "duration": 30509,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-10-12T18:58:04.317Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-2-Mobile-Safari-retry1/test-failed-1.png"
+                        },
                         {
                           "name": "video",
                           "contentType": "video/webm",
@@ -1917,7 +1842,7 @@
             },
             {
               "title": "PW Test 3",
-              "ok": false,
+              "ok": true,
               "tags": [],
               "tests": [
                 {
@@ -1928,72 +1853,18 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 29,
-                      "status": "timedOut",
-                      "duration": 31972,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        }
-                      ],
+                      "workerIndex": 27,
+                      "status": "passed",
+                      "duration": 762,
+                      "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:11:21.795Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-3-Mobile-Safari/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-3-Mobile-Safari/video.webm"
-                        }
-                      ]
-                    },
-                    {
-                      "workerIndex": 30,
-                      "status": "timedOut",
-                      "duration": 32083,
-                      "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                      },
-                      "errors": [
-                        {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
-                        }
-                      ],
-                      "stdout": [],
-                      "stderr": [],
-                      "retry": 1,
-                      "startTime": "2026-10-09T16:11:54.295Z",
-                      "attachments": [
-                        {
-                          "name": "screenshot",
-                          "contentType": "image/png",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-3-Mobile-Safari-retry1/test-failed-1.png"
-                        },
-                        {
-                          "name": "video",
-                          "contentType": "video/webm",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-3-Mobile-Safari-retry1/video.webm"
-                        },
-                        {
-                          "name": "trace",
-                          "contentType": "application/zip",
-                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-3-Mobile-Safari-retry1/trace.zip"
-                        }
-                      ]
+                      "startTime": "2026-10-12T18:58:35.178Z",
+                      "attachments": []
                     }
                   ],
-                  "status": "unexpected"
+                  "status": "expected"
                 }
               ],
               "id": "f08996c82dfe12fe76d6-844d42812689566c5a0f",
@@ -2014,18 +1885,62 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 31,
-                      "status": "passed",
-                      "duration": 698,
-                      "errors": [],
+                      "workerIndex": 27,
+                      "status": "timedOut",
+                      "duration": 30902,
+                      "error": {
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                      },
+                      "errors": [
+                        {
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        },
+                        {
+                          "location": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/settings/notifications.spec.ts",
+                            "column": 20,
+                            "line": 18
+                          },
+                          "message": "Error: page.goto: Test timeout of 30000ms exceeded.\nCall log:\n  \u001b[2m- navigating to \"https://the-internet.herokuapp.com/\", waiting until \"load\"\u001b[22m\n\n\n\u001b[0m \u001b[90m 16 |\u001b[39m\n \u001b[90m 17 |\u001b[39m     test(\u001b[32m\"PW Test 4\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m ({ page }) \u001b[33m=>\u001b[39m {\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 18 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"https://the-internet.herokuapp.com\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m    |\u001b[39m                    \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 19 |\u001b[39m     })\u001b[33m;\u001b[39m\n \u001b[90m 20 |\u001b[39m })\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/settings/notifications.spec.ts:18:20"
+                        }
+                      ],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:12:26.955Z",
-                      "attachments": []
+                      "startTime": "2026-10-12T18:58:36.003Z",
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-4-Mobile-Safari/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-4-Mobile-Safari/video.webm"
+                        }
+                      ]
+                    },
+                    {
+                      "workerIndex": 28,
+                      "status": "passed",
+                      "duration": 834,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 1,
+                      "startTime": "2026-10-12T18:59:07.168Z",
+                      "attachments": [
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-notifications-TS-Notifications-PW-Test-4-Mobile-Safari-retry1/trace.zip"
+                        }
+                      ]
                     }
                   ],
-                  "status": "expected"
+                  "status": "flaky"
                 }
               ],
               "id": "f08996c82dfe12fe76d6-58b615d4c66727d46b85",
@@ -2063,9 +1978,9 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 13,
+                      "workerIndex": 16,
                       "status": "timedOut",
-                      "duration": 32364,
+                      "duration": 31484,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/settings/profile.spec.ts:5:10",
@@ -2096,7 +2011,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:04:33.886Z",
+                      "startTime": "2026-10-12T18:54:12.263Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -2116,9 +2031,9 @@
                       }
                     },
                     {
-                      "workerIndex": 14,
+                      "workerIndex": 17,
                       "status": "timedOut",
-                      "duration": 32236,
+                      "duration": 31461,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/settings/profile.spec.ts:5:10",
@@ -2157,7 +2072,7 @@
                       ],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:06.807Z",
+                      "startTime": "2026-10-12T18:54:44.125Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -2210,7 +2125,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:06.393Z",
+                      "startTime": "2026-10-12T18:54:43.854Z",
                       "attachments": []
                     },
                     {
@@ -2221,7 +2136,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:39.206Z",
+                      "startTime": "2026-10-12T18:55:15.705Z",
                       "attachments": []
                     }
                   ],
@@ -2253,7 +2168,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:06.393Z",
+                      "startTime": "2026-10-12T18:54:43.854Z",
                       "attachments": []
                     },
                     {
@@ -2264,7 +2179,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:39.206Z",
+                      "startTime": "2026-10-12T18:55:15.705Z",
                       "attachments": []
                     }
                   ],
@@ -2289,16 +2204,27 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 31,
+                      "workerIndex": 28,
                       "status": "timedOut",
-                      "duration": 30182,
+                      "duration": 31244,
                       "error": {
-                        "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m",
-                        "stack": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                        "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
+                        "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/settings/profile.spec.ts:5:10",
+                        "location": {
+                          "file": "/home/runner/work/Playwright/Playwright/tests/e2e/settings/profile.spec.ts",
+                          "column": 10,
+                          "line": 5
+                        },
+                        "snippet": "\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mserial(\u001b[32m\"TS | Profile\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m`\\n${testInfo.title} starting...`\u001b[39m)\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m"
                       },
                       "errors": [
                         {
-                          "message": "\u001b[31mTest timeout of 30000ms exceeded.\u001b[39m"
+                          "location": {
+                            "file": "/home/runner/work/Playwright/Playwright/tests/e2e/settings/profile.spec.ts",
+                            "column": 10,
+                            "line": 5
+                          },
+                          "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n\n\u001b[0m \u001b[90m 3 |\u001b[39m test\u001b[33m.\u001b[39mdescribe\u001b[33m.\u001b[39mserial(\u001b[32m\"TS | Profile\"\u001b[39m\u001b[33m,\u001b[39m \u001b[36masync\u001b[39m () \u001b[33m=>\u001b[39m {\n \u001b[90m 4 |\u001b[39m\n\u001b[31m\u001b[1m>\u001b[22m\u001b[39m\u001b[90m 5 |\u001b[39m     test\u001b[33m.\u001b[39mbeforeEach(\u001b[36masync\u001b[39m ({page}\u001b[33m,\u001b[39m testInfo)\u001b[33m=>\u001b[39m{\n \u001b[90m   |\u001b[39m          \u001b[31m\u001b[1m^\u001b[22m\u001b[39m\n \u001b[90m 6 |\u001b[39m         console\u001b[33m.\u001b[39mlog(\u001b[32m`\\n${testInfo.title} starting...`\u001b[39m)\n \u001b[90m 7 |\u001b[39m         \u001b[36mawait\u001b[39m page\u001b[33m.\u001b[39mgoto(\u001b[32m\"\"\u001b[39m)\u001b[33m;\u001b[39m\n \u001b[90m 8 |\u001b[39m     })\u001b[33m;\u001b[39m\u001b[0m\n\n    at /home/runner/work/Playwright/Playwright/tests/e2e/settings/profile.spec.ts:5:10"
                         }
                       ],
                       "stdout": [
@@ -2311,7 +2237,7 @@
                       ],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:12:27.750Z",
+                      "startTime": "2026-10-12T18:59:08.080Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -2323,12 +2249,17 @@
                           "contentType": "video/webm",
                           "path": "/home/runner/work/Playwright/Playwright/test-results/e2e-settings-profile-TS-Profile-TC1-Mobile-Safari/video.webm"
                         }
-                      ]
+                      ],
+                      "errorLocation": {
+                        "file": "/home/runner/work/Playwright/Playwright/tests/e2e/settings/profile.spec.ts",
+                        "column": 10,
+                        "line": 5
+                      }
                     },
                     {
-                      "workerIndex": 32,
+                      "workerIndex": 29,
                       "status": "timedOut",
-                      "duration": 32063,
+                      "duration": 31336,
                       "error": {
                         "message": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m",
                         "stack": "\u001b[31mTest timeout of 30000ms exceeded while running \"beforeEach\" hook.\u001b[39m\n    at /home/runner/work/Playwright/Playwright/tests/e2e/settings/profile.spec.ts:5:10",
@@ -2359,7 +2290,7 @@
                       ],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:12:58.379Z",
+                      "startTime": "2026-10-12T18:59:39.580Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -2412,7 +2343,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:12:57.956Z",
+                      "startTime": "2026-10-12T18:59:39.342Z",
                       "attachments": []
                     },
                     {
@@ -2423,7 +2354,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:13:30.598Z",
+                      "startTime": "2026-10-12T19:00:11.022Z",
                       "attachments": []
                     }
                   ],
@@ -2455,7 +2386,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:12:57.956Z",
+                      "startTime": "2026-10-12T18:59:39.342Z",
                       "attachments": []
                     },
                     {
@@ -2466,7 +2397,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:13:30.598Z",
+                      "startTime": "2026-10-12T19:00:11.022Z",
                       "attachments": []
                     }
                   ],
@@ -2512,25 +2443,25 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
+                      "workerIndex": 18,
                       "status": "passed",
-                      "duration": 580,
+                      "duration": 495,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:39.624Z",
+                      "startTime": "2026-10-12T18:55:15.960Z",
                       "attachments": []
                     },
                     {
-                      "workerIndex": 16,
+                      "workerIndex": 19,
                       "status": "passed",
-                      "duration": 669,
+                      "duration": 522,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:41.268Z",
+                      "startTime": "2026-10-12T18:55:17.257Z",
                       "attachments": [
                         {
                           "name": "trace",
@@ -2568,14 +2499,14 @@
                   "projectName": "chromium",
                   "results": [
                     {
-                      "workerIndex": 15,
+                      "workerIndex": 18,
                       "status": "passed",
-                      "duration": 496,
+                      "duration": 438,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:40.314Z",
+                      "startTime": "2026-10-12T18:55:16.536Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -2590,14 +2521,14 @@
                       ]
                     },
                     {
-                      "workerIndex": 16,
+                      "workerIndex": 19,
                       "status": "passed",
-                      "duration": 628,
+                      "duration": 487,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:42.126Z",
+                      "startTime": "2026-10-12T18:55:17.905Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -2652,7 +2583,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:40.842Z",
+                      "startTime": "2026-10-12T18:55:16.999Z",
                       "attachments": []
                     },
                     {
@@ -2663,7 +2594,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:42.892Z",
+                      "startTime": "2026-10-12T18:55:18.483Z",
                       "attachments": []
                     }
                   ],
@@ -2702,7 +2633,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:40.842Z",
+                      "startTime": "2026-10-12T18:55:16.999Z",
                       "attachments": []
                     },
                     {
@@ -2713,7 +2644,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:42.893Z",
+                      "startTime": "2026-10-12T18:55:18.483Z",
                       "attachments": []
                     }
                   ],
@@ -2749,7 +2680,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:40.842Z",
+                      "startTime": "2026-10-12T18:55:16.999Z",
                       "attachments": []
                     },
                     {
@@ -2760,7 +2691,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:42.893Z",
+                      "startTime": "2026-10-12T18:55:18.483Z",
                       "attachments": []
                     }
                   ],
@@ -2796,7 +2727,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:40.842Z",
+                      "startTime": "2026-10-12T18:55:16.999Z",
                       "attachments": []
                     },
                     {
@@ -2807,7 +2738,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:42.893Z",
+                      "startTime": "2026-10-12T18:55:18.483Z",
                       "attachments": []
                     }
                   ],
@@ -2843,7 +2774,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:05:40.842Z",
+                      "startTime": "2026-10-12T18:55:16.999Z",
                       "attachments": []
                     },
                     {
@@ -2854,7 +2785,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:05:42.893Z",
+                      "startTime": "2026-10-12T18:55:18.483Z",
                       "attachments": []
                     }
                   ],
@@ -2883,25 +2814,25 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 33,
+                      "workerIndex": 30,
                       "status": "passed",
-                      "duration": 760,
+                      "duration": 496,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:13:31.027Z",
+                      "startTime": "2026-10-12T19:00:11.264Z",
                       "attachments": []
                     },
                     {
-                      "workerIndex": 34,
+                      "workerIndex": 31,
                       "status": "passed",
-                      "duration": 963,
+                      "duration": 692,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:13:33.003Z",
+                      "startTime": "2026-10-12T19:00:12.650Z",
                       "attachments": [
                         {
                           "name": "trace",
@@ -2939,14 +2870,14 @@
                   "projectName": "Mobile Safari",
                   "results": [
                     {
-                      "workerIndex": 33,
+                      "workerIndex": 30,
                       "status": "passed",
-                      "duration": 664,
+                      "duration": 538,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:13:31.877Z",
+                      "startTime": "2026-10-12T19:00:11.822Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -2961,14 +2892,14 @@
                       ]
                     },
                     {
-                      "workerIndex": 34,
+                      "workerIndex": 31,
                       "status": "passed",
-                      "duration": 988,
+                      "duration": 659,
                       "errors": [],
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:13:34.126Z",
+                      "startTime": "2026-10-12T19:00:13.449Z",
                       "attachments": [
                         {
                           "name": "screenshot",
@@ -3023,7 +2954,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:13:32.581Z",
+                      "startTime": "2026-10-12T19:00:12.400Z",
                       "attachments": []
                     },
                     {
@@ -3034,7 +2965,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:13:35.247Z",
+                      "startTime": "2026-10-12T19:00:14.185Z",
                       "attachments": []
                     }
                   ],
@@ -3073,7 +3004,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:13:32.581Z",
+                      "startTime": "2026-10-12T19:00:12.400Z",
                       "attachments": []
                     },
                     {
@@ -3084,7 +3015,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:13:35.247Z",
+                      "startTime": "2026-10-12T19:00:14.185Z",
                       "attachments": []
                     }
                   ],
@@ -3120,7 +3051,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:13:32.581Z",
+                      "startTime": "2026-10-12T19:00:12.400Z",
                       "attachments": []
                     },
                     {
@@ -3131,7 +3062,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:13:35.247Z",
+                      "startTime": "2026-10-12T19:00:14.185Z",
                       "attachments": []
                     }
                   ],
@@ -3167,7 +3098,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:13:32.581Z",
+                      "startTime": "2026-10-12T19:00:12.400Z",
                       "attachments": []
                     },
                     {
@@ -3178,7 +3109,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:13:35.247Z",
+                      "startTime": "2026-10-12T19:00:14.185Z",
                       "attachments": []
                     }
                   ],
@@ -3214,7 +3145,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 0,
-                      "startTime": "2026-10-09T16:13:32.581Z",
+                      "startTime": "2026-10-12T19:00:12.400Z",
                       "attachments": []
                     },
                     {
@@ -3225,7 +3156,7 @@
                       "stdout": [],
                       "stderr": [],
                       "retry": 1,
-                      "startTime": "2026-10-09T16:13:35.247Z",
+                      "startTime": "2026-10-12T19:00:14.185Z",
                       "attachments": []
                     }
                   ],
@@ -3244,11 +3175,11 @@
   ],
   "errors": [],
   "stats": {
-    "startTime": "2026-10-09T15:57:16.010Z",
-    "duration": 979252.7339999999,
-    "expected": 16,
+    "startTime": "2026-10-12T18:46:26.195Z",
+    "duration": 828002.031,
+    "expected": 17,
     "skipped": 14,
-    "unexpected": 17,
-    "flaky": 1
+    "unexpected": 15,
+    "flaky": 2
   }
 }
